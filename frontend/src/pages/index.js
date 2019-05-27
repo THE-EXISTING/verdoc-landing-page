@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import Header from '../components/header'
-
+import Subscribe from '../components/subscribe'
 // import { Link } from "gatsby"
 // import Layout from "../components/layout"
 // import Image from "../components/image"
@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Courier';
     src: url('../static/font/courier1.ttf');
   }
+  /* @font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../static/font/roboto_regular.ttf');
+  } */
 
   `
 const BodyBackground = styled.body`
@@ -26,6 +30,7 @@ const IndexPage = () => (
     <GlobalStyle />
     <BodyBackground>
       <Header />
+      <Subscribe />
     </BodyBackground>
   </>
 )

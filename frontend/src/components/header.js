@@ -4,29 +4,25 @@ import img_signature from '../images/signature.svg'
 import img_verdoc_dark from '../images/verdoc_dark.svg'
 
 const WraperHeader = styled.div`
-  padding-top: 8em;
+  padding-top: 5em;
   width: 100%;
   position: relative;
 `
 const ImageSignature = styled.img`
   position: absolute;
+  left: 0;
+  right: 316px;
+  margin-left: auto;
+  margin-right: auto;
   top: 11.45em;
-  left: 36.55%;
   z-index: -1;
 `
 const ImageVerdocDark = styled.img`
   z-index: 1;
 `
 
-const TextPromote = styled.p`
-  opacity: 0.6;
-  font-family: Courier;
-  font-size: 28px;
-  color: #000000;
-  letter-spacing: 0.62px;
-`
-
 const TextPR = styled.p`
+  white-space: nowrap;
   opacity: 0.6;
   font-family: Courier;
   font-size: 28px;
@@ -34,6 +30,7 @@ const TextPR = styled.p`
   letter-spacing: 0.62px;
 `
 const TextPrFeature = styled.p`
+  margin-top: 24px;
   font-family: Courier;
   font-size: 32px;
   color: #5856d6;
