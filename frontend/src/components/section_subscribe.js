@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
-// import { makeStyles } from '@material-ui/core/styles'
-// import TextField from '@material-ui/core/TextField'
 import TextField from './common/textfield'
+
 const WraperContent = styled.div`
   margin-top: 40px;
   width: 100%;
@@ -31,7 +30,7 @@ const TextBold = styled.div`
   font-weight: bold;
 `
 const BtnSubscribe = styled(Button)`
-  margin-top: 26px !important;
+  margin-top: 34px !important;
   height: 56px;
   display: inline-block;
   text-transform: lowercase !important;

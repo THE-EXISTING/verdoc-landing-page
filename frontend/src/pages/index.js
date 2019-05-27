@@ -1,11 +1,12 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import Header from '../components/header'
-import Subscribe from '../components/subscribe'
-// import { Link } from "gatsby"
-// import Layout from "../components/layout"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
+import Header from '../components/section_header'
+import Subscribe from '../components/section_subscribe'
+import Line from '../components/section_line'
+// import { Link } from 'gatsby'
+// import Layout from '../components/layout'
+// import Image from '../components/image'
+// import SEO from '../components/seo'
 const GlobalStyle = createGlobalStyle`
 
   @font-face {
@@ -31,6 +32,7 @@ const IndexPage = () => (
     <BodyBackground>
       <Header />
       <Subscribe />
+      <Line />
     </BodyBackground>
   </>
 )

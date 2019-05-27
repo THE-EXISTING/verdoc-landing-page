@@ -4,7 +4,7 @@ import img_signature from '../images/signature.svg'
 import img_verdoc_dark from '../images/verdoc_dark.svg'
 
 const WraperHeader = styled.div`
-  padding-top: 5em;
+  padding-top: 7em;
   width: 100%;
   position: relative;
 `
@@ -14,7 +14,7 @@ const ImageSignature = styled.img`
   right: 316px;
   margin-left: auto;
   margin-right: auto;
-  top: 11.45em;
+  top: 10.95em;
   z-index: -1;
 `
 const ImageVerdocDark = styled.img`
