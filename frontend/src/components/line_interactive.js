@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
 
 import img_qr from '../images/line_qr_code.svg'
-import img_btn_name_verdoc from '../images/btn_verdoc.svg'
-import img_btn_icon_verdec from '../images/v_circle.svg'
+import icon_btn_name_verdoc from '../images/btn_verdoc.svg'
+import icon_btn_verdec from '../images/v_circle.svg'
 
 const WraperContent = styled.div`
   /* margin-top: 75px; */
@@ -45,12 +45,50 @@ const ButtonLine = styled(Button)`
   vertical-align: middle;
 `
 
+const WrapContentBtn = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+`
+const ContentBtnRight = styled.div`
+  float: right;
+  display: block;
+  margin-left: 10px;
+  margin-bottom: auto;
+  margin-top: auto;
+  text-align: left;
+`
+const IconVerdoc = styled.img`
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+`
+const IconNameVerdoc = styled.img`
+  margin-bottom: 0px;
+  display: block;
+`
+const TextLineBtn = styled.p`
+  margin-left: 4px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: block;
+  color: #00b900;
+  font-weight: bold;
+`
 const LineInter = () => (
   <>
     <WraperContent>
       <ImageQR src={img_qr} />
       <TextOr>or</TextOr>
-      <ButtonLine>LINE</ButtonLine>
+      <ButtonLine>
+        <WrapContentBtn>
+          <IconVerdoc src={icon_btn_verdec} />
+          <ContentBtnRight>
+            <IconNameVerdoc src={icon_btn_name_verdoc} />
+            <TextLineBtn>LINE@</TextLineBtn>
+          </ContentBtnRight>
+        </WrapContentBtn>
+      </ButtonLine>
     </WraperContent>
   </>
 )
