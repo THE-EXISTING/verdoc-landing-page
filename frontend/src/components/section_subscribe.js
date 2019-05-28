@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
 import TextField from './common/textfield'
 
 const WraperContent = styled.div`
-  margin-top: 40px;
+  margin-top: 30px;
   width: 100%;
   display: block;
 `
@@ -12,7 +13,8 @@ const WraperContent = styled.div`
 const WraperForm = styled.div`
   margin-top: -10px;
   width: 100%;
-  position: relative;
+  /* position: relative; */
+  display: inline-block;
   text-align: center;
 `
 const TextOnBtnFront = styled.p`
@@ -32,17 +34,25 @@ const TextBold = styled.div`
 const BtnSubscribe = styled(Button)`
   margin-top: 34px !important;
   height: 56px;
-  display: inline-block;
+  display: inline-block !important;
   text-transform: lowercase !important;
   font-size: 16px;
   color: #fff !important;
   background-color: #5856d6 !important;
 `
-
+const Cutter = styled.div`
+  display: inline-block;
+  ${media.lessThan('medium')`
+    display: block;
+`}
+`
 const Subscribe = () => (
   <WraperContent>
     <TextOnBtnFront>
-      Please subscribe to get <TextBold>free 3 month usage. 💰💰💰</TextBold>
+      <Cutter>Please subscribe to get&nbsp; </Cutter>
+      <Cutter>
+        <TextBold> free 3 month usage. 💰💰💰</TextBold>
+      </Cutter>
     </TextOnBtnFront>
     <WraperForm>
       <TextField />

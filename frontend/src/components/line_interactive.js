@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
 
 import img_qr from '../images/line_qr_code.svg'
@@ -23,6 +24,11 @@ const ImageQR = styled.img`
   height: cover;
   min-width: 140px;
   min-height: 140px;
+
+  ${media.lessThan('medium')`
+    display: block;
+    margin: auto;
+  `}
 `
 const TextOr = styled.p`
   padding: 32px;
@@ -32,8 +38,11 @@ const TextOr = styled.p`
   font-weight: bold;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.87);
-  /* letter-spacing: 0.45px; */
-
+  ${media.lessThan('medium')`
+    display: block;
+    padding: 0px;
+    margin: 8px;
+  `}
   display: inline-block;
 `
 const ButtonLine = styled(Button)`
@@ -43,6 +52,12 @@ const ButtonLine = styled(Button)`
   border-radius: 8px !important;
   display: inline-block;
   vertical-align: middle;
+  background-color: #fff !important;
+  ${media.lessThan('medium')`
+    display: block;
+    padding: 0px;
+    margin-top: 8px !important;
+  `}
 `
 
 const WrapContentBtn = styled.div`

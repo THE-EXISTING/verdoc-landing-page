@@ -10,20 +10,25 @@ const WraperForm = styled.div`
   /* margin: 0; */
 `
 
+const TextFieldStyled = styled(TextField)`
+  width: 50vw;
+  max-width: 352px;
+`
+
 const useStyles = makeStyles(theme => ({
   textField: {
     height: 56,
     fontSize: 16,
     borderColor: '#5856d6',
-    width: 354,
     paddingTop: 0,
     marginTop: 0,
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
+    backgroundColor: '#fff',
   },
   cssLabel: {
     borderWidth: '2px',
-    color: '#5856D6',
+    // color: '#5856D6',
   },
 
   cssOutlinedInput: {
@@ -37,15 +42,15 @@ const useStyles = makeStyles(theme => ({
   cssFocused: {},
 
   notchedOutline: {
-    borderWidth: '2px',
-    borderColor: '#5856D6 !important',
+    // borderWidth: '2px',
+    // borderColor: '#5856d6 !important',
   },
 }))
 
 function TextFieldCustom() {
   const classes = useStyles()
   const [values, setValues] = React.useState({
-    value: 'your@verdoc.io',
+    value: '',
   })
 
   const handleChange = name => event => {
@@ -55,12 +60,13 @@ function TextFieldCustom() {
   return (
     <WraperForm>
       {' '}
-      <TextField
+      <TextFieldStyled
         id="standard-name"
         label="Email"
         className={classes.textField}
         value={values.value}
         onChange={handleChange('value')}
+        placeholder="your@verdoc.io"
         margin="normal"
         variant="outlined"
         InputLabelProps={{

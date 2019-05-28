@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import img_signature from '../images/signature.svg'
 import img_verdoc_dark from '../images/verdoc_dark.svg'
 
@@ -7,6 +8,10 @@ const WraperHeader = styled.div`
   padding-top: 7em;
   width: 100%;
   position: relative;
+
+  ${media.lessThan('medium')`
+    margin-bottom: 28px;
+  `}
 `
 const ImageSignature = styled.img`
   position: absolute;
@@ -16,9 +21,20 @@ const ImageSignature = styled.img`
   margin-right: auto;
   top: 10.95em;
   z-index: -1;
+  ${media.lessThan('medium')`
+  
+    right: 266px;
+    top: 10.4em;
+    /* width: 12%;   */
+    width: 54px;
+  `}
 `
 const ImageVerdocDark = styled.img`
   z-index: 1;
+  ${media.lessThan('medium')`
+    /* width: 56%;   */
+    width: 268px;
+  `}
 `
 
 const TextPR = styled.p`
@@ -28,13 +44,25 @@ const TextPR = styled.p`
   font-size: 28px;
   color: #000000;
   letter-spacing: 0.62px;
+  ${media.lessThan('medium')`
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 20px;
+  `}
 `
 const TextPrFeature = styled.p`
-  margin-top: 24px;
+  margin-top: 34px;
   font-family: Courier;
   font-size: 32px;
   color: #5856d6;
   letter-spacing: 0.71px;
+  ${media.lessThan('medium')`
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: 1.2em;
+    white-space: nowrap;
+    
+  `}
 `
 
 const Header = () => (
