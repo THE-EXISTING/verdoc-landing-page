@@ -15,6 +15,9 @@ const WraperContent = styled.div`
   display: block;
   /* margin: 0 100px; */
   justify-content: space-between;
+  ${media.lessThan('medium')`
+      margin-bottom: 1em;
+      `}
 `
 
 const ImageQR = styled.img`

@@ -16,29 +16,30 @@ const GlobalStyle = createGlobalStyle`
     src: url('../static/font/courier1.ttf');
   }
   body{
-    opacity: 12%;
-  background-color: transparent;
-  background-image: linear-gradient(
+      /* overflow: hidden; */
+      opacity: 12%;
+      background-color: transparent;
+      background-image: linear-gradient(
       0deg,
       transparent 24%,
-      rgba(0, 0, 0, 0.12) 25%,
-      rgba(0, 0, 0, 0.12) 26%,
+      rgba(0, 0, 0, 0.06) 25%,
+      rgba(0, 0, 0, 0.06) 26%,
       transparent 27%,
       transparent 74%,
-      rgba(0, 0, 0, 0.12) 75%,
-      rgba(0, 0, 0, 0.12) 76%,
+      rgba(0, 0, 0, 0.06) 75%,
+      rgba(0, 0, 0, 0.06) 76%,
       transparent 77%,
       transparent
     ),
     linear-gradient(
       90deg,
       transparent 24%,
-      rgba(0, 0, 0, 0.12) 25%,
-      rgba(0, 0, 0, 0.12) 26%,
+      rgba(0, 0, 0, 0.06) 25%,
+      rgba(0, 0, 0, 0.06) 26%,
       transparent 27%,
       transparent 74%,
-      rgba(0, 0, 0, 0.12) 75%,
-      rgba(0, 0, 0, 0.12) 76%,
+      rgba(0, 0, 0, 0.06) 75%,
+      rgba(0, 0, 0, 0.06) 76%,
       transparent 77%,
       transparent
     );
@@ -54,6 +55,7 @@ const BodyBackground = styled.div`
   text-align: center;
   position: relative;
   float: left;
+  overflow: hidden;
 `
 
 const IndexPage = () => (

@@ -49,6 +49,15 @@ const TextPR = styled.p`
     margin-right: 1em;
     font-size: 20px;
   `}
+  ${media.lessThan('small')`
+  margin-left: 1em;
+    margin-right: 1em;
+    font-size: 17px;
+  `}
+  @media (max-width: 320px) {
+    font-size: 14px;
+    white-space: initial;
+  }
 `
 const TextPrFeature = styled.p`
   margin-top: 34px;
