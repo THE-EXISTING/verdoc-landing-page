@@ -1,11 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import LineInteractive from './line_interactive'
 const WraperContent = styled.div`
   /* margin-top: 75px; */
   margin-top: 50px;
   width: 100%;
   display: block;
+  /* background-color: green; */
+  /* margin-bottom: 200px;
+  ${media.lessThan('medium')`
+      margin-bottom: 0px;
+    `} */
 `
 const TextOnBtnFront = styled.p`
   font-family: Courier;
@@ -16,12 +22,18 @@ const TextOnBtnFront = styled.p`
   margin-bottom: 0px;
   margin-right: 14px;
   margin-left: 14px;
+
+  ${media.lessThan('medium')`
+        margin-left: 3em;
+        margin-right: 3em;
+    `}
 `
 const SetLowOpacity = styled.div`
   display: inline;
   opacity: 0.6;
 `
-const TextGreenUL = styled.div`
+const TextGreenUL = styled.a`
+  cursor: pointer;
   display: inline;
   font-weight: bold;
   color: #00be00;
@@ -44,9 +56,11 @@ const Line = () => (
       <TextOnBtnFront>
         <SetLowOpacity>Just scan</SetLowOpacity>
         <TextRed>!!</TextRed> <SetLowOpacity>on</SetLowOpacity>{' '}
-        <TextGreenUL>Line</TextGreenUL>{' '}
+        <TextGreenUL href="https://line.me/" target="_blank">
+          Line
+        </TextGreenUL>{' '}
         <SetLowOpacity> application and use </SetLowOpacity>
-        <TextPurple>Verdoc</TextPurple>
+        <TextPurple>Verdoc.</TextPurple>
       </TextOnBtnFront>
       <LineInteractive />
     </WraperContent>

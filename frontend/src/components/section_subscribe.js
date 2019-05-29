@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button'
 import TextField from './common/textfield'
 
 const WraperContent = styled.div`
+  /* background-color: green; */
   margin-top: 30px;
   width: 100%;
   display: block;
@@ -13,7 +14,6 @@ const WraperContent = styled.div`
 const WraperForm = styled.div`
   margin-top: -10px;
   width: 100%;
-  /* position: relative; */
   display: inline-block;
   text-align: center;
 `
@@ -23,7 +23,6 @@ const TextOnBtnFront = styled.p`
   font-size: 16px;
   color: #000000;
   letter-spacing: 0.36px;
-  /* white-space: nowrap; */
   display: inline-block;
   margin-bottom: 0px;
 `
@@ -39,6 +38,13 @@ const BtnSubscribe = styled(Button)`
   font-size: 16px;
   color: #fff !important;
   background-color: #5856d6 !important;
+  &:hover {
+    -webkit-box-shadow: 0.75px 0.75px 5.5px 0.75px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0.75px 0.75px 5.5px 0.75px rgba(0, 0, 0, 0.45);
+    box-shadow: 0.75px 0.75px 5.5px 0.75px rgba(0, 0, 0, 0.45);
+
+    /* opacity: 0.97 !important; */
+  }
 `
 const Cutter = styled.div`
   display: inline-block;

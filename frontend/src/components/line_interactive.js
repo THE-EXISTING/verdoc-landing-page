@@ -2,35 +2,37 @@ import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
-
+import ModalQr from './modal_qrcode'
 import img_qr from '../images/line_qr_code.svg'
 import icon_btn_name_verdoc from '../images/btn_verdoc.svg'
 import icon_btn_verdec from '../images/v_circle.svg'
 
 const WraperContent = styled.div`
-  /* margin-top: 75px; */
   margin-top: 34px;
   margin-bottom: 9em;
   width: 100%;
-  display: block;
-  /* margin: 0 100px; */
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   ${media.lessThan('medium')`
       margin-bottom: 1em;
+      flex-direction: column-reverse;
       `}
 `
 
 const ImageQR = styled.img`
   display: inline-block;
   vertical-align: middle;
-  width: 14%;
+  width: 140px;
+  height: 140px;
+
   height: cover;
-  min-width: 140px;
-  min-height: 140px;
 
   ${media.lessThan('medium')`
     display: block;
     margin: auto;
+    width: 226px;
+  height: 226px;
   `}
 `
 const TextOr = styled.p`
@@ -56,7 +58,9 @@ const ButtonLine = styled(Button)`
   display: inline-block;
   vertical-align: middle;
   background-color: #fff !important;
+  /* padding: 0px; */
   ${media.lessThan('medium')`
+    
     display: block;
     padding: 0px;
     margin-top: 8px !important;
@@ -71,23 +75,28 @@ const WrapContentBtn = styled.div`
 const ContentBtnRight = styled.div`
   float: right;
   display: block;
-  margin-left: 10px;
+  height: 44px;
+  margin-left: 0px;
   margin-bottom: auto;
   margin-top: auto;
   text-align: left;
 `
 const IconVerdoc = styled.img`
+  width: 44px;
+  height: 44px;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 6px;
+  margin-right: 16px;
 `
 const IconNameVerdoc = styled.img`
   margin-bottom: 0px;
   display: block;
 `
 const TextLineBtn = styled.p`
+  font-size: 15px;
+  height: 15px;
   margin-left: 4px;
-  margin-top: 0px;
+  margin-top: 2px;
   margin-bottom: 0px;
   display: block;
   color: #00b900;
@@ -95,10 +104,11 @@ const TextLineBtn = styled.p`
 `
 const LineInter = () => (
   <>
+    <ModalQr />
     <WraperContent>
       <ImageQR src={img_qr} />
       <TextOr>or</TextOr>
-      <ButtonLine>
+      <ButtonLine href="https://line.me/R/ti/p/%40abr9961f" target="_blank">
         <WrapContentBtn>
           <IconVerdoc src={icon_btn_verdec} />
           <ContentBtnRight>

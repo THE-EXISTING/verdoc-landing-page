@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
 import img_signature from '../images/signature.svg'
 import img_verdoc_dark from '../images/verdoc_dark.svg'
@@ -70,10 +70,40 @@ const TextPrFeature = styled.p`
     margin-right: 2em;
     font-size: 1.2em;
     white-space: nowrap;
-    
   `}
 `
-
+const Typing = keyframes`
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80%{
+  opacity: 1;
+}
+  100%{
+  opacity: 0;
+}
+`
+const Dot = styled.span`
+  animation-name: ${Typing};
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  ${Dot}:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  ${Dot}:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+`
 const Header = () => (
   <>
     <WraperHeader>
@@ -81,7 +111,11 @@ const Header = () => (
       <ImageVerdocDark src={img_verdoc_dark} />
     </WraperHeader>
     <TextPR>Make your comapnay paperless.</TextPR>
-    <TextPrFeature>Stay tuned...</TextPrFeature>
+    <TextPrFeature>
+      Stay tuned<Dot>.</Dot>
+      <Dot>.</Dot>
+      <Dot>.</Dot>
+    </TextPrFeature>
   </>
 )
 export default Header

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
+import media from 'styled-media-query'
 import Header from '../components/section_header'
 import Subscribe from '../components/section_subscribe'
 import Line from '../components/section_line'
@@ -46,6 +47,8 @@ const GlobalStyle = createGlobalStyle`
   z-index: -5;
   height: 100%;
   background-size: 75px 75px;
+  margin: 0;
+  
   }
   `
 const BodyBackground = styled.div`
@@ -54,14 +57,14 @@ const BodyBackground = styled.div`
   margin: 0 auto;
   text-align: center;
   position: relative;
-  float: left;
   overflow: hidden;
+  /* background-color: green; */
 `
 
 const IndexPage = () => (
   <>
-    <GlobalStyle />
     <BodyBackground>
+      <GlobalStyle />
       <Header />
       <Subscribe />
       <Line />
