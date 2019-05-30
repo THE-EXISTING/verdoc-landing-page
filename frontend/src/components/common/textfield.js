@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField'
 const WraperForm = styled.div`
   /* width: 100%; */
   display: inline-block;
-  margin-top: 25px;
+  /* margin-top: 25px; */
   top: 0;
   /* margin: 0; */
 `
@@ -22,7 +22,8 @@ const useStyles = makeStyles(theme => ({
     borderColor: '#5856d6',
     paddingTop: 0,
     marginTop: 0,
-    marginLeft: theme.spacing(1),
+    marginBottom: 0,
+    marginLeft: 0,
     marginRight: theme.spacing(1),
     backgroundColor: '#fff',
   },

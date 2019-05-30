@@ -18,29 +18,29 @@ const GlobalStyle = createGlobalStyle`
   }
   body{
       /* overflow: hidden; */
-      opacity: 12%;
+      
       background-color: transparent;
       background-image: linear-gradient(
       0deg,
       transparent 24%,
-      rgba(0, 0, 0, 0.06) 25%,
-      rgba(0, 0, 0, 0.06) 26%,
+      rgba(0, 0, 0, 0.03) 25%,
+      rgba(0, 0, 0, 0.03) 26%,
       transparent 27%,
       transparent 74%,
-      rgba(0, 0, 0, 0.06) 75%,
-      rgba(0, 0, 0, 0.06) 76%,
+      rgba(0, 0, 0, 0.03) 75%,
+      rgba(0, 0, 0, 0.03) 76%,
       transparent 77%,
       transparent
     ),
     linear-gradient(
       90deg,
       transparent 24%,
-      rgba(0, 0, 0, 0.06) 25%,
-      rgba(0, 0, 0, 0.06) 26%,
+      rgba(0, 0, 0, 0.03) 25%,
+      rgba(0, 0, 0, 0.03) 26%,
       transparent 27%,
       transparent 74%,
-      rgba(0, 0, 0, 0.06) 75%,
-      rgba(0, 0, 0, 0.06) 76%,
+      rgba(0, 0, 0, 0.03) 75%,
+      rgba(0, 0, 0, .03) 76%,
       transparent 77%,
       transparent
     );
@@ -53,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
   `
 const BodyBackground = styled.div`
   width: 100vw;
-  height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   text-align: center;
   position: relative;

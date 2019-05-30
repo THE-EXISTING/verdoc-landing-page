@@ -3,16 +3,6 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import img_mock_iphone from '../images/mock_iphone.png'
 
-const PageContainer = styled.div`
-  width: 100vw;
-  height: 0px;
-  @media (min-width: 1640px) {
-    height: 100px;
-  }
-  @media (min-height: 880px) {
-    height: 100px;
-  }
-`
 const BodyBackground = styled.div`
   /* background-color: green; */
   width: 700px;
@@ -25,29 +15,32 @@ const BodyBackground = styled.div`
   margin-bottom: 0px;
 
   ${media.lessThan('medium')`
+      margin-top: 60px;
       top:0px;
       width: 100vw;
-      height:500px;
+      height: 400px;
       display: block;
       position: relative;  
     `}
+
   ${media.between('medium', 'large')`
+      margin-top: 120px;
       top:0px;
       width: 100vw;
-      height:400px;
+      /* height: 480px; */
+      height: 600px;
       display: block;
       position: relative;  
     `}
+    
     @media(min-width: 1640px) {
     right: 210px;
   }
 `
 
 const ImageMockMobile = styled.div`
-  /* background-color: green; */
   width: 100%;
   height: 100%;
-  /* height: 700px; */
   background-image: url(${img_mock_iphone});
   background-repeat: no-repeat;
   background-size: 440px auto;
@@ -58,26 +51,30 @@ const ImageMockMobile = styled.div`
   -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
   ${media.lessThan('large')`
-  background-size: 90% auto; 
-  background-position: top center;
-  -ms-transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  margin-left: auto;
-  margin-right: auto;
-  height: 550px;
-
+    background-size: 440px auto; 
+    background-position: top center;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin-left: auto;
+    margin-right: auto;
+    height: 430px;
+    `}
+    ${media.lessThan('medium')`
+    max-width: 500px;
+    background-size: 90% auto; 
+    height: 100%;
     `}
   ${media.between('medium', 'large')`
-  margin-top: -100px;
-    background-size: 450px auto; 
-    height: 420px;
+    margin-top: -100px;
+    background-size: 440px auto; 
+    height: 100%;
     `}
-`
+    
+    `
 
 const MockMobile = () => (
   <>
-    <PageContainer />
     <BodyBackground>
       <ImageMockMobile />
     </BodyBackground>

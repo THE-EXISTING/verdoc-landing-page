@@ -5,17 +5,17 @@ import Button from '@material-ui/core/Button'
 import TextField from './common/textfield'
 
 const WraperContent = styled.div`
-  /* background-color: green; */
   margin-top: 30px;
   width: 100%;
   display: block;
 `
 
 const WraperForm = styled.div`
-  margin-top: -10px;
+  margin-top: 15px;
   width: 100%;
-  display: inline-block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 const TextOnBtnFront = styled.p`
   opacity: 0.6;
@@ -31,7 +31,6 @@ const TextBold = styled.div`
   font-weight: bold;
 `
 const BtnSubscribe = styled(Button)`
-  margin-top: 34px !important;
   height: 56px;
   display: inline-block !important;
   text-transform: lowercase !important;

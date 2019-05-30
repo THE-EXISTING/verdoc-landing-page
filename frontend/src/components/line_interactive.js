@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
@@ -14,10 +14,16 @@ const WraperContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${media.between('medium', 'large')`
+      margin-bottom: 2em;
+    `}
   ${media.lessThan('medium')`
       margin-bottom: 1em;
       flex-direction: column-reverse;
-      `}
+    `}
+    @media(min-height: 768px) and (max-width: 960px) {
+    margin-bottom: -1em;
+  }
 `
 
 const ImageQR = styled.img`
@@ -25,8 +31,8 @@ const ImageQR = styled.img`
   vertical-align: middle;
   width: 140px;
   height: 140px;
-
-  height: cover;
+  cursor: pointer;
+  /* height: cover; */
 
   ${media.lessThan('medium')`
     display: block;
@@ -102,22 +108,28 @@ const TextLineBtn = styled.p`
   color: #00b900;
   font-weight: bold;
 `
-const LineInter = () => (
-  <>
-    <ModalQr />
-    <WraperContent>
-      <ImageQR src={img_qr} />
-      <TextOr>or</TextOr>
-      <ButtonLine href="https://line.me/R/ti/p/%40abr9961f" target="_blank">
-        <WrapContentBtn>
-          <IconVerdoc src={icon_btn_verdec} />
-          <ContentBtnRight>
-            <IconNameVerdoc src={icon_btn_name_verdoc} />
-            <TextLineBtn>LINE@</TextLineBtn>
-          </ContentBtnRight>
-        </WrapContentBtn>
-      </ButtonLine>
-    </WraperContent>
-  </>
-)
+const LineInter = () => {
+  const [isShow, setIsShow] = useState(false)
+  const show = () => setIsShow(true)
+  const hide = () => setIsShow(false)
+  return (
+    <>
+      <ModalQr isShow={isShow} hideModal={hide} />
+      <WraperContent>
+        <ImageQR src={img_qr} onClick={show} />
+        <TextOr>or</TextOr>
+        <ButtonLine href="https://line.me/R/ti/p/%40abr9961f" target="_blank">
+          <WrapContentBtn>
+            <IconVerdoc src={icon_btn_verdec} />
+            <ContentBtnRight>
+              <IconNameVerdoc src={icon_btn_name_verdoc} />
+              <TextLineBtn>LINE@</TextLineBtn>
+            </ContentBtnRight>
+          </WrapContentBtn>
+        </ButtonLine>
+      </WraperContent>
+    </>
+  )
+}
+
 export default LineInter
