@@ -118,7 +118,7 @@ const LineInter = () => {
       <WraperContent>
         <ImageQR src={img_qr} onClick={show} />
         <TextOr>or</TextOr>
-        <ButtonLine href="https://line.me/R/ti/p/%40abr9961f" target="_blank">
+        <ButtonLine href="line://ti/p/%40abr9961f" target="_blank">
           <WrapContentBtn>
             <IconVerdoc src={icon_btn_verdec} />
             <ContentBtnRight>
