@@ -18,7 +18,8 @@ const TextOnBtnFront = styled.p`
   font-size: 16px;
   color: #000000;
   letter-spacing: 0.36px;
-  display: inline-block;
+  /* display: inline-block; */
+  display: block;
   margin-bottom: 0px;
   margin-right: 14px;
   margin-left: 14px;

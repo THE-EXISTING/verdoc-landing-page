@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import media from 'styled-media-query'
+import firebase from '../components/firebase'
+// import media from 'styled-media-query'
 import Header from '../components/section_header'
 import Subscribe from '../components/section_subscribe'
 import Line from '../components/section_line'
@@ -12,10 +13,10 @@ import MockMobile from '../components/mock_mobile'
 // import SEO from '../components/seo'
 const GlobalStyle = createGlobalStyle`
 
-  @font-face {
+  /* @font-face {
     font-family: 'Courier';
     src: url('../static/font/courier1.ttf');
-  }
+  } */
   body{
       /* overflow: hidden; */
       
@@ -63,9 +64,10 @@ const BodyBackground = styled.div`
 
 const IndexPage = () => (
   <>
+    <GlobalStyle />
     <BodyBackground>
-      <GlobalStyle />
       <Header />
+      {/* <Subscribe db={firebase} /> */}
       <Subscribe />
       <Line />
       <MockMobile />

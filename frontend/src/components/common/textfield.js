@@ -64,6 +64,7 @@ function TextFieldCustom() {
       <TextFieldStyled
         id="standard-name"
         label="Email"
+        type="email"
         className={classes.textField}
         value={values.value}
         onChange={handleChange('value')}

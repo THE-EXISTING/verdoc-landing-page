@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import moment from 'moment'
 import Button from '@material-ui/core/Button'
 import TextField from './common/textfield'
 
@@ -23,7 +24,8 @@ const TextOnBtnFront = styled.p`
   font-size: 16px;
   color: #000000;
   letter-spacing: 0.36px;
-  display: inline-block;
+  /* display: inline-block; */
+  display: block;
   margin-bottom: 0px;
 `
 const TextBold = styled.div`
@@ -51,20 +53,42 @@ const Cutter = styled.div`
     display: block;
 `}
 `
-const Subscribe = () => (
-  <WraperContent>
-    <TextOnBtnFront>
-      <Cutter>Please subscribe to get&nbsp; </Cutter>
-      <Cutter>
-        <TextBold> free 3 month usage. 💰💰💰</TextBold>
-      </Cutter>
-    </TextOnBtnFront>
-    <WraperForm>
-      <TextField />
-      <BtnSubscribe size="large">subscribe</BtnSubscribe>
-    </WraperForm>
-  </WraperContent>
-)
+const Subscribe = props => {
+  const handleSubscribe = () => {
+    // Add a second document with a generated ID.
+    // props.db
+    //   .firestore()
+    //   .collection('subscribers')
+    //   .doc('poon.s@ku.ac.th')
+    //   .set({
+    //     email: 'poon.s@ku.ac.th',
+    //     timestamp: moment().format('x'),
+    //   })
+    //   .then(function() {
+    //     console.log('Subscribe success')
+    //   })
+    //   .catch(function(error) {
+    //     console.error('Error seting document: ', error)
+    //   })
+    console.log('for deploy without firestore')
+  }
+  return (
+    <WraperContent>
+      <TextOnBtnFront>
+        <Cutter>Please subscribe to get&nbsp; </Cutter>
+        <Cutter>
+          <TextBold> free 3 month usage. 💰💰💰</TextBold>
+        </Cutter>
+      </TextOnBtnFront>
+      <WraperForm>
+        <TextField />
+        <BtnSubscribe size="large" onClick={handleSubscribe}>
+          subscribe
+        </BtnSubscribe>
+      </WraperForm>
+    </WraperContent>
+  )
+}
 
 //   )
 // }
