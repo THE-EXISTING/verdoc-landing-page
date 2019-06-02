@@ -13,7 +13,7 @@ const WraperContent = styled.div`
       margin-bottom: 0px;
     `} */
 `
-const TextOnBtnFront = styled.p`
+const TextOnBtnFront = styled.div`
   font-family: Courier;
   font-size: 16px;
   color: #000000;

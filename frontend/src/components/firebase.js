@@ -1,20 +1,18 @@
-// import * as firebase from 'firebase'
-// import 'firebase/firestore'
-// // const firebase = require('firebase/app')
-// // Required for side-effects
-// // require('@firebase/firestore')
-// const firebaseConfig = {
-//   apiKey: 'AIzaSyCvbUaDYSnIr8-1NTiqtBpistyXkYKTyDU',
-//   authDomain: 'verdoc-landing-page.firebaseapp.com',
-//   databaseURL: 'https://verdoc-landing-page.firebaseio.com',
-//   projectId: 'verdoc-landing-page',
-//   storageBucket: 'verdoc-landing-page.appspot.com',
-//   messagingSenderId: '151604777002',
-//   appId: '1:151604777002:web:0441d658085729d1',
-// }
+const firebase = require('firebase/firebase')
+require('firebase/firestore')
 
-// firebase.initializeApp(firebaseConfig)
+const firebaseConfig = {
+  apiKey: 'AIzaSyCvbUaDYSnIr8-1NTiqtBpistyXkYKTyDU',
+  authDomain: 'verdoc-landing-page.firebaseapp.com',
+  databaseURL: 'https://verdoc-landing-page.firebaseio.com',
+  projectId: 'verdoc-landing-page',
+  storageBucket: 'verdoc-landing-page.appspot.com',
+  messagingSenderId: '151604777002',
+  appId: '1:151604777002:web:0441d658085729d1',
+}
 
-// export default firebase
+firebase.initializeApp(firebaseConfig)
 
-// // export const db = firebase.firestore()
+export default firebase
+
+// export const db = firebase.firestore()

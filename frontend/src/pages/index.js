@@ -67,8 +67,8 @@ const IndexPage = () => (
     <GlobalStyle />
     <BodyBackground>
       <Header />
-      {/* <Subscribe db={firebase} /> */}
-      <Subscribe />
+      <Subscribe db={firebase} />
+      {/* <Subscribe /> */}
       <Line />
       <MockMobile />
     </BodyBackground>

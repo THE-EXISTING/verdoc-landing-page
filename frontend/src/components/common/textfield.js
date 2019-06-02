@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
@@ -48,15 +48,21 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function TextFieldCustom() {
+function TextFieldCustom({ handleTyping }) {
   const classes = useStyles()
-  const [values, setValues] = React.useState({
+  const [values, setValues] = useState({
     value: '',
   })
 
-  const handleChange = name => event => {
+  const handleChangeText = name => event => {
+    event.persist()
     setValues({ ...values, [name]: event.target.value })
+    // handleTyping(values)
   }
+
+  useEffect(() => {
+    handleTyping(values)
+  }, [values])
 
   return (
     <WraperForm>
@@ -65,12 +71,15 @@ function TextFieldCustom() {
         id="standard-name"
         label="Email"
         type="email"
+        name="email"
+        autoComplete="email"
         className={classes.textField}
         value={values.value}
-        onChange={handleChange('value')}
+        onChange={handleChangeText('value')}
         placeholder="your@verdoc.io"
         margin="normal"
         variant="outlined"
+        autoFocus
         InputLabelProps={{
           classes: {
             root: classes.cssLabel,
