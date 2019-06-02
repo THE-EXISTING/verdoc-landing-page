@@ -1,6 +1,4 @@
-const firebase = require('firebase/firebase')
-require('firebase/firestore')
-
+let firebase
 const firebaseConfig = {
   apiKey: 'AIzaSyCvbUaDYSnIr8-1NTiqtBpistyXkYKTyDU',
   authDomain: 'verdoc-landing-page.firebaseapp.com',
@@ -11,8 +9,13 @@ const firebaseConfig = {
   appId: '1:151604777002:web:0441d658085729d1',
 }
 
-firebase.initializeApp(firebaseConfig)
+if (typeof window !== `undefined`) {
+  firebase = require('firebase/firebase')
+  require('firebase/firestore')
+  firebase.initializeApp(firebaseConfig)
+}
 
-export default firebase
+module.exports = firebase
+// export default firebase
 
 // export const db = firebase.firestore()

@@ -97,10 +97,10 @@ const Dot = styled.span`
   animation-duration: 1.8s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
-  ${Dot}:nth-child(2) {
+  &:nth-child(2) {
     animation-delay: 0.2s;
   }
-  ${Dot}:nth-child(3) {
+  &:nth-child(3) {
     animation-delay: 0.4s;
   }
 `

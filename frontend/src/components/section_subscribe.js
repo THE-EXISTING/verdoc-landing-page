@@ -5,7 +5,7 @@ import moment from 'moment'
 import Button from '@material-ui/core/Button'
 import TextField from './common/textfield'
 
-const WraperContent = styled.div` 
+const WraperContent = styled.div`
   margin-top: 30px;
   width: 100%;
   display: block;
@@ -83,7 +83,12 @@ const Subscribe = props => {
       <TextOnBtnFront>
         <Cutter>Please subscribe to get&nbsp;</Cutter>
         <Cutter>
-          <TextBold>free 3 month usage. 💰💰💰</TextBold>
+          <TextBold>
+            free 3 month usage.{' '}
+            <span role="img" aria-label="money">
+              💰💰💰
+            </span>
+          </TextBold>
         </Cutter>
       </TextOnBtnFront>
       <WraperForm>
