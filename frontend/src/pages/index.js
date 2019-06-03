@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import firebase from '../components/firebase'
+import firebase, { getFirebase } from '../components/firebase'
 // import media from 'styled-media-query'
 import Header from '../components/section_header'
 import Subscribe from '../components/section_subscribe'
@@ -62,17 +62,29 @@ const BodyBackground = styled.div`
   /* background-color: green; */
 `
 
-const IndexPage = () => (
-  <>
-    <GlobalStyle />
-    <BodyBackground>
-      <Header />
-      <Subscribe db={firebase} />
-      {/* <Subscribe /> */}
-      <Line />
-      <MockMobile />
-    </BodyBackground>
-  </>
-)
+const IndexPage = () => {
+  const [firestore, setFirestore] = useState({})
+  useEffect(() => {
+    const lazyApp = import('firebase/app')
+    const lazyDatabase = import('firebase/firestore')
+
+    Promise.all([lazyApp, lazyDatabase]).then(([firebase]) => {
+      setFirestore(getFirebase(firebase))
+    })
+  })
+  return (
+    <>
+      <GlobalStyle />
+      <BodyBackground>
+        db
+        <Header />
+        <Subscribe db={firestore} />
+        {/* <Subscribe /> */}
+        <Line />
+        <MockMobile />
+      </BodyBackground>
+    </>
+  )
+}
 
 export default IndexPage

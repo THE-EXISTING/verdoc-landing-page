@@ -24,7 +24,6 @@ const TextOnBtnFront = styled.div`
   font-size: 16px;
   color: #000000;
   letter-spacing: 0.36px;
-  /* display: inline-block; */
   display: block;
   margin-bottom: 0px;
 `
@@ -54,11 +53,7 @@ const Cutter = styled.div`
 const Subscribe = props => {
   const [email, setEmail] = useState(``)
 
-  // const { value, handleSubmit, handleChange } = useSubscribe(Subscribed)
-
   const handleSubmit = event => {
-    // console.log('clicked', email)
-    // Add a second document with a generated ID.
     event.preventDefault()
     props.db
       .firestore()
@@ -100,8 +95,4 @@ const Subscribe = props => {
     </WraperContent>
   )
 }
-
-//   )
-// }
-
 export default Subscribe
