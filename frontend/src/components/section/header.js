@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
-import img_signature from '../images/signature.svg'
-import img_verdoc_dark from '../images/verdoc_dark.svg'
+import img_signature from '../../images/signature.svg'
+import img_verdoc_dark from '../../images/verdoc_dark.svg'
 
 const WraperHeader = styled.div`
   padding-top: 7em;

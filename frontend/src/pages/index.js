@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import firebase, { getFirebase } from '../components/firebase'
+import { getFirebase } from '../components/common/firebase'
 // import media from 'styled-media-query'
-import Header from '../components/section_header'
-import Subscribe from '../components/section_subscribe'
-import Line from '../components/section_line'
-import MockMobile from '../components/mock_mobile'
+import Header from '../components/section/header'
+import Subscribe from '../components/section/subscribe'
+import Line from '../components/section/line'
+import MockMobile from '../components/common/mock_mobile'
 
 // import { Link } from 'gatsby'
 // import Layout from '../components/layout'
@@ -76,7 +76,6 @@ const IndexPage = () => {
     <>
       <GlobalStyle />
       <BodyBackground>
-        db
         <Header />
         <Subscribe db={firestore} />
         {/* <Subscribe /> */}

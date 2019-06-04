@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import img_qrcode from '../images/line_qr_code.svg'
-import img_cancel from '../images/ic_cancel_white.svg'
+import img_qrcode from '../../images/line_qr_code.svg'
+import img_cancel from '../../images/ic_cancel_white.svg'
 
 const BgModal = styled.div`
   /* background-color: #090916; */

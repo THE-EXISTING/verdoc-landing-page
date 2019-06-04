@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import img_mock_iphone from '../images/mock_iphone.png'
+import img_mock_iphone from '../../images/mock_iphone.png'
 
 const BodyBackground = styled.div`
   /* background-color: green; */

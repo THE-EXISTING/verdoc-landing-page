@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
 import ModalQr from './modal_qrcode'
-import img_qr from '../images/line_qr_code.svg'
-import icon_btn_name_verdoc from '../images/btn_verdoc.svg'
-import icon_btn_verdec from '../images/v_circle.svg'
+import img_qr from '../../images/line_qr_code.svg'
+import icon_btn_name_verdoc from '../../images/btn_verdoc.svg'
+import icon_btn_verdec from '../../images/v_circle.svg'
 
 const WraperContent = styled.div`
   margin-top: 34px;

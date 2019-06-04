@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import LineInteractive from './line_interactive'
+import LineInteractive from '../common/line_interactive'
 const WraperContent = styled.div`
   /* margin-top: 75px; */
   margin-top: 50px;
