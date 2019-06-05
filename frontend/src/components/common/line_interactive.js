@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
-import { makeStyles } from '@material-ui/core/styles'
 import ModalQr from './modal_qrcode'
 import R from '../res/R'
 
@@ -54,23 +53,31 @@ const TextOr = styled.p`
   `}
 `
 const ButtonLine = styled(Button)`
-  width: 226px;
-  height: 64px;
-  display: inline-block;
-  vertical-align: middle;
+  && {
+    width: 226px;
+    height: 64px;
+    display: flex;
+    vertical-align: middle;
+    background-color: ${R.colors.bg_btn_line};
+    border: 2px solid ${R.colors.border_btn};
+    border-radius: 8px;
 
-  ${media.lessThan('medium')`
-    display: block;
-    padding: 0px;
+    &:hover {
+      background-color: ${R.colors.bg_btn_line_hover};
+    }
+
+    ${media.lessThan('medium')`
+    display: flex;
+    /* padding: 0px; */
     margin-top: 8px !important;
   `}
+  }
 `
 
 const WrapContentBtn = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  margin: 0;
 `
 const ContentBtnRight = styled.div`
   float: right;
@@ -92,7 +99,7 @@ const IconNameVerdoc = styled.img`
   margin-bottom: 0px;
   display: block;
 `
-const TextLineBtn = styled.p`
+const TextLineBtn = styled.div`
   font-size: 15px;
   height: 15px;
   margin-left: 4px;
@@ -103,32 +110,21 @@ const TextLineBtn = styled.p`
   font-weight: bold;
 `
 
-const useStyles = makeStyles(theme => ({
-  button: {
-    backgroundColor: R.colors.bg_btn_line,
-    border: '2px solid ' + R.colors.border_btn,
-    borderRadius: '8px',
-    '&:hover': { backgroundColor: R.colors.bg_btn_line_hover },
-  },
-}))
-
 const LineInter = () => {
   const [isShow, setIsShow] = useState(false)
   const show = () => setIsShow(true)
   const hide = () => setIsShow(false)
-  const classes = useStyles()
+
   return (
     <>
       <ModalQr isShow={isShow} hideModal={hide} />
       <WraperContent>
         <ImageQR src={R.images.qr_code} onClick={show} />
         <TextOr>or</TextOr>
-
         <ButtonLine
           variant="outlined"
           href="line://ti/p/%40abr9961f"
           target="_blank"
-          className={classes.button}
         >
           <WrapContentBtn>
             <IconVerdoc src={R.images.btn_logo} />

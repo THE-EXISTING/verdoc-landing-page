@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import moment from 'moment'
-import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import TextField from '../common/textfield'
 import R from '../res/R'
@@ -32,15 +31,23 @@ const TextBold = styled.div`
   font-weight: bold;
 `
 const BtnSubscribe = styled(Button)`
-  height: 56px;
-  font-size: 16px;
-  &:hover {
-    background-color: ${R.colors.primary} !important;
-    -webkit-box-shadow: 0.75px 0.75px 5.5px 0.75px
-      ${R.colors.border_btn_subsc_hover};
-    -moz-box-shadow: 0.75px 0.75px 5.5px 0.75px
-      ${R.colors.border_btn_subsc_hover};
-    box-shadow: 0.75px 0.75px 5.5px 0.75px ${R.colors.border_btn_subsc_hover};
+  && {
+    height: 56px;
+    font-size: 16px;
+    border-width: 0;
+    display: inline-block;
+    text-transform: lowercase;
+    color: ${R.colors.white};
+    background-color: ${R.colors.primary};
+
+    &:hover {
+      background-color: ${R.colors.primary} !important;
+      -webkit-box-shadow: 0.75px 0.75px 5.5px 0.75px
+        ${R.colors.border_btn_subsc_hover};
+      -moz-box-shadow: 0.75px 0.75px 5.5px 0.75px
+        ${R.colors.border_btn_subsc_hover};
+      box-shadow: 0.75px 0.75px 5.5px 0.75px ${R.colors.border_btn_subsc_hover};
+    }
   }
 `
 const Cutter = styled.div`
@@ -50,18 +57,8 @@ const Cutter = styled.div`
 `}
 `
 
-const useStyles = makeStyles(theme => ({
-  button: {
-    borderWidth: 0,
-    display: 'inline-block',
-    textTransform: 'lowercase',
-    color: R.colors.white,
-    backgroundColor: R.colors.primary,
-  },
-}))
 const Subscribe = props => {
   const [email, setEmail] = useState(``)
-  const classes = useStyles()
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -101,7 +98,7 @@ const Subscribe = props => {
           variant="outlined"
           size="large"
           onClick={event => handleSubmit(event)}
-          className={classes.button}
+          
         >
           {R.strings.btn_subscribe}
         </BtnSubscribe>

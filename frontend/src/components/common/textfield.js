@@ -4,20 +4,13 @@ import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import R from '../res/R'
 const WraperForm = styled.div`
-  /* width: 100%; */
   display: inline-block;
-  /* margin-top: 25px; */
   top: 0;
-  /* margin: 0; */
 `
-
-const TextFieldStyled = styled(TextField)`
-  width: 50vw;
-  max-width: 352px;
-`
-
 const useStyles = makeStyles(theme => ({
   textField: {
+    width: '50vw',
+    maxWidth: 352,
     height: 56,
     fontSize: 16,
     borderColor: R.colors.primary,
@@ -30,7 +23,6 @@ const useStyles = makeStyles(theme => ({
   },
   cssLabel: {
     borderWidth: '2px',
-    // color: '#5856D6',
   },
 
   cssOutlinedInput: {
@@ -68,7 +60,7 @@ function TextFieldCustom({ handleTyping }) {
   return (
     <WraperForm>
       {' '}
-      <TextFieldStyled
+      <TextField
         id="standard-name"
         label="Email"
         type="email"
