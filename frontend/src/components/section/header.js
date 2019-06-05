@@ -1,8 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
-import img_signature from '../../images/signature.svg'
-import img_verdoc_dark from '../../images/verdoc_dark.svg'
+import R from '../res/R'
 
 const WraperHeader = styled.div`
   padding-top: 7em;
@@ -40,9 +39,9 @@ const ImageVerdocDark = styled.img`
 const TextPR = styled.p`
   white-space: nowrap;
   opacity: 0.6;
-  font-family: Courier;
+  /* font-family: Courier; */
   font-size: 28px;
-  color: #000000;
+  color: ${R.colors.text};
   letter-spacing: 0.62px;
   ${media.lessThan('medium')`
     margin-left: 1em;
@@ -61,7 +60,7 @@ const TextPR = styled.p`
 `
 const TextPrFeature = styled.p`
   margin-top: 34px;
-  font-family: Courier;
+  /* font-family: Courier; */
   font-size: 32px;
   color: #5856d6;
   letter-spacing: 0.71px;
@@ -107,12 +106,13 @@ const Dot = styled.span`
 const Header = () => (
   <>
     <WraperHeader>
-      <ImageSignature src={img_signature} />
-      <ImageVerdocDark src={img_verdoc_dark} />
+      <ImageSignature src={R.images.signature} />
+      <ImageVerdocDark src={R.images.logo} />
     </WraperHeader>
-    <TextPR>Make your comapnay paperless.</TextPR>
+    <TextPR>{R.strings.pr_product}</TextPR>
     <TextPrFeature>
-      Stay tuned<Dot>.</Dot>
+      {R.strings.animation}
+      <Dot>.</Dot>
       <Dot>.</Dot>
       <Dot>.</Dot>
     </TextPrFeature>

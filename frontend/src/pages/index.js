@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { getFirebase } from '../components/common/firebase'
-// import media from 'styled-media-query'
+import MockMobile from '../components/common/mock_mobile'
 import Header from '../components/section/header'
 import Subscribe from '../components/section/subscribe'
 import Line from '../components/section/line'
-import MockMobile from '../components/common/mock_mobile'
-
+import R from '../components/res/R'
 // import { Link } from 'gatsby'
 // import Layout from '../components/layout'
 // import Image from '../components/image'
@@ -19,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   } */
   body{
       /* overflow: hidden; */
-      
+      font-family: ${R.fonts.text.name};
       background-color: transparent;
       background-image: linear-gradient(
       0deg,

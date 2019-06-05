@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
+import R from '../res/R'
 const WraperForm = styled.div`
   /* width: 100%; */
   display: inline-block;
@@ -19,13 +20,13 @@ const useStyles = makeStyles(theme => ({
   textField: {
     height: 56,
     fontSize: 16,
-    borderColor: '#5856d6',
+    borderColor: R.colors.primary,
     paddingTop: 0,
     marginTop: 0,
     marginBottom: 0,
     marginLeft: 0,
     marginRight: theme.spacing(1),
-    backgroundColor: '#fff',
+    backgroundColor: R.colors.white,
   },
   cssLabel: {
     borderWidth: '2px',
@@ -36,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 16,
     '&$cssFocused $notchedOutline': {
       borderWidth: '2px',
-      borderColor: `#5856D6 !important`,
+      borderColor: R.colors.primary,
     },
   },
 
