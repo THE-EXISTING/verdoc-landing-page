@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import img_mock_iphone from '../images/mock_iphone.png'
-
+import R from '../res/R'
 const BodyBackground = styled.div`
   /* background-color: green; */
   width: 700px;
@@ -41,7 +40,7 @@ const BodyBackground = styled.div`
 const ImageMockMobile = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url(${img_mock_iphone});
+  background-image: url(${R.images.mock_mobile});
   background-repeat: no-repeat;
   background-size: 440px auto;
   background-position-y: bottom;

@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import LineInteractive from './line_interactive'
+import LineInteractive from '../common/line_interactive'
+import R from '../res/R'
 const WraperContent = styled.div`
   /* margin-top: 75px; */
   margin-top: 50px;
@@ -14,9 +15,9 @@ const WraperContent = styled.div`
     `} */
 `
 const TextOnBtnFront = styled.div`
-  font-family: Courier;
+  /* font-family: Courier; */
   font-size: 16px;
-  color: #000000;
+  color: ${R.colors.black};
   letter-spacing: 0.36px;
   /* display: inline-block; */
   display: block;
@@ -33,22 +34,22 @@ const SetLowOpacity = styled.div`
   display: inline;
   opacity: 0.6;
 `
-const TextGreenUL = styled.a`
+const LinkLine = styled.a`
   cursor: pointer;
   display: inline;
   font-weight: bold;
-  color: #00be00;
+  color: ${R.colors.line};
   text-decoration: underline;
 `
 const TextRed = styled.div`
   display: inline;
   font-weight: bold;
-  color: rgba(255, 0, 0, 0.87);
+  color: ${R.colors.repeat};
 `
 const TextPurple = styled.div`
   display: inline;
   font-weight: bold;
-  color: #5856d6;
+  color: ${R.colors.primary};
 `
 
 const Line = () => (
@@ -57,9 +58,9 @@ const Line = () => (
       <TextOnBtnFront>
         <SetLowOpacity>Just scan</SetLowOpacity>
         <TextRed>!!</TextRed> <SetLowOpacity>on</SetLowOpacity>{' '}
-        <TextGreenUL href="https://line.me/" target="_blank">
+        <LinkLine href="https://line.me/" target="_blank">
           Line
-        </TextGreenUL>{' '}
+        </LinkLine>{' '}
         <SetLowOpacity> application and use </SetLowOpacity>
         <TextPurple>Verdoc.</TextPurple>
       </TextOnBtnFront>

@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
 import ModalQr from './modal_qrcode'
-import img_qr from '../images/line_qr_code.svg'
-import icon_btn_name_verdoc from '../images/btn_verdoc.svg'
-import icon_btn_verdec from '../images/v_circle.svg'
+import R from '../res/R'
 
 const WraperContent = styled.div`
   margin-top: 34px;
@@ -32,7 +30,6 @@ const ImageQR = styled.img`
   width: 140px;
   height: 140px;
   cursor: pointer;
-  /* height: cover; */
 
   ${media.lessThan('medium')`
     display: block;
@@ -45,32 +42,36 @@ const TextOr = styled.p`
   padding: 32px;
   vertical-align: middle;
   opacity: 0.6;
-  font-family: Courier;
   font-weight: bold;
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.87);
+  color: ${R.colors.text};
+  display: inline-block;
   ${media.lessThan('medium')`
     display: block;
     padding: 0px;
     margin: 8px;
   `}
-  display: inline-block;
 `
 const ButtonLine = styled(Button)`
-  width: 226px;
-  height: 64px;
-  border: 2px solid rgba(0, 0, 0, 0.34) !important;
-  border-radius: 8px !important;
-  display: inline-block;
-  vertical-align: middle;
-  background-color: #fff !important;
-  /* padding: 0px; */
-  ${media.lessThan('medium')`
-    
-    display: block;
-    padding: 0px;
+  && {
+    width: 226px;
+    height: 64px;
+    display: flex;
+    vertical-align: middle;
+    background-color: ${R.colors.bg_btn_line};
+    border: 2px solid ${R.colors.border_btn};
+    border-radius: 8px;
+
+    &:hover {
+      background-color: ${R.colors.bg_btn_line_hover};
+    }
+
+    ${media.lessThan('medium')`
+    display: flex;
+    /* padding: 0px; */
     margin-top: 8px !important;
   `}
+  }
 `
 
 const WrapContentBtn = styled.div`
@@ -98,36 +99,38 @@ const IconNameVerdoc = styled.img`
   margin-bottom: 0px;
   display: block;
 `
-const TextLineBtn = styled.p`
+const TextLineBtn = styled.div`
   font-size: 15px;
   height: 15px;
   margin-left: 4px;
   margin-top: 2px;
   margin-bottom: 0px;
   display: block;
-  color: #00b900;
+  color: ${R.colors.line};
   font-weight: bold;
 `
+
 const LineInter = () => {
   const [isShow, setIsShow] = useState(false)
   const show = () => setIsShow(true)
   const hide = () => setIsShow(false)
+
   return (
     <>
       <ModalQr isShow={isShow} hideModal={hide} />
       <WraperContent>
-        <ImageQR src={img_qr} onClick={show} />
+        <ImageQR src={R.images.qr_code} onClick={show} />
         <TextOr>or</TextOr>
         <ButtonLine
+          variant="outlined"
           href="line://ti/p/%40abr9961f"
           target="_blank"
-          // onClick={e => e.preventDefault()}
         >
           <WrapContentBtn>
-            <IconVerdoc src={icon_btn_verdec} />
+            <IconVerdoc src={R.images.btn_logo} />
             <ContentBtnRight>
-              <IconNameVerdoc src={icon_btn_name_verdoc} />
-              <TextLineBtn>LINE@</TextLineBtn>
+              <IconNameVerdoc src={R.images.btn_name} />
+              <TextLineBtn>{R.strings.btn_line}</TextLineBtn>
             </ContentBtnRight>
           </WrapContentBtn>
         </ButtonLine>

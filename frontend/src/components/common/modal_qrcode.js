@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import img_qrcode from '../images/line_qr_code.svg'
-import img_cancel from '../images/ic_cancel_white.svg'
-
+import R from '../res/R'
 const BgModal = styled.div`
   /* background-color: #090916; */
-  background-color: rgb(9, 9, 22, 0.8);
+  background-color: ${R.colors.bg_modal};
   position: fixed;
   top: 0;
   right: 0;
@@ -17,7 +15,7 @@ const BgModal = styled.div`
   z-index: 3;
 
   &:hover {
-    cursor: url(${img_cancel}) 205 205, auto;
+    cursor: url(${R.images.ic_cancel}) 205 205, auto;
   }
 `
 const ImageQrCode = styled.img`
@@ -53,9 +51,9 @@ const IconCancel = styled.img`
 const Modal = ({ isShow, hideModal }) =>
   isShow ? (
     <>
-      <ImageQrCode src={img_qrcode} />
+      <ImageQrCode src={R.images.qr_code} />
       <BgModal onClick={hideModal}>
-        <IconCancel src={img_cancel} onClick={hideModal} />
+        <IconCancel src={R.images.ic_cancel} onClick={hideModal} />
       </BgModal>
     </>
   ) : null
