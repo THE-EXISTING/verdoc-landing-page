@@ -117,6 +117,7 @@ const LineInter = () => {
           variant="outlined"
           href="line://ti/p/%40abr9961f"
           target="_blank"
+          rel="noreferrer"
         >
           <WrapContentBtn>
             <IconVerdoc src={R.images.btn_logo} />
