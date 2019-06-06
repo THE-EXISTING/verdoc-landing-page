@@ -1,27 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
-import ModalQr from './modal_qrcode'
-import R from '../res/R'
+import ModalQr from './ModalQRCode'
+import R from '../resources/R'
 
 const WraperContent = styled.div`
-  margin-top: 34px;
+  margin-top: 2em;
   margin-bottom: 9em;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   ${media.between('medium', 'large')`
-      margin-bottom: 2em;
-    `}
+    margin-bottom: 2em;
+  `}
   ${media.lessThan('medium')`
-      margin-bottom: 1em;
-      flex-direction: column-reverse;
-    `}
-    @media(min-height: 768px) and (max-width: 960px) {
+    margin-bottom: 1em;
+    flex-direction: column-reverse;
+  `}
+  ${media.between('768px', '960px')`
     margin-bottom: -1em;
-  }
+  `}
+    
 `
 
 const ImageQR = styled.img`
@@ -35,7 +36,7 @@ const ImageQR = styled.img`
     display: block;
     margin: auto;
     width: 226px;
-  height: 226px;
+    height: 226px;
   `}
 `
 const TextOr = styled.p`
@@ -43,9 +44,10 @@ const TextOr = styled.p`
   vertical-align: middle;
   opacity: 0.6;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.25em;
   color: ${R.colors.text};
   display: inline-block;
+
   ${media.lessThan('medium')`
     display: block;
     padding: 0px;
@@ -67,10 +69,9 @@ const ButtonLine = styled(Button)`
     }
 
     ${media.lessThan('medium')`
-    display: flex;
-    /* padding: 0px; */
-    margin-top: 8px !important;
-  `}
+      display: flex;
+      margin-top: 8px !important;
+    `}
   }
 `
 
@@ -80,32 +81,23 @@ const WrapContentBtn = styled.div`
   display: flex;
 `
 const ContentBtnRight = styled.div`
-  float: right;
-  display: block;
   height: 44px;
-  margin-left: 0px;
-  margin-bottom: auto;
-  margin-top: auto;
+  margin: auto 0;
   text-align: left;
 `
 const IconVerdoc = styled.img`
   width: 44px;
   height: 44px;
-  float: left;
-  margin-left: 6px;
-  margin-right: 16px;
+  margin: 1px 16px 1px 6px;
 `
 const IconNameVerdoc = styled.img`
   margin-bottom: 0px;
   display: block;
 `
 const TextLineBtn = styled.div`
-  font-size: 15px;
+  font-size: 1em;
   height: 15px;
-  margin-left: 4px;
-  margin-top: 2px;
-  margin-bottom: 0px;
-  display: block;
+  margin: 2px 0 0 4px;
   color: ${R.colors.line};
   font-weight: bold;
 `
@@ -116,7 +108,7 @@ const LineInter = () => {
   const hide = () => setIsShow(false)
 
   return (
-    <>
+    <Fragment>
       <ModalQr isShow={isShow} hideModal={hide} />
       <WraperContent>
         <ImageQR src={R.images.qr_code} onClick={show} />
@@ -135,7 +127,7 @@ const LineInter = () => {
           </WrapContentBtn>
         </ButtonLine>
       </WraperContent>
-    </>
+    </Fragment>
   )
 }
 

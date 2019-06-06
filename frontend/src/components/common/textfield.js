@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
-import R from '../res/R'
+import R from '../resources/R'
 const WraperForm = styled.div`
   display: inline-block;
   top: 0;
@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     width: '50vw',
     maxWidth: 352,
     height: 56,
-    fontSize: 16,
+    fontSize: '1.6rem',
     borderColor: R.colors.primary,
     paddingTop: 0,
     marginTop: 0,
@@ -48,7 +48,7 @@ function TextFieldCustom({ handleTyping }) {
   })
 
   const handleChangeText = name => event => {
-    event.persist()
+    // event.persist()
     setValues({ ...values, [name]: event.target.value })
     // handleTyping(values)
   }

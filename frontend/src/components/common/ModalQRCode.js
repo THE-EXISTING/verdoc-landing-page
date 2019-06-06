@@ -1,15 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import R from '../res/R'
+import R from '../resources/R'
+
 const BgModal = styled.div`
-  /* background-color: #090916; */
   background-color: ${R.colors.bg_modal};
   position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
   width: 100vw;
   height: 100vh;
   z-index: 3;
@@ -20,20 +17,20 @@ const BgModal = styled.div`
 `
 const ImageQrCode = styled.img`
   width: 504px;
-  height: cover;
+  height: auto;
   z-index: 4;
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -252px;
-  margin-left: -252px;
+  margin: -252px auto auto -252px;
+
   &:hover {
     cursor: auto;
   }
+
   ${media.lessThan('medium')`
-  width: 248px;
-  margin-top: -124px; 
-  margin-left: -124px; 
+    width: 248px;
+    margin: -124px auto auto -124px;
   `}
 `
 const IconCancel = styled.img`
@@ -44,8 +41,9 @@ const IconCancel = styled.img`
   top: 4%;
   right: 2%;
   z-index: 4;
+
   ${media.lessThan('medium')`
-      width: 44px;`}
+    width: 44px;`}
 `
 
 const Modal = ({ isShow, hideModal }) =>

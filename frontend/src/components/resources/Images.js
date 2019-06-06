@@ -7,7 +7,6 @@ import btn_name from '../../images/btn_verdoc.svg'
 import ic_cancel from '../../images/ic_cancel_white.svg'
 const images = {
   // header
-
   logo: logo,
   signature: signature,
   // line

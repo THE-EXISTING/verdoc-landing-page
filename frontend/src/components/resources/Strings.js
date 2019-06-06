@@ -1,6 +1,6 @@
 const strings = {
   // heade
-  pr_product: 'Make your comapnay paperless.',
+  pr_product: 'Make your company paperless.',
   animation: 'Stay tuned',
   // subscribe
   pr_subscribe_one: 'Please subscribe to get ',

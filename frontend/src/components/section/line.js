@@ -1,29 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import LineInteractive from '../common/line_interactive'
-import R from '../res/R'
+import LineInteractive from '../common/LineInteractive'
+import R from '../resources/R'
+
 const WraperContent = styled.div`
-  /* margin-top: 75px; */
   margin-top: 50px;
   width: 100%;
-  display: block;
-  /* background-color: green; */
-  /* margin-bottom: 200px;
-  ${media.lessThan('medium')`
-      margin-bottom: 0px;
-    `} */
 `
 const TextOnBtnFront = styled.div`
-  /* font-family: Courier; */
-  font-size: 16px;
+  font-size: 1em;
   color: ${R.colors.black};
   letter-spacing: 0.36px;
-  /* display: inline-block; */
-  display: block;
-  margin-bottom: 0px;
-  margin-right: 14px;
-  margin-left: 14px;
+  margin: auto 14px 0 14px;
 
   ${media.lessThan('medium')`
         margin-left: 3em;

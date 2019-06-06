@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import moment from 'moment'
 import Button from '@material-ui/core/Button'
-import TextField from '../common/textfield'
-import R from '../res/R'
+import TextField from '../common/TextField'
+import R from '../resources/R'
 
 const WraperContent = styled.div`
   margin-top: 30px;
   width: 100%;
-  display: block;
 `
 const WraperForm = styled.div`
   margin-top: 15px;
@@ -20,10 +18,9 @@ const WraperForm = styled.div`
 `
 const TextOnBtnFront = styled.div`
   opacity: 0.6;
-  font-size: 16px;
+  font-size: 1em;
   color: ${R.colors.text};
   letter-spacing: 0.36px;
-  display: block;
   margin-bottom: 0px;
 `
 const TextBold = styled.div`
@@ -33,7 +30,7 @@ const TextBold = styled.div`
 const BtnSubscribe = styled(Button)`
   && {
     height: 56px;
-    font-size: 16px;
+    font-size: 1em;
     border-width: 0;
     display: inline-block;
     text-transform: lowercase;
@@ -58,7 +55,7 @@ const Cutter = styled.div`
 `
 
 const Subscribe = props => {
-  const [email, setEmail] = useState(``)
+  const [email, setEmail] = useState('')
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -68,7 +65,8 @@ const Subscribe = props => {
       .doc(email)
       .set({
         email: email,
-        timestamp: moment().format('x'),
+        timestamp: new Date().getTime(),
+        // timestamp: moment().format('x'),
       })
       .then(function() {
         console.log('Subscribe success', email)
@@ -98,7 +96,6 @@ const Subscribe = props => {
           variant="outlined"
           size="large"
           onClick={event => handleSubmit(event)}
-          
         >
           {R.strings.btn_subscribe}
         </BtnSubscribe>

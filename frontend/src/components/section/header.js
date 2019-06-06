@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
-import R from '../res/R'
+import R from '../resources/R'
 
 const WraperHeader = styled.div`
   padding-top: 7em;
@@ -20,18 +20,17 @@ const ImageSignature = styled.img`
   margin-right: auto;
   top: 10.95em;
   z-index: -1;
+
   ${media.lessThan('medium')`
-  
     right: 266px;
     top: 10.4em;
-    /* width: 12%;   */
     width: 54px;
   `}
 `
 const ImageVerdocDark = styled.img`
   z-index: 1;
+
   ${media.lessThan('medium')`
-    /* width: 56%;   */
     width: 268px;
   `}
 `
@@ -39,30 +38,28 @@ const ImageVerdocDark = styled.img`
 const TextPR = styled.p`
   white-space: nowrap;
   opacity: 0.6;
-  /* font-family: Courier; */
-  font-size: 28px;
+  font-size: 1.625em;
   color: ${R.colors.text};
   letter-spacing: 0.62px;
+
   ${media.lessThan('medium')`
     margin-left: 1em;
     margin-right: 1em;
-    font-size: 20px;
+    font-size: 1.25em;
   `}
+
   ${media.lessThan('small')`
-  margin-left: 1em;
-    margin-right: 1em;
-    font-size: 17px;
+    font-size: 1.05em;
   `}
-  @media (max-width: 320px) {
-    font-size: 14px;
+  ${media.lessThan('320px')`
+    font-size: 0.75em;
     white-space: initial;
-  }
+    `}
 `
 const TextPrFeature = styled.p`
   margin-top: 34px;
-  /* font-family: Courier; */
-  font-size: 32px;
-  color: #5856d6;
+  font-size: 2em;
+  color: ${R.colors.primary};
   letter-spacing: 0.71px;
   ${media.lessThan('medium')`
     margin-left: 2em;
@@ -86,7 +83,7 @@ const Typing = keyframes`
   }
   80%{
   opacity: 1;
-}
+  }
   100%{
   opacity: 0;
 }

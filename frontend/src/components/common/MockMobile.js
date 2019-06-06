@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import R from '../res/R'
+import R from '../resources/R'
 const BodyBackground = styled.div`
-  /* background-color: green; */
+  
   width: 700px;
   height: 1000px;
   position: absolute;
@@ -14,27 +14,26 @@ const BodyBackground = styled.div`
   margin-bottom: 0px;
 
   ${media.lessThan('medium')`
-      margin-top: 60px;
-      top:0px;
-      width: 100vw;
-      height: 400px;
-      display: block;
-      position: relative;  
-    `}
+    margin-top: 60px;
+    top:0px;
+    width: 100vw;
+    height: 400px;
+    position: relative;  
+  `}
 
   ${media.between('medium', 'large')`
-      margin-top: 120px;
-      top:0px;
-      width: 100vw;
-      /* height: 480px; */
-      height: 600px;
-      display: block;
-      position: relative;  
-    `}
-    
-    @media(min-width: 1640px) {
+    margin-top: 120px;
+    top:0px;
+    width: 100vw;
+    height: 600px;
+    display: block;
+    position: relative;  
+  `}
+
+  ${media.greaterThan('1640px')`
     right: 210px;
-  }
+  `}
+  
 `
 
 const ImageMockMobile = styled.div`
@@ -49,28 +48,23 @@ const ImageMockMobile = styled.div`
   -ms-transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
+
   ${media.lessThan('large')`
-    background-size: 440px auto; 
     background-position: top center;
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     margin-left: auto;
     margin-right: auto;
-    height: 430px;
+    height: 100%;
     `}
-    ${media.lessThan('medium')`
+
+  ${media.lessThan('medium')`
     max-width: 500px;
     background-size: 90% auto; 
     height: 100%;
     `}
-  ${media.between('medium', 'large')`
-    margin-top: -100px;
-    background-size: 440px auto; 
-    height: 100%;
-    `}
-    
-    `
+`
 
 const MockMobile = () => (
   <>

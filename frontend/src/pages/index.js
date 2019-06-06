@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import { getFirebase } from '../components/common/firebase'
-import MockMobile from '../components/common/mock_mobile'
-import Header from '../components/section/header'
-import Subscribe from '../components/section/subscribe'
-import Line from '../components/section/line'
-import R from '../components/res/R'
+import { getFirebase } from '../components/utility/Firebase'
+import MockMobile from '../components/common/MockMobile'
+import Header from '../components/section/Header'
+import Subscribe from '../components/section/Subscribe'
+import Line from '../components/section/Line'
+import R from '../components/resources/R'
+import SEO from '../components/seo'
+
 // import { Link } from 'gatsby'
 // import Layout from '../components/layout'
 // import Image from '../components/image'
-// import SEO from '../components/seo'
-const GlobalStyle = createGlobalStyle`
 
-  /* @font-face {
-    font-family: 'Courier';
-    src: url('../static/font/courier1.ttf');
-  } */
+const GlobalStyle = createGlobalStyle`
+  
+
   body{
-      /* overflow: hidden; */
+      /* font-size: 62.5%;  */
+      /* base font-size in html is 16px => map to 10px */
       font-family: ${R.fonts.text.name};
       background-color: transparent;
       background-image: linear-gradient(
@@ -58,7 +58,6 @@ const BodyBackground = styled.div`
   text-align: center;
   position: relative;
   overflow: hidden;
-  /* background-color: green; */
 `
 
 const IndexPage = () => {
@@ -73,11 +72,11 @@ const IndexPage = () => {
   })
   return (
     <>
+      <SEO title="Verdoc" description="Make your company paperless." />
       <GlobalStyle />
       <BodyBackground>
         <Header />
         <Subscribe db={firestore} />
-        {/* <Subscribe /> */}
         <Line />
         <MockMobile />
       </BodyBackground>
