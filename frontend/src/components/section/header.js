@@ -106,9 +106,9 @@ const Header = () => (
       <ImageSignature src={R.images.signature} />
       <ImageVerdocDark src={R.images.logo} />
     </WraperHeader>
-    <TextPR>{R.strings.pr_product}</TextPR>
+    <TextPR>Make your company paperless.</TextPR>
     <TextPrFeature>
-      {R.strings.animation}
+      Stay tuned
       <Dot>.</Dot>
       <Dot>.</Dot>
       <Dot>.</Dot>

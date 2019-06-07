@@ -8,10 +8,6 @@ import Line from '../components/section/Line'
 import R from '../components/resources/R'
 import SEO from '../components/seo'
 
-// import { Link } from 'gatsby'
-// import Layout from '../components/layout'
-// import Image from '../components/image'
-
 const GlobalStyle = createGlobalStyle`
   
 

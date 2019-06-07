@@ -80,10 +80,10 @@ const Subscribe = props => {
   return (
     <WraperContent>
       <TextOnBtnFront>
-        <Cutter>{R.strings.pr_subscribe_one}</Cutter>
+        <Cutter>Please subscribe to get </Cutter>
         <Cutter>
           <TextBold>
-            {R.strings.pr_subscribe_two}
+            free 3 month usage.
             <span role="img" aria-label="money">
               💰💰💰
             </span>
@@ -97,7 +97,7 @@ const Subscribe = props => {
           size="large"
           onClick={event => handleSubmit(event)}
         >
-          {R.strings.btn_subscribe}
+          subscribe
         </BtnSubscribe>
       </WraperForm>
     </WraperContent>

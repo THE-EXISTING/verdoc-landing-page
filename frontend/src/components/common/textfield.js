@@ -15,9 +15,8 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1.6rem',
     borderColor: R.colors.primary,
     paddingTop: 0,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 0,
+    marginTop: theme.spacing(0),
+    marginBottom: theme.spacing(0),
     marginRight: theme.spacing(1),
     backgroundColor: R.colors.white,
   },
@@ -35,10 +34,7 @@ const useStyles = makeStyles(theme => ({
 
   cssFocused: {},
 
-  notchedOutline: {
-    // borderWidth: '2px',
-    // borderColor: '#5856d6 !important',
-  },
+  notchedOutline: {},
 }))
 
 function TextFieldCustom({ handleTyping }) {
@@ -48,9 +44,7 @@ function TextFieldCustom({ handleTyping }) {
   })
 
   const handleChangeText = name => event => {
-    // event.persist()
     setValues({ ...values, [name]: event.target.value })
-    // handleTyping(values)
   }
 
   useEffect(() => {

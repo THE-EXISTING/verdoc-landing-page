@@ -12,6 +12,7 @@ const WraperContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   ${media.between('medium', 'large')`
     margin-bottom: 2em;
   `}
@@ -70,7 +71,7 @@ const ButtonLine = styled(Button)`
 
     ${media.lessThan('medium')`
       display: flex;
-      margin-top: 8px !important;
+      margin-top: 0.2rem;
     `}
   }
 `
@@ -123,7 +124,7 @@ const LineInter = () => {
             <IconVerdoc src={R.images.btn_logo} />
             <ContentBtnRight>
               <IconNameVerdoc src={R.images.btn_name} />
-              <TextLineBtn>{R.strings.btn_line}</TextLineBtn>
+              <TextLineBtn>LINE@</TextLineBtn>
             </ContentBtnRight>
           </WrapContentBtn>
         </ButtonLine>

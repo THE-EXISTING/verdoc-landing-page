@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Verdoc`,
-    description: `verdoc-landing-page`,
-    author: `@Existing`,
+    description: `Make your company paperless.`,
+    author: `@THE EXISTING`,
+    url: "https://verdoc.io/",
+    image: "/images/snape.jpg",
   },
   plugins: [
     `gatsby-plugin-material-ui`,

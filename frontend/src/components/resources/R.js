@@ -1,10 +1,10 @@
-import strings from './strings'
+// import strings from './strings'
 import colors from './colors'
 import images from './images'
 import fonts from './fonts'
 const R = {
   fonts,
-  strings,
+  // strings,
   colors,
   images,
 }
