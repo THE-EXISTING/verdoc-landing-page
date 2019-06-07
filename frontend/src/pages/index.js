@@ -71,6 +71,7 @@ const IndexPage = () => {
       <SEO
         title="Verdoc"
         description="Make your company paperless."
+        url="https://verdoc.io"
         image={R.images.og_image}
       />
       <GlobalStyle />
