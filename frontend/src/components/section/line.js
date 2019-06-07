@@ -5,7 +5,7 @@ import LineInteractive from '../common/LineInteractive'
 import R from '../resources/R'
 
 const WraperContent = styled.div`
-  margin-top: 50px;
+  margin-top: 3.1rem;
   width: 100%;
 `
 const TextOnBtnFront = styled.div`

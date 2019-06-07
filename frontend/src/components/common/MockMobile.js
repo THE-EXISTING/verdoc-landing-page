@@ -11,7 +11,7 @@ const BodyBackground = styled.div`
   bottom: 0px;
   top: 200px;
   right: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   ${media.lessThan('medium')`
     margin-top: 60px;

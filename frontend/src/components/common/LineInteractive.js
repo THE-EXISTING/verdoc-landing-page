@@ -41,7 +41,7 @@ const ImageQR = styled.img`
   `}
 `
 const TextOr = styled.p`
-  padding: 32px;
+  padding: 2rem;
   vertical-align: middle;
   opacity: 0.6;
   font-weight: bold;
@@ -51,7 +51,7 @@ const TextOr = styled.p`
 
   ${media.lessThan('medium')`
     display: block;
-    padding: 0px;
+    padding: 0;
     margin: 8px;
   `}
 `

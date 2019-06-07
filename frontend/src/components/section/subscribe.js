@@ -6,11 +6,11 @@ import TextField from '../common/TextField'
 import R from '../resources/R'
 
 const WraperContent = styled.div`
-  margin-top: 30px;
+  margin-top: 2rem;
   width: 100%;
 `
 const WraperForm = styled.div`
-  margin-top: 15px;
+  margin-top: 1rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@ const TextOnBtnFront = styled.div`
   font-size: 1em;
   color: ${R.colors.text};
   letter-spacing: 0.36px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 `
 const TextBold = styled.div`
   display: inline;

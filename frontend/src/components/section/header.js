@@ -57,7 +57,7 @@ const TextPR = styled.p`
     `}
 `
 const TextPrFeature = styled.p`
-  margin-top: 34px;
+  margin-top: 2.1rem;
   font-size: 2em;
   color: ${R.colors.primary};
   letter-spacing: 0.71px;
