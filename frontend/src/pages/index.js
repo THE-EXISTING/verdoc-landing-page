@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
       font-family: ${R.fonts.text.name};
       background-color: transparent;
       background-image: linear-gradient(
-      0deg,
+      0deg, 
       transparent 24%,
       rgba(0, 0, 0, 0.03) 25%,
       rgba(0, 0, 0, 0.03) 26%,
@@ -68,7 +68,11 @@ const IndexPage = () => {
   })
   return (
     <>
-      <SEO title="Verdoc" description="Make your company paperless." />
+      <SEO
+        title="Verdoc"
+        description="Make your company paperless."
+        image={R.images.og_image}
+      />
       <GlobalStyle />
       <BodyBackground>
         <Header />

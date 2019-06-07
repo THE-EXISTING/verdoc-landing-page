@@ -59,21 +59,23 @@ const Subscribe = props => {
 
   const handleSubmit = event => {
     event.preventDefault()
-    props.db
-      .firestore()
-      .collection('subscribers')
-      .doc(email)
-      .set({
-        email: email,
-        timestamp: new Date().getTime(),
-        // timestamp: moment().format('x'),
-      })
-      .then(function() {
-        console.log('Subscribe success', email)
-      })
-      .catch(function(error) {
-        console.error('Error seting document: ', error)
-      })
+    if (email !== '') {
+      props.db
+        .firestore()
+        .collection('subscribers')
+        .doc(email)
+        .set({
+          email: email,
+          timestamp: new Date().getTime(),
+          // timestamp: moment().format('x'),
+        })
+        .then(function() {
+          console.log('Subscribe success', email)
+        })
+        .catch(function(error) {
+          console.error('Error seting document: ', error)
+        })
+    }
   }
   const handleTyping = value => setEmail(value['value'])
 
