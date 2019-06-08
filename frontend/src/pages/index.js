@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
   
 
   body{
+      
       /* font-size: 62.5%;  */
       /* base font-size in html is 16px => map to 10px */
       font-family: ${R.fonts.text.name};
@@ -57,6 +58,7 @@ const BodyBackground = styled.div`
 `
 
 const IndexPage = () => {
+  // const [modalActive, setModalActive] = useState(fa)
   const [firestore, setFirestore] = useState({})
   useEffect(() => {
     const lazyApp = import('firebase/app')

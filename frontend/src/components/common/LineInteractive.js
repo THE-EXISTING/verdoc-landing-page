@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from 'react'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
 import ModalQr from './ModalQRCode'
@@ -108,8 +108,15 @@ const LineInter = () => {
   const show = () => setIsShow(true)
   const hide = () => setIsShow(false)
 
+  const GlobalStyle = createGlobalStyle`
+  body{
+    overflow: ${isShow ? 'hidden' : 'visible'};
+    
+  }
+  `
   return (
     <Fragment>
+      <GlobalStyle />
       <ModalQr isShow={isShow} hideModal={hide} />
       <WraperContent>
         <ImageQR src={R.images.qr_code} onClick={show} />
