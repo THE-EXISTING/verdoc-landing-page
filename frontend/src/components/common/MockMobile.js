@@ -56,13 +56,11 @@ const ImageMockMobile = styled.div`
     transform: rotate(0deg);
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
     `}
 
   ${media.lessThan('medium')`
     max-width: 500px;
     background-size: 90% auto; 
-    height: 100%;
     `}
 `
 
