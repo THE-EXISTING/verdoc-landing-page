@@ -109,9 +109,11 @@ const LineInter = () => {
   const hide = () => setIsShow(false)
 
   const GlobalStyle = createGlobalStyle`
+
   body{
     overflow: ${isShow ? 'hidden' : 'visible'};
   }
+  
   `
   return (
     <Fragment>

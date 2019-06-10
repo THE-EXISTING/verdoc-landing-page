@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import R from '../resources/R'
+
 const BodyBackground = styled.div`
   
   width: 700px;
