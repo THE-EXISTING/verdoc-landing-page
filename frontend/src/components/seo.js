@@ -70,6 +70,7 @@ function SEO({ description, lang, meta, title, image, url }) {
       ].concat(meta)}
     >
       {' '}
+      <meta property="fb:app_id" content="1251069971724034" />
       <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
