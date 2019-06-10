@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
@@ -27,8 +27,8 @@ const WraperContent = styled.div`
 `
 
 const ImageQR = styled.img`
-  display: inline-block;
-  vertical-align: middle;
+  /* display: inline-block; */
+  /* vertical-align: middle; */
   width: 140px;
   height: 140px;
   cursor: pointer;
@@ -93,7 +93,7 @@ const IconVerdoc = styled.img`
 `
 const IconNameVerdoc = styled.img`
   margin-bottom: 0px;
-  display: block;
+  /* display: block; */
 `
 const TextLineBtn = styled.div`
   font-size: 1em;
@@ -113,10 +113,10 @@ const LineInter = () => {
   body{
     overflow: ${isShow ? 'hidden' : 'visible'};
   }
-  
+
   `
   return (
-    <Fragment>
+    <>
       <GlobalStyle />
       <ModalQr isShow={isShow} hideModal={hide} />
       <WraperContent>
@@ -137,7 +137,7 @@ const LineInter = () => {
           </WrapContentBtn>
         </ButtonLine>
       </WraperContent>
-    </Fragment>
+    </>
   )
 }
 

@@ -23,13 +23,11 @@ const TextOnBtnFront = styled.div`
   letter-spacing: 0.36px;
   margin-bottom: 0;
 `
-const TextBold = styled.div`
-  display: inline;
+const TextBold = styled.span`
   font-weight: bold;
 `
 const BtnSubscribe = styled(Button)`
   && {
-    
     height: 56px;
     font-size: 1em;
     border-width: 0;

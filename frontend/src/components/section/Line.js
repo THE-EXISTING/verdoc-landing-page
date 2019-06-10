@@ -19,8 +19,7 @@ const TextOnBtnFront = styled.div`
         margin-right: 3em;
     `}
 `
-const SetLowOpacity = styled.div`
-  display: inline;
+const SetLowOpacity = styled.span`
   opacity: 0.6;
 `
 const LinkLine = styled.a`
@@ -30,13 +29,11 @@ const LinkLine = styled.a`
   color: ${R.colors.line};
   text-decoration: underline;
 `
-const TextRed = styled.div`
-  display: inline;
+const TextRed = styled.span`
   font-weight: bold;
   color: ${R.colors.repeat};
 `
-const TextPurple = styled.div`
-  display: inline;
+const TextPurple = styled.span`
   font-weight: bold;
   color: ${R.colors.primary};
 `
