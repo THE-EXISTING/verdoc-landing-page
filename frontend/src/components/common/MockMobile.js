@@ -33,7 +33,6 @@ const BodyBackground = styled.div`
   ${media.greaterThan('1640px')`
     right: 210px;
   `}
-  
 `
 
 const ImageMockMobile = styled.div`

@@ -111,7 +111,6 @@ const LineInter = () => {
   const GlobalStyle = createGlobalStyle`
   body{
     overflow: ${isShow ? 'hidden' : 'visible'};
-    
   }
   `
   return (
