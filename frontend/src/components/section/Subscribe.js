@@ -29,6 +29,7 @@ const TextBold = styled.div`
 `
 const BtnSubscribe = styled(Button)`
   && {
+    
     height: 56px;
     font-size: 1em;
     border-width: 0;
