@@ -6,7 +6,7 @@ import Header from '../components/section/Header'
 import Subscribe from '../components/section/Subscribe'
 import Line from '../components/section/Line'
 import R from '../components/resources/R'
-import SEO from '../components/seo'
+import SEO from '../components/utility/Seo'
 
 const GlobalStyle = createGlobalStyle`
   
