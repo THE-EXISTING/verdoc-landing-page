@@ -5,7 +5,7 @@ import R from '../resources/R'
 
 const WraperForm = styled.div`
   display: inline-block;
-  top: 0;
+  top: 0px;
 `
 
 const TextFieldEmail = styled(TextField)`
