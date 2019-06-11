@@ -5,7 +5,7 @@ import R from '../resources/R'
 
 const WraperForm = styled.div`
   display: inline-block;
-  top: 0px;
+  top: 0;
 `
 
 const TextFieldEmail = styled(TextField)`
@@ -25,10 +25,44 @@ const TextFieldEmail = styled(TextField)`
   }
 `
 
-function TextFieldCustom({ handleTyping }) {
+function TextFieldCustom({
+  isExist,
+  isSubmit,
+  handleTyping,
+  handleEmail,
+  handleSubmit,
+}) {
+  const [isEmail, setIsEmail] = useState(true)
+  const [textError, setTextError] = useState('')
   const [values, setValues] = useState({
     value: '',
   })
+
+  const checkFormatEmail = email => {
+    let regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+    return regex.test(String(email).toLowerCase())
+  }
+
+  const validateEmail = email => {
+    if (email === '') {
+      setIsEmail(false)
+      handleEmail(false)
+      setTextError('Please, put your email.')
+    } else {
+      if (checkFormatEmail(email)) {
+        // true ,because this value is email format.
+        handleSubmit(false) // for ignore accept text
+        setIsEmail(true)
+        handleEmail(true)
+        setTextError('')
+      } else {
+        // not email format
+        setIsEmail(false)
+        handleEmail(false)
+        setTextError('Invalid email format.')
+      }
+    }
+  }
 
   const handleChangeText = name => event => {
     setValues({ ...values, [name]: event.target.value })
@@ -36,6 +70,7 @@ function TextFieldCustom({ handleTyping }) {
 
   useEffect(() => {
     handleTyping(values)
+    validateEmail(values.value)
   }, [values])
 
   return (
@@ -51,6 +86,16 @@ function TextFieldCustom({ handleTyping }) {
         placeholder="your@verdoc.io"
         margin="normal"
         variant="outlined"
+        error={isSubmit && !isEmail}
+        helperText={
+          isSubmit
+            ? !isEmail
+              ? textError
+              : isExist
+              ? 'You already subscribe Verdoc.'
+              : 'Thank you for subscribe Verdoc.'
+            : ''
+        }
       />
     </WraperForm>
   )

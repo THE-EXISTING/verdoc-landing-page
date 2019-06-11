@@ -55,29 +55,51 @@ const Cutter = styled.div`
 
 const Subscribe = props => {
   const [email, setEmail] = useState('')
+  const [emailReady, setEmailReady] = useState(false) // 0 is ready to subscribe
+  const [isExist, setIsExists] = useState(false)
+  const [isSubmit, setIsSubmit] = useState(false)
 
-  const handleSubmit = event => {
+  const callSubmited = event => {
     event.preventDefault()
-    if (email !== '') {
+    setIsSubmit(true)
+    if (emailReady) {
+      // check from child component (TextField) (look at callback)
+
       props.db
         .firestore()
         .collection('subscribers')
         .doc(email)
-        .set({
-          email: email,
-          timestamp: new Date().getTime(),
-          // timestamp: moment().format('x'),
-        })
-        .then(function() {
-          console.log('Subscribe success', email)
-        })
-        .catch(function(error) {
-          console.error('Error seting document: ', error)
+        .get()
+        .then(snapshot => {
+          if (snapshot.exists) {
+            // you already subscribe Verdoc.
+            setEmailReady(false) // give state = 1 => email is exists (not ready)
+            setIsExists(true) // tell textfield show text-error
+
+            console.log(snapshot)
+          } else {
+            // new subscribe Verdoc.
+            props.db
+              .firestore()
+              .collection('subscribers')
+              .doc(email)
+              .set({
+                email: email,
+                timestamp: new Date().getTime(),
+              })
+              .then(function() {
+                console.log('Subscribe success', email)
+              })
+              .catch(function(error) {
+                console.error('Error seting document: ', error)
+              })
+          }
         })
     }
   }
   const handleTyping = value => setEmail(value['value'])
-
+  const handleEmail = value => setEmailReady(value)
+  const handleSubmit = value => setIsSubmit(value)
   return (
     <WraperContent>
       <TextOnBtnFront>
@@ -92,11 +114,17 @@ const Subscribe = props => {
         </Cutter>
       </TextOnBtnFront>
       <WraperForm>
-        <TextField handleTyping={handleTyping} />
+        <TextField
+          handleTyping={handleTyping}
+          handleEmail={handleEmail}
+          handleSubmit={handleSubmit}
+          isExist={isExist}
+          isSubmit={isSubmit}
+        />
         <BtnSubscribe
           variant="outlined"
           size="large"
-          onClick={event => handleSubmit(event)}
+          onClick={event => callSubmited(event)}
         >
           subscribe
         </BtnSubscribe>
