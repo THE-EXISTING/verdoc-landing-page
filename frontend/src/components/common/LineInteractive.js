@@ -127,6 +127,7 @@ const LineInter = () => {
           href="line://ti/p/%40abr9961f"
           target="_blank"
           rel="noreferrer"
+          // This point use href on button because material-ui have api that to link url
         >
           <WrapContentBtn>
             <IconVerdoc src={R.images.btn_logo} />
