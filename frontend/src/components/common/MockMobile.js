@@ -16,7 +16,7 @@ const BodyBackground = styled.div`
 
   ${media.lessThan('medium')`
     margin-top: 60px;
-    top:0px;
+    top: 0;
     width: 100vw;
     height: 400px;
     position: relative;  
@@ -24,7 +24,7 @@ const BodyBackground = styled.div`
 
   ${media.between('medium', 'large')`
     margin-top: 120px;
-    top:0px;
+    top:0;
     width: 100vw;
     height: 600px;
     display: block;
@@ -56,7 +56,7 @@ const ImageMockMobile = styled.div`
     transform: rotate(0deg);
     margin-left: auto;
     margin-right: auto;
-    `}
+  `}
 
   ${media.lessThan('medium')`
     max-width: 500px;

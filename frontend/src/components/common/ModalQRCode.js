@@ -43,7 +43,8 @@ const IconCancel = styled.img`
   z-index: 4;
 
   ${media.lessThan('medium')`
-    width: 44px;`}
+    width: 44px;
+  `}
 `
 
 const Modal = ({ isShow, hideModal }) =>
