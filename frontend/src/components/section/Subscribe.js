@@ -61,10 +61,8 @@ const Subscribe = props => {
 
   const callSubmited = event => {
     event.preventDefault()
-    setIsSubmit(true)
     if (emailReady) {
       // check from child component (TextField) (look at callback)
-
       props.db
         .firestore()
         .collection('subscribers')
@@ -73,12 +71,16 @@ const Subscribe = props => {
         .then(snapshot => {
           if (snapshot.exists) {
             // you already subscribe Verdoc.
+            setIsSubmit(true)
             setEmailReady(false) // give state = 1 => email is exists (not ready)
             setIsExists(true) // tell textfield show text-error
 
             console.log(snapshot)
           } else {
             // new subscribe Verdoc.
+            setIsSubmit(true)
+            setEmailReady(true)
+            setIsExists(false)
             props.db
               .firestore()
               .collection('subscribers')
@@ -95,6 +97,8 @@ const Subscribe = props => {
               })
           }
         })
+    } else {
+      setIsSubmit(true)
     }
   }
   const handleTyping = value => setEmail(value['value'])
