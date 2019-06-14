@@ -28,6 +28,7 @@ const BodyBackground = styled.div`
     top:0;
     width: 100vw;
     height: 600px;
+    /* height: 1000px; */
     display: block;
     position: relative;  
   `}
@@ -35,6 +36,11 @@ const BodyBackground = styled.div`
   ${media.greaterThan('1640px')`
     right: 210px;
   `}
+
+  @media (min-height: 1500px){
+    height: 880px;
+  }
+
 `
 
 const ImageMockMobile = styled.div`
