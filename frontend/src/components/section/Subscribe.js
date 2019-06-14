@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import TextField from '../common/TextField'
 import R from '../resources/R'
 
@@ -28,6 +29,7 @@ const TextBold = styled.span`
 `
 const BtnSubscribe = styled(Button)`
   && {
+    width: 120px;
     height: 56px;
     font-size: 1em;
     border-width: 0;
@@ -52,17 +54,21 @@ const Cutter = styled.div`
     display: block;
 `}
 `
-
+const LoadingCircle = styled(CircularProgress)`
+  width: 20px;
+`
 const Subscribe = props => {
   const [email, setEmail] = useState('')
   const [emailReady, setEmailReady] = useState(false) // 0 is ready to subscribe
   const [isExist, setIsExists] = useState(false)
   const [isSubmit, setIsSubmit] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const callSubmited = event => {
     event.preventDefault()
     if (emailReady) {
       // check from child component (TextField) (look at callback)
+      setLoading(true)
       props.db
         .firestore()
         .collection('subscribers')
@@ -74,13 +80,14 @@ const Subscribe = props => {
             setIsSubmit(true)
             setEmailReady(false) // give state = 1 => email is exists (not ready)
             setIsExists(true) // tell textfield show text-error
-
+            setLoading(false)
             console.log(snapshot)
           } else {
             // new subscribe Verdoc.
             setIsSubmit(true)
             setEmailReady(true)
             setIsExists(false)
+            setLoading(false)
             props.db
               .firestore()
               .collection('subscribers')
@@ -130,7 +137,7 @@ const Subscribe = props => {
           size="large"
           onClick={event => callSubmited(event)}
         >
-          subscribe
+          {loading ? <LoadingCircle color="white" /> : 'subscribe'}
         </BtnSubscribe>
       </WraperForm>
     </WraperContent>
