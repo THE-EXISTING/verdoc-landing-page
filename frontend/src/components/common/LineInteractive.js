@@ -93,12 +93,12 @@ const IconVerdoc = styled.img`
 `
 const IconNameVerdoc = styled.img`
   margin-bottom: 0px;
-  /* display: block; */
 `
 const TextLineBtn = styled.div`
+  line-height: 1.25;
   font-size: 1em;
   height: 15px;
-  margin: 2px 0 0 4px;
+  margin: 0 0 0 4px;
   color: ${R.colors.line};
   font-weight: bold;
 `

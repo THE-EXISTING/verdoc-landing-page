@@ -19,6 +19,7 @@ const BodyBackground = styled.div`
     top: 0;
     width: 100vw;
     height: 400px;
+    /* height: 600px; */
     position: relative;  
   `}
 
@@ -59,7 +60,7 @@ const ImageMockMobile = styled.div`
   `}
 
   ${media.lessThan('medium')`
-    max-width: 500px;
+    /* max-width: 500px; */
     background-size: 90% auto; 
     `}
 `
