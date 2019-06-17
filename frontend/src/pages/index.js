@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { getFirebase } from '../components/utility/Firebase'
+import Navbar from '../components/common/Navbar'
 import MockMobile from '../components/common/MockMobile'
 import Header from '../components/section/Header'
 import Subscribe from '../components/section/Subscribe'
@@ -77,7 +78,9 @@ const IndexPage = () => {
         image={R.images.og_image}
       />
       <GlobalStyle />
+
       <BodyBackground>
+        <Navbar />
         <Header />
         <Subscribe db={firestore} />
         <Line />
