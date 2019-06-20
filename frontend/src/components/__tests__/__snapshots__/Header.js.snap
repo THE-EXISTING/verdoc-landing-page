@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+Array [
+  <div
+    className="sc-bdVaJa drSgpp"
+  >
+    <img
+      className="sc-bwzfXH epXkfd"
+      src="test-file-stub"
+    />
+    <img
+      className="sc-htpNat cufXnE"
+      src="test-file-stub"
+    />
+  </div>,
+  <p
+    className="sc-bxivhb bVYwQk"
+  >
+    Make your company paperless.
+  </p>,
+  <p
+    className="sc-ifAKCX fieTJm"
+  >
+    Stay tuned
+    <span
+      className="sc-EHOje idUFqY"
+    >
+      .
+    </span>
+    <span
+      className="sc-EHOje idUFqY"
+    >
+      .
+    </span>
+    <span
+      className="sc-EHOje idUFqY"
+    >
+      .
+    </span>
+  </p>,
+]
+`;

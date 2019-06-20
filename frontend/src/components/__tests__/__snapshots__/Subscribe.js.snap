@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Subscribe renders correctly 1`] = `
+<div
+  className="sc-htpNat gtHyGp"
+>
+  <div
+    className="sc-ifAKCX kntUZg"
+  >
+    <div
+      className="sc-gzVnrw Pltlk"
+    >
+      Please subscribe to get 
+    </div>
+    <div
+      className="sc-gzVnrw Pltlk"
+    >
+      <span
+        className="sc-EHOje fPRgQt"
+      >
+        free 3 month usage.
+        <span
+          aria-label="money"
+          role="img"
+        >
+          💰💰💰
+        </span>
+      </span>
+    </div>
+  </div>
+  <div
+    className="sc-bxivhb hOBMUX"
+  >
+    <div
+      className="sc-bdVaJa iILNGh"
+    >
+      <div
+        className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root sc-bwzfXH fsszKJ"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+          data-shrink={false}
+          htmlFor="standard-name"
+        >
+          Email
+        </label>
+        <div
+          className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          onClick={[Function]}
+        >
+          <fieldset
+            aria-hidden={true}
+            className="PrivateNotchedOutline-root-54 MuiOutlinedInput-notchedOutline"
+            style={
+              Object {
+                "paddingLeft": 8,
+              }
+            }
+          >
+            <legend
+              className="PrivateNotchedOutline-legend-55"
+              style={
+                Object {
+                  "width": 0.01,
+                }
+              }
+            >
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&#8203;",
+                  }
+                }
+              />
+            </legend>
+          </fieldset>
+          <input
+            aria-invalid={false}
+            autoComplete="email"
+            className="MuiInputBase-input MuiOutlinedInput-input"
+            disabled={false}
+            id="standard-name"
+            name="email"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            placeholder="your@verdoc.io"
+            required={false}
+            type="email"
+            value=""
+          />
+        </div>
+        
+      </div>
+    </div>
+    <button
+      className="MuiButtonBase-root MuiButton-root sc-bZQynM ijCzVY MuiButton-outlined MuiButton-sizeLarge"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        subscribe
+      </span>
+    </button>
+  </div>
+</div>
+`;

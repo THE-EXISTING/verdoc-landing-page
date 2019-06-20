@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Line renders correctly 1`] = `
+<div
+  className="sc-gqjmRU kehxiU"
+>
+  <div
+    className="sc-VigVT gypDXo"
+  >
+    <span
+      className="sc-jTzLTM gQYRF"
+    >
+      Just scan
+    </span>
+    <span
+      className="sc-jzJRlG cJzsTM"
+    >
+      !!
+    </span>
+     
+    <span
+      className="sc-jTzLTM gQYRF"
+    >
+      on
+    </span>
+     
+    <a
+      className="sc-fjdhpX bZMazs"
+      href="https://line.me/"
+      target="_blank"
+    >
+      Line
+    </a>
+     
+    <span
+      className="sc-jTzLTM gQYRF"
+    >
+       application and use 
+    </span>
+    <span
+      className="sc-cSHVUG jtAWWs"
+    >
+      Verdoc.
+    </span>
+  </div>
+  <div
+    className="sc-bxivhb fpYHvD"
+  >
+    <img
+      className="sc-ifAKCX hDmxfN"
+      onClick={[Function]}
+      src="test-file-stub"
+    />
+    <p
+      className="sc-EHOje gRMGc"
+    >
+      or
+    </p>
+    <a
+      aria-disabled={false}
+      className="MuiButtonBase-root MuiButton-root sc-bZQynM hZkxnO MuiButton-outlined"
+      href="line://ti/p/%40abr9961f"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      rel="noreferrer"
+      role="button"
+      tabIndex={0}
+      target="_blank"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        <div
+          className="sc-gzVnrw dDoANy"
+        >
+          <img
+            className="sc-dnqmqq cUevqg"
+            src="test-file-stub"
+          />
+          <div
+            className="sc-htoDjs ufayu"
+          >
+            <img
+              className="sc-iwsKbI dLTHSh"
+              src="test-file-stub"
+            />
+            <div
+              className="sc-gZMcBi jDZGjU"
+            >
+              LINE@
+            </div>
+          </div>
+        </div>
+      </span>
+    </a>
+  </div>
+</div>
+`;
