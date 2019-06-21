@@ -9,7 +9,7 @@ const BgModal = styled.div`
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 3;
+  z-index: 200;
 
   &:hover {
     cursor: url(${R.images.ic_cancel}) 205 205, auto;

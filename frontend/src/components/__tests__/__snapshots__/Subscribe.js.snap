@@ -1,22 +1,106 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Subscribe renders correctly 1`] = `
+exports[`Render Subscribe => renders correctly 1`] = `
+.c5 {
+  display: inline-block;
+  top: 0;
+}
+
+.c6.c6 {
+  width: 50vw;
+  max-width: 352px;
+  height: 56px;
+  font-size: 1.6rem;
+  padding-top: 0;
+  background-color: #FFF;
+  margin: 0 0.5em 0 auto;
+}
+
+.c6.c6:hover {
+  border-width: 2px;
+}
+
+.c0 {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.c4 {
+  margin-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  opacity: 0.6;
+  font-size: 1em;
+  color: #000000;
+  -webkit-letter-spacing: 0.36px;
+  -moz-letter-spacing: 0.36px;
+  -ms-letter-spacing: 0.36px;
+  letter-spacing: 0.36px;
+  margin-bottom: 0;
+}
+
+.c3 {
+  font-weight: bold;
+}
+
+.c7.c7 {
+  width: 120px;
+  height: 56px;
+  font-size: 1em;
+  border-width: 0;
+  display: inline-block;
+  text-transform: lowercase;
+  color: #FFF;
+  background-color: #5856d6;
+}
+
+.c7.c7:hover {
+  background-color: #5856d6 !important;
+  -webkit-box-shadow: 0.75px 0.75px 5.5px 0.75px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0.75px 0.75px 5.5px 0.75px rgba(0,0,0,0.45);
+  box-shadow: 0.75px 0.75px 5.5px 0.75px rgba(0,0,0,0.45);
+}
+
+.c2 {
+  display: inline;
+}
+
+@media (max-width:768px) {
+  .c2 {
+    display: block;
+  }
+}
+
 <div
-  className="sc-htpNat gtHyGp"
+  className="c0"
 >
   <div
-    className="sc-ifAKCX kntUZg"
+    className="c1"
   >
     <div
-      className="sc-gzVnrw Pltlk"
+      className="c2"
     >
       Please subscribe to get 
     </div>
     <div
-      className="sc-gzVnrw Pltlk"
+      className="c2"
     >
       <span
-        className="sc-EHOje fPRgQt"
+        className="c3"
       >
         free 3 month usage.
         <span
@@ -29,13 +113,13 @@ exports[`Subscribe renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-bxivhb hOBMUX"
+    className="c4"
   >
     <div
-      className="sc-bdVaJa iILNGh"
+      className="c5"
     >
       <div
-        className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root sc-bwzfXH fsszKJ"
+        className="MuiFormControl-root MuiTextField-root c6 MuiFormControl-marginNormal"
       >
         <label
           className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -50,7 +134,7 @@ exports[`Subscribe renders correctly 1`] = `
         >
           <fieldset
             aria-hidden={true}
-            className="PrivateNotchedOutline-root-54 MuiOutlinedInput-notchedOutline"
+            className="PrivateNotchedOutline-root-141 MuiOutlinedInput-notchedOutline"
             style={
               Object {
                 "paddingLeft": 8,
@@ -58,7 +142,7 @@ exports[`Subscribe renders correctly 1`] = `
             }
           >
             <legend
-              className="PrivateNotchedOutline-legend-55"
+              className="PrivateNotchedOutline-legend-142"
               style={
                 Object {
                   "width": 0.01,
@@ -94,10 +178,11 @@ exports[`Subscribe renders correctly 1`] = `
       </div>
     </div>
     <button
-      className="MuiButtonBase-root MuiButton-root sc-bZQynM ijCzVY MuiButton-outlined MuiButton-sizeLarge"
+      className="MuiButtonBase-root MuiButton-root c7 MuiButton-outlined MuiButton-sizeLarge"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
+      onDragEnd={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}

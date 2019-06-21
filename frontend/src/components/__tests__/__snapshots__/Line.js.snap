@@ -61,6 +61,7 @@ exports[`Line renders correctly 1`] = `
       className="MuiButtonBase-root MuiButton-root sc-bZQynM hZkxnO MuiButton-outlined"
       href="line://ti/p/%40abr9961f"
       onBlur={[Function]}
+      onDragEnd={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
