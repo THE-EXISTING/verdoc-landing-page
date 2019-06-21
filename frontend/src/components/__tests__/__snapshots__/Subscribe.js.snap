@@ -120,6 +120,7 @@ exports[`Render Subscribe => renders correctly 1`] = `
     >
       <div
         className="MuiFormControl-root MuiTextField-root c6 MuiFormControl-marginNormal"
+        data-testid="textfield"
       >
         <label
           className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -179,6 +180,7 @@ exports[`Render Subscribe => renders correctly 1`] = `
     </div>
     <button
       className="MuiButtonBase-root MuiButton-root c7 MuiButton-outlined MuiButton-sizeLarge"
+      data-testid="btn_submit"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}

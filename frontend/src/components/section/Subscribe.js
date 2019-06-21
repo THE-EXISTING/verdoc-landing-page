@@ -133,6 +133,7 @@ const Subscribe = props => {
           isSubmit={isSubmit}
         />
         <BtnSubscribe
+          data-testid="btn_submit"
           variant="outlined"
           size="large"
           onClick={event => callSubmited(event)}

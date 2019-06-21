@@ -18,7 +18,7 @@ const BgModal = styled.div`
 const ImageQrCode = styled.img`
   width: 504px;
   height: auto;
-  z-index: 4;
+  z-index: 204;
   position: fixed;
   top: 50%;
   left: 50%;
