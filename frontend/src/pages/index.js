@@ -1,11 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import Navbar from '../components/common/Navbar'
+import Header from '../components/section/Landing/Header'
 import R from '../components/resources/R'
 import SEO from '../components/utility/Seo'
 
 const GlobalStyle = createGlobalStyle`
-  body{font-family: ${R.fonts.text.name};}
+  body{
+    font-family: ${R.fonts.text.name};
+  }
+  
+`
+const ContainerGlobal = styled.div`
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 `
 
 const IndexPage = () => (
@@ -17,7 +29,11 @@ const IndexPage = () => (
       image={R.images.og_image}
     />
     <GlobalStyle />
-    <Navbar />
+
+    <ContainerGlobal>
+      <Navbar />
+      <Header />
+    </ContainerGlobal>
   </>
 )
 
