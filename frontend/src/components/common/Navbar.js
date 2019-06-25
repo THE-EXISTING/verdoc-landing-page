@@ -5,10 +5,23 @@ import { Link } from 'gatsby'
 import R from '../resources/R'
 
 const LinkText = styled(Link)`
-  color: ${R.colors.primary};
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: ${R.colors.text};
+  opacity: 0.3;
   text-decoration: none;
   margin-right: 3rem;
-  border-bottom: 2px solid ${R.colors.primary};
+  height: 20px;
+  &:hover {
+    color: ${R.colors.primary};
+    opacity: 1;
+  }
+  &.active {
+    color: ${R.colors.primary};
+    opacity: 1;
+    border-bottom: 2px solid ${R.colors.primary};
+  }
 
   ${media.lessThan('medium')`
   margin-right: 2rem;
@@ -16,10 +29,15 @@ const LinkText = styled(Link)`
 `
 
 const ExternalLink = styled.a`
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 20px;
   color: ${R.colors.text};
   opacity: 0.3;
   text-decoration: none;
   margin-right: 3rem;
+  cursor: pointer;
 
   &:hover {
     color: ${R.colors.primary};
@@ -72,11 +90,18 @@ const Navbar = () => {
   return (
     <Container isDown={isDown}>
       <BoxRight>
-        <ExternalLink href="https://docs.verdoc.io/"> Home</ExternalLink>
-        <LinkText to="/"> Subscribe</LinkText>
-        <ExternalLink href="https://docs.verdoc.io/docs/api_ref/login_token_api/issue-access-token/">
+        <LinkText activeClassName="active" to="/">
+          Home
+        </LinkText>
+        <LinkText activeClassName="active" to="/subscribe">
+          Subscribe
+        </LinkText>
+        <ExternalLink href="https://docs.verdoc.io/docs/api_ref/login_token_api/about-access-token/">
           Docs
         </ExternalLink>
+        {/* <ExternalLink href="https://docs.verdoc.io/"> Home</ExternalLink>
+        <LinkText to="/"> Subscribe</LinkText>
+         */}
       </BoxRight>
     </Container>
   )
