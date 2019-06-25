@@ -13,10 +13,12 @@ const LinkText = styled(Link)`
   text-decoration: none;
   margin-right: 3rem;
   height: 20px;
+
   &:hover {
     color: ${R.colors.primary};
     opacity: 1;
   }
+
   &.active {
     color: ${R.colors.primary};
     opacity: 1;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
-import R from '../resources/R'
+import R from '../../resources/R'
 
 const WraperHeader = styled.div`
   padding-top: 7em;

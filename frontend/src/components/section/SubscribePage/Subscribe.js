@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import TextField from '../common/TextField'
-import R from '../resources/R'
+import TextField from '../../common/TextField'
+import R from '../../resources/R'
 
 const WraperContent = styled.div`
   margin-top: 2rem;
