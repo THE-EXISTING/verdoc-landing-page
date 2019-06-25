@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import LineInteractive from '../common/LineInteractive'
-import R from '../resources/R'
+import LineInteractive from '../../common/LineInteractive'
+import R from '../../resources/R'
 
 const WraperContent = styled.div`
   margin-top: 3.1rem;

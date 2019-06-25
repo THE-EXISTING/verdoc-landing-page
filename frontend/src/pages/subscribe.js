@@ -3,19 +3,15 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { getFirebase } from '../components/utility/Firebase'
 import Navbar from '../components/common/Navbar'
 import MockMobile from '../components/common/MockMobile'
-import Header from '../components/section/Header'
-import Subscribe from '../components/section/Subscribe'
-import Line from '../components/section/Line'
+import Header from '../components/section/SubscribePage/Header'
+import Subscribe from '../components/section/SubscribePage/Subscribe'
+import Line from '../components/section/SubscribePage/Line'
 import R from '../components/resources/R'
 import SEO from '../components/utility/Seo'
 
 const GlobalStyle = createGlobalStyle`
   
-
   body{
-      
-      /* font-size: 62.5%;  */
-      /* base font-size in html is 16px => map to 10px */
       font-family: ${R.fonts.text.name};
       background-color: transparent;
       background-image: linear-gradient(
@@ -58,7 +54,7 @@ const BodyBackground = styled.div`
   overflow: hidden;
 `
 
-const IndexPage = () => {
+const SubscribePage = () => {
   // const [modalActive, setModalActive] = useState(fa)
   const [firestore, setFirestore] = useState({})
   useEffect(() => {
@@ -90,4 +86,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default SubscribePage
