@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import R from '../resources/R'
 
 const FeatureCard = styled.div`
-  font-family: verdana;
   cursor: pointer;
   width: 350px;
   height: 250px;

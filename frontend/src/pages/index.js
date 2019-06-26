@@ -5,6 +5,7 @@ import Header from '../components/section/Landing/Header'
 import MvpFeatures from '../components/section/Landing/Mvp'
 import Works from '../components/section/Landing/Works'
 import Partner from '../components/section/Landing/Partner'
+import Reason from '../components/section/Landing/Reason'
 
 import R from '../components/resources/R'
 import SEO from '../components/utility/Seo'
@@ -41,6 +42,7 @@ const IndexPage = () => (
       <MvpFeatures />
       <Works />
       <Partner />
+      <Reason />
     </ContainerGlobal>
   </>
 )

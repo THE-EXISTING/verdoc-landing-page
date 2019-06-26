@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import BtnFeature from '../../common/ButtonFeature'
 import TopicText from '../../common/TopicText'
-import R from '../../resources/R'
 
 const WrapContainer = styled.div`
   display: flex;
