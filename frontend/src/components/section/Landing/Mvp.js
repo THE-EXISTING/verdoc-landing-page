@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import CardMvp from '../../common/Cardmvp'
-import R from '../../resources/R'
 
 const ContainerMvp = styled.div`
   display: flex;

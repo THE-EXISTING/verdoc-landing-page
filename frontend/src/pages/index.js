@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import Navbar from '../components/common/Navbar'
 import Header from '../components/section/Landing/Header'
+import MvpFeatures from '../components/section/Landing/Mvp'
+import Works from '../components/section/Landing/Works'
+
 import R from '../components/resources/R'
 import SEO from '../components/utility/Seo'
-import MvpFeatures from '../components/section/Landing/Mvp'
+
 const GlobalStyle = createGlobalStyle`
   body{
     font-family: ${R.fonts.text.name};
+    margin: 0;
   }
   
 `
 const ContainerGlobal = styled.div`
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -34,6 +38,7 @@ const IndexPage = () => (
       <Navbar />
       <Header />
       <MvpFeatures />
+      <Works />
     </ContainerGlobal>
   </>
 )
