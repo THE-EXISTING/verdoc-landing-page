@@ -4,7 +4,7 @@ import Navbar from '../components/common/Navbar'
 import Header from '../components/section/Landing/Header'
 import R from '../components/resources/R'
 import SEO from '../components/utility/Seo'
-
+import MvpFeatures from '../components/section/Landing/Mvp'
 const GlobalStyle = createGlobalStyle`
   body{
     font-family: ${R.fonts.text.name};
@@ -33,6 +33,7 @@ const IndexPage = () => (
     <ContainerGlobal>
       <Navbar />
       <Header />
+      <MvpFeatures />
     </ContainerGlobal>
   </>
 )

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import R from '../../resources/R'
 const TopicPrimary = styled.p`
   margin: 4rem auto;
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: ${R.colors.primary};
   letter-spacing: 0.71px;
 `
