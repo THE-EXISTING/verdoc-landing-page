@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import R from '../resources/R'
 
 const FeatureCard = styled.div`
-  margin: 1rem;
+  font-family: verdana;
+  cursor: pointer;
   width: 350px;
   height: 250px;
   border: 1px solid
@@ -11,12 +12,17 @@ const FeatureCard = styled.div`
   background-color: ${props =>
     props.isPrimary ? R.colors.primary : 'transparent'};
   border-radius: 6px;
-
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+
+  &:hover {
+    opacity: 0.8;
+    background-color: ${R.colors.primary};
+  }
 `
 
 const Icon = styled.img`
@@ -36,6 +42,7 @@ const FeatureDetail = styled.p`
 `
 
 const HorizontalRule = styled.hr`
+  /* border-width: 1px; */
   width: 70%;
 `
 
