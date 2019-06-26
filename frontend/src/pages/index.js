@@ -4,6 +4,7 @@ import Navbar from '../components/common/Navbar'
 import Header from '../components/section/Landing/Header'
 import MvpFeatures from '../components/section/Landing/Mvp'
 import Works from '../components/section/Landing/Works'
+import Partner from '../components/section/Landing/Partner'
 
 import R from '../components/resources/R'
 import SEO from '../components/utility/Seo'
@@ -39,6 +40,7 @@ const IndexPage = () => (
       <Header />
       <MvpFeatures />
       <Works />
+      <Partner />
     </ContainerGlobal>
   </>
 )

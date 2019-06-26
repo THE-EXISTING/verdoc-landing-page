@@ -31,8 +31,6 @@ const LinkText = styled(Link)`
 `
 
 const ExternalLink = styled.a`
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 20px;
   color: ${R.colors.text};

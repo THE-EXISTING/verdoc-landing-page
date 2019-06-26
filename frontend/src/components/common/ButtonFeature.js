@@ -7,7 +7,8 @@ const CardBtn = styled(Button)`
   && {
     font-size: 0.8em;
     color: ${R.colors.primary};
-    padding-left: 0.8em;
+    padding: 0.1rem 0.8rem;
+    margin: auto 1rem;
   }
 `
 

@@ -11,5 +11,6 @@ const colors = {
   bg_modal: 'rgba(9, 9, 22, 0.8)',
   bg_btn_line: 'rgba(255,255,255,1)',
   bg_btn_line_hover: 'rgba(0,0,0,.2)',
+  bg_partner_section: 'rgb(0,0,0,.08)',
 }
 export default colors

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BtnFeature from '../../common/ButtonFeature'
+import TopicText from '../../common/TopicText'
 import R from '../../resources/R'
 
 const WrapContainer = styled.div`
@@ -9,22 +10,21 @@ const WrapContainer = styled.div`
   align-items: center;
 `
 
-const TopicText = styled.p`
-  font-size: 1.5rem;
-  color: ${R.colors.text};
-`
-
 const WrapFeatures = styled.div`
-  margin: 0.8rem auto;
-  width: 40%;
-  max-width: 500px;
+  margin: 0.6rem auto;
+  /* width: 40%; */
+  /* max-width: 500px; */
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 `
 
 const WorksLanding = () => (
   <WrapContainer>
-    <TopicText>Sign a example document to see how verdoc works.</TopicText>
+    <TopicText
+      text="Sign a example document to see how verdoc works."
+      isPrimary={false}
+    />
     <WrapFeatures>
       <BtnFeature nameFeature="LETTER" iconSvg={null} />
       <BtnFeature nameFeature="CONTRACT" iconSvg={null} />
