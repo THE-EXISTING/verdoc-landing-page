@@ -11,6 +11,17 @@ import R from '../components/resources/R'
 import SEO from '../components/utility/Seo'
 
 const GlobalStyle = createGlobalStyle`
+
+  @font-face{
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf');
+  }
+
+  @font-face{
+    font-family: 'RobotoSlab-Regular';
+    src: url('../fonts/RobotoSlab-Regular.ttf');
+  }
+
   body{
     font-family: ${R.fonts.text.name};
     margin: 0;

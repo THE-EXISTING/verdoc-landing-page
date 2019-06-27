@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import R from '../resources/R'
 
 const FeatureCard = styled.div`
+  font-family: 'Roboto-Regular';
   cursor: pointer;
-  width: 350px;
-  height: 250px;
+  width: 340px;
+  height: 220px;
   border: 1px solid
     ${props => (props.isPrimary ? R.colors.primary : R.colors.gray)};
   background-color: ${props =>
@@ -31,12 +32,12 @@ const Icon = styled.img`
 `
 
 const FeatureName = styled.p`
-  font-size: 1.1em;
+  font-size: 1rem;
   color: ${props => (props.isPrimary ? R.colors.white : R.colors.primary)};
 `
 
 const FeatureDetail = styled.p`
-  font-size: 0.9em;
+  font-size: 0.75em;
   color: ${props => (props.isPrimary ? R.colors.white : R.colors.text)};
 `
 

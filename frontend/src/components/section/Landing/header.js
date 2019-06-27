@@ -1,25 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 import R from '../../resources/R'
+import TextDetail from '../../common/DetailText'
+
 const TopicPrimary = styled.p`
-  margin: 4rem auto;
-  font-size: 2.4rem;
+  font-family: Courier;
+  margin: 4.2rem auto 2rem auto;
+  font-size: 3rem;
   color: ${R.colors.primary};
-  letter-spacing: 0.71px;
+  letter-spacing: 0.35px;
 `
 
 const TopicText = styled.p`
   white-space: nowrap;
-  opacity: 0.6;
-  font-size: 1.6rem;
-  color: ${R.colors.text};
-  letter-spacing: 0.12px;
-`
-
-const TextDescribe = styled.p`
-  opacity: 0.6;
-  font-size: 0.95rem;
-  color: ${R.colors.text};
+  font-family: 'RobotoSlab-Regular';
+  font-size: 1.8rem;
+  color: ${R.colors.text_gray};
+  letter-spacing: 0.25px;
+  margin: 1.2rem auto;
 `
 
 const HeaderLanding = () => (
@@ -27,9 +25,7 @@ const HeaderLanding = () => (
     <TopicPrimary>Verdoc</TopicPrimary>
     <TopicText>The best way to sign documents</TopicText>
     <TopicText>Easy - Fast - Secure</TopicText>
-    <TextDescribe>
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    </TextDescribe>
+    <TextDetail textDetail="Verdoc is a blockchain service for legally secure signing any documents, invoices, or agreements that is important to your business." />
   </>
 )
 export default HeaderLanding
