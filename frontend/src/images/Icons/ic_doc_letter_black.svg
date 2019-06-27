@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+  <defs>
+    <path id="prefix__ic_doc_letter_black-a" d="M22.232 4.019c.412 0 .746.334.746.745v14.487a.745.745 0 0 1-.746.746H1.745A.745.745 0 0 1 1 19.25V4.764c0-.411.334-.745.745-.745h20.487zm-.745 14.487V5.51H2.491v12.997h18.996zM4.443 9.02a.745.745 0 1 1 .782-1.269l6.764 4.167 6.763-4.167a.745.745 0 1 1 .782 1.27l-7.154 4.407a.744.744 0 0 1-.782 0L4.443 9.02z"/>
+  </defs>
+  <use xlink:href="#prefix__ic_doc_letter_black-a"/>
+</svg>

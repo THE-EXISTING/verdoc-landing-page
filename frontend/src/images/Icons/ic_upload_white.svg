@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+  <defs>
+    <path id="prefix__ic_upload_white-a" d="M18.738 10.537C21.12 10.702 23 12.663 23 15.083a4.585 4.585 0 0 1-4.583 4.584H6.5a5.504 5.504 0 0 1-5.5-5.5 5.495 5.495 0 0 1 4.904-5.464A6.871 6.871 0 0 1 12 5a6.866 6.866 0 0 1 6.738 5.537zm-4.905 2.713h2.75L12 8.667 7.417 13.25h2.75v3.667h3.666V13.25z"/>
+  </defs>
+  <use fill="#FFF" xlink:href="#prefix__ic_upload_white-a"/>
+</svg>

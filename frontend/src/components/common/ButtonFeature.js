@@ -5,23 +5,22 @@ import R from '../resources/R'
 
 const CardBtn = styled(Button)`
   && {
-    font-size: 0.8em;
+    display: flex;
     color: ${R.colors.primary};
-    padding: 0.1rem 0.8rem;
+    padding: 0.1rem 0.5rem;
     margin: auto 1rem;
   }
 `
 
 const IconFeature = styled.img`
-  width: 10px;
-  height: 10px;
-  background: ${R.colors.primary};
+  width: 18px;
+  height: 18px;
   margin-right: 0.38rem;
 `
 
 const BtnFeature = props => (
   <CardBtn variant="outlined">
-    <IconFeature />
+    {props.pathIcon ? <IconFeature src={props.pathIcon} /> : null}
     {props.nameFeature}
   </CardBtn>
 )

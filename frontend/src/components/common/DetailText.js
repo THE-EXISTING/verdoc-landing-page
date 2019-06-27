@@ -7,11 +7,12 @@ const StyleDetail = styled.p`
   font-size: 1rem;
   color: ${R.colors.text_gray};
   letter-spacing: 0.5px;
-  line-height: 28px;
+  width: 52%;
+  margin: 2rem auto;
 `
 
 const TextDetail = props => {
-  return <StyleDetail>{props.textDetail}</StyleDetail>
+  return <StyleDetail>{props.text}</StyleDetail>
 }
 
 export default TextDetail

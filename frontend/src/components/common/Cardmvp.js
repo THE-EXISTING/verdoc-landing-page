@@ -20,15 +20,15 @@ const FeatureCard = styled.div`
   position: relative;
 
   &:hover {
-    opacity: 0.8;
-    background-color: ${R.colors.primary};
+    background-color: ${props =>
+      props.isPrimary ? R.colors.mvp_verify_hover : R.colors.mvp_sign_hover};
   }
 `
 
 const Icon = styled.img`
-  width: 30px;
-  height: 30px;
-  background-color: blue;
+  width: 1.6rem;
+  height: 1.6rem;
+  /* background-color: blue; */
 `
 
 const FeatureName = styled.p`
@@ -38,7 +38,7 @@ const FeatureName = styled.p`
 
 const FeatureDetail = styled.p`
   font-size: 0.75em;
-  color: ${props => (props.isPrimary ? R.colors.white : R.colors.text)};
+  color: ${props => (props.isPrimary ? R.colors.white : R.colors.text_gray)};
 `
 
 const HorizontalRule = styled.hr`
@@ -46,25 +46,15 @@ const HorizontalRule = styled.hr`
   width: 70%;
 `
 
-const IconBottom = styled.img`
-  width: 15px;
-  height: 15px;
-  background-color: red;
-  position: absolute;
-  right: 0.8rem;
-  bottom: 0.8rem;
-  z-index: 2;
-`
 const CardMvplanding = props => (
   <>
     <FeatureCard isPrimary={props.isPrimary}>
-      <Icon />
+      <Icon src={props.icPath} />
       <FeatureName isPrimary={props.isPrimary}>{props.featureName}</FeatureName>
       <HorizontalRule />
       <FeatureDetail isPrimary={props.isPrimary}>
         {props.featureDetail}
       </FeatureDetail>
-      {props.showIcon ? <IconBottom /> : null}
     </FeatureCard>
   </>
 )

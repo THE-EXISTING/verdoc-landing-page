@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+  <defs>
+    <path id="prefix__ic_qr_code_primary-a" d="M7 17v2H5v-2h2zM7 5v2H5V5h2zm12 0v2h-2V5h2zM3 20.984h6V15H3v5.984zM3 9h6V3H3v6zm12 0h6V3h-6v6zm-4 4v10H1V13h10zm8 8v2h-2v-2h2zm4 0v2h-2v-2h2zm0-8v6h-6v-2h-2v6h-2V13h6v2h2v-2h2zM11 1v10H1V1h10zm12 0v10H13V1h10z"/>
+  </defs>
+  <use fill="#5856D6" xlink:href="#prefix__ic_qr_code_primary-a"/>
+</svg>

@@ -12,7 +12,7 @@ const WrapCard = styled.div`
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-
+  padding: 1rem;
   &:hover {
     border: 2px solid ${R.colors.primary};
     border-radius: 6px;
@@ -20,23 +20,25 @@ const WrapCard = styled.div`
 `
 
 const TextReason = styled.p`
+  font-family: 'RobotoSlab-Regular';
   font-size: 1rem;
   color: ${R.colors.primary};
 `
+
 const TextDetail = styled.p`
+  font-family: 'Roboto-Regular';
   font-size: 1rem;
   color: ${R.colors.text_gray};
-  margin: 0 1rem;
 `
+
 const IconReason = styled.img`
-  width: 50px;
-  height: 50px;
-  background: ${R.colors.primary};
+  width: 56px;
+  height: 56px;
 `
 const CardReason = props => {
   return (
     <WrapCard>
-      <IconReason />
+      <IconReason src={props.iconPath} />
       <TextReason>{props.textReason}</TextReason>
       <TextDetail>{props.textDetail}</TextDetail>
     </WrapCard>

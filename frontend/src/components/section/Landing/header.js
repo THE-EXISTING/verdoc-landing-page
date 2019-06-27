@@ -5,7 +5,7 @@ import TextDetail from '../../common/DetailText'
 
 const TopicPrimary = styled.p`
   font-family: Courier;
-  margin: 4.2rem auto 2rem auto;
+  margin: 5rem auto 2rem auto;
   font-size: 3rem;
   color: ${R.colors.primary};
   letter-spacing: 0.35px;
@@ -17,7 +17,7 @@ const TopicText = styled.p`
   font-size: 1.8rem;
   color: ${R.colors.text_gray};
   letter-spacing: 0.25px;
-  margin: 1.2rem auto;
+  margin: 1.2rem auto 0 auto;
 `
 
 const HeaderLanding = () => (
@@ -25,7 +25,7 @@ const HeaderLanding = () => (
     <TopicPrimary>Verdoc</TopicPrimary>
     <TopicText>The best way to sign documents</TopicText>
     <TopicText>Easy - Fast - Secure</TopicText>
-    <TextDetail textDetail="Verdoc is a blockchain service for legally secure signing any documents, invoices, or agreements that is important to your business." />
+    <TextDetail text="Verdoc is a blockchain service for legally secure signing any documents, invoices, or agreements that is important to your business." />
   </>
 )
 export default HeaderLanding

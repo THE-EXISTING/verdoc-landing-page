@@ -6,7 +6,7 @@ import MvpFeatures from '../components/section/Landing/Mvp'
 import Works from '../components/section/Landing/Works'
 import Partner from '../components/section/Landing/Partner'
 import Reason from '../components/section/Landing/Reason'
-
+import Api from '../components/section/Landing/Api'
 import R from '../components/resources/R'
 import SEO from '../components/utility/Seo'
 
@@ -14,12 +14,17 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face{
     font-family: 'Roboto-Regular';
-    src: url('../fonts/Roboto-Regular.ttf');
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+  }
+
+  @font-face{
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/Roboto/Roboto-Medium.ttf');
   }
 
   @font-face{
     font-family: 'RobotoSlab-Regular';
-    src: url('../fonts/RobotoSlab-Regular.ttf');
+    src: url('../fonts/Roboto_Slab/RobotoSlab-Regular.ttf');
   }
 
   body{
@@ -54,6 +59,7 @@ const IndexPage = () => (
       <Works />
       <Partner />
       <Reason />
+      <Api />
     </ContainerGlobal>
   </>
 )

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+  <defs>
+    <path id="prefix__ic_download_black-a" d="M19 10h-4V4H9v6H5l7 7 7-7zM5 19v2h14v-2H5z"/>
+  </defs>
+  <use xlink:href="#prefix__ic_download_black-a"/>
+</svg>
