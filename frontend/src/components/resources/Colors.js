@@ -18,5 +18,6 @@ const colors = {
   footer: '#20262C',
   hr_footer: 'rgba(255,255,255,0.12)',
   text_footer: 'rgb(255, 255, 255, .7)',
+  border_navbar: 'rgba(0,0,0,0.12)',
 }
 export default colors

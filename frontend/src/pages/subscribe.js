@@ -76,7 +76,7 @@ const SubscribePage = () => {
       <GlobalStyle />
 
       <BodyBackground>
-        <Navbar />
+        <Navbar isLanding={false} />
         <Header />
         <Subscribe db={firestore} />
         <Line />

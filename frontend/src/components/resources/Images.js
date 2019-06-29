@@ -25,7 +25,10 @@ import ic_api from '../../images/Icons/ic_api_primary.svg'
 import bg_verdoc_sig from '../../images/Logos/logo_verdoc_signature.svg'
 import logo_verdoc_footer from '../../images/Logos/logo_verdoc_white.svg'
 import logo_theexisting from '../../images/Logos/logo_existing_white.svg'
+import logo_verdoc from '../../images/Logos/logo_verdoc.svg'
 const images = {
+  //navbar
+  logo_verdoc,
   //footer
   logo_theexisting,
   logo_verdoc_footer,

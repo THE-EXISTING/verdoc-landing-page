@@ -5,7 +5,7 @@ import TextDetail from '../../common/DetailText'
 
 const TopicPrimary = styled.p`
   font-family: Courier;
-  margin: 5rem auto 2rem auto;
+  margin: 7rem auto 2rem auto;
   font-size: 3rem;
   color: ${R.colors.primary};
   letter-spacing: 0.35px;
