@@ -6,10 +6,8 @@ import mock_mobile from '../../images/mock_iphone.png'
 import btn_name from '../../images/btn_verdoc.svg'
 import ic_cancel from '../../images/ic_cancel_white.svg'
 import og_image from '../../images/facebook_link_cover.png'
-
 import ic_mvp_sign from '../../images/Icons/ic_qr_code_primary.svg'
 import ic_mvp_verify from '../../images/Icons/ic_check_white.svg'
-
 import ic_work_letter from '../../images/Icons/ic_doc_letter_primary.svg'
 import ic_work_contact from '../../images/Icons/ic_doc_contract_primary.svg'
 import ic_work_nda from '../../images/Icons/ic_doc_nda_primary.svg'
@@ -17,18 +15,18 @@ import ic_work_mou from '../../images/Icons/ic_doc_mou_primary.svg'
 import ic_work_invoice from '../../images/Icons/ic_doc_invoice_primary.svg'
 import ic_work_po from '../../images/Icons/ic_doc_po_primary.svg'
 import ic_work_quotation from '../../images/Icons/ic_doc_quotation_primary.svg'
-
 import partner_mock from '../../images/Images/Avatar/Circular.png'
-
 import ic_secure from '../../images/Icons/ic_secure_primary.svg'
-
 import ic_pf_identity from '../../images/Icons/ic_proof_of_integrity_primary.svg'
 import ic_pf_exis from '../../images/Icons/ic_proof_of_existence_primary.svg'
 import ic_pf_integrity from '../../images/Icons/ic_proof_of_integrity_primary.svg'
 import ic_pf_receipt from '../../images/Icons/ic_proof_of_receipt_primary.svg'
-
 import ic_api from '../../images/Icons/ic_api_primary.svg'
+import bg_verdoc_sig from '../../images/Logos/logo_verdoc_signature.svg'
+
 const images = {
+  //quota
+  bg_verdoc_sig,
   // header
   logo: logo,
   signature: signature,

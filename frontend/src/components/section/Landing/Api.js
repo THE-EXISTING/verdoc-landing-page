@@ -15,7 +15,8 @@ const WrapContainer = styled.div`
 const IconApi = styled.img`
   width: 80px;
   height: 30px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
+  margin-top: -0.4rem;
 `
 
 const DetailApi = styled.p`
@@ -31,7 +32,7 @@ const BtnInfo = styled(Button)`
     font-family: 'Roboto-Medium';
     color: ${R.colors.primary};
     font-size: 0.8em;
-    margin: 2.5rem;
+    margin: 2rem;
     text-align: center;
   }
 `
