@@ -10,6 +10,7 @@ const WrapContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 1.5rem;
+  padding-bottom: 3rem;
 `
 const IconReason = styled.img`
   /* background: ${R.colors.primary}; */

@@ -15,5 +15,8 @@ const colors = {
   bg_partner_section: '#F7F7F7',
   mvp_verify_hover: 'rgb(100, 98, 222)',
   mvp_sign_hover: 'rgb(247, 247, 247)',
+  footer: '#20262C',
+  hr_footer: 'rgba(255,255,255,0.12)',
+  text_footer: 'rgb(255, 255, 255, .7)',
 }
 export default colors

@@ -23,8 +23,12 @@ import ic_pf_integrity from '../../images/Icons/ic_proof_of_integrity_primary.sv
 import ic_pf_receipt from '../../images/Icons/ic_proof_of_receipt_primary.svg'
 import ic_api from '../../images/Icons/ic_api_primary.svg'
 import bg_verdoc_sig from '../../images/Logos/logo_verdoc_signature.svg'
-
+import logo_verdoc_footer from '../../images/Logos/logo_verdoc_white.svg'
+import logo_theexisting from '../../images/Logos/logo_existing_white.svg'
 const images = {
+  //footer
+  logo_theexisting,
+  logo_verdoc_footer,
   //quota
   bg_verdoc_sig,
   // header
