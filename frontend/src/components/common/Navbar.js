@@ -66,13 +66,6 @@ const Navbar = ({ isLanding = true }) => {
     transition: ${props => (props.isLanding ? '' : 'all 0.5s ease')};
     border-bottom: ${props =>
       props.isLanding ? `1px solid ${R.colors.border_navbar}` : ''};
-      /* ${isLanding &&
-        css`
-          justify-content: center;
-          background-color: white;
-          transition: '';
-          border-bottom: 1px solid ${R.colors.border_navbar};
-        `} */
 `
 
   const LinkCustom = styled(Link)`
