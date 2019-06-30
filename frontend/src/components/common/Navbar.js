@@ -52,6 +52,7 @@ const Navbar = ({ isLanding = true }) => {
     })
   })
   const Container = styled.div`
+    font-family: ${props => (props.isLanding ? 'Roboto-Regular' : 'Courier')};
     position: fixed;
     display: flex;
     justify-content: ${props => (props.isLanding ? 'center' : 'flex-end')};
@@ -66,7 +67,7 @@ const Navbar = ({ isLanding = true }) => {
     transition: ${props => (props.isLanding ? '' : 'all 0.5s ease')};
     border-bottom: ${props =>
       props.isLanding ? `1px solid ${R.colors.border_navbar}` : ''};
-`
+  `
 
   const LinkCustom = styled(Link)`
     box-sizing: border-box;

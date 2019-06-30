@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     font-family: ${R.fonts.text.name};
     margin: 0;
+    background: ${R.colors.white};
   }
   
 `
