@@ -11,7 +11,6 @@ const InputCustom = styled(TextField)`
     font-size: 1.6rem;
     padding-top: 0;
     background-color: ${R.colors.white};
-    margin: 0 0.5em 0 auto;
 
     &:hover {
       border-width: 2px;
@@ -27,9 +26,9 @@ const TextFieldCustom = props => {
       margin="normal"
       variant="outlined"
       data-testid="textfield"
-      label={props.label}
-      name={props.name}
       type={props.type}
+      name={props.name}
+      label={props.label}
       autoComplete={props.type}
       //   value={values.value}
       //   onChange={handleChangeText('value')}
