@@ -2,27 +2,31 @@ import React from 'react'
 import Form from '../components/section/LoginPage/Form'
 import Navbar from '../components/common/Navbar'
 import styled, { createGlobalStyle } from 'styled-components'
-// const GlobbalStyled = createGlobalStyle`
-//   body {
-//     margin: 0;
-//   }
-// `
-// const ContainerGlobal = styled.div`
-//   width: 100vw;
-//   margin: 0 auto;
-//   text-align: center;
-//   overflow: hidden;
-// `
+import R from '../components/resources/R'
+
+const GlobbalStyled = createGlobalStyle`
+  body {
+    margin: 0;
+    background: ${R.colors.white};
+  }
+`
+
+const ContainerGlobal = styled.div`
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+`
+
 const login = () => {
   return (
-    // <ContainerGlobal>
-    //   <GlobbalStyled />
-    <>
+    <ContainerGlobal>
       <Navbar isLanding={true} />
+      <GlobbalStyled />
       <Form />
-    </>
-
-    // </ContainerGlobal>
+    </ContainerGlobal>
   )
 }
 
