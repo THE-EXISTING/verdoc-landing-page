@@ -7,7 +7,9 @@ import btn_name from '../../images/btn_verdoc.svg'
 import ic_cancel from '../../images/ic_cancel_white.svg'
 import og_image from '../../images/facebook_link_cover.png'
 import ic_mvp_sign from '../../images/Icons/ic_qr_code_primary.svg'
-import ic_mvp_verify from '../../images/Icons/ic_check_white.svg'
+import ic_mvp_sign_white from '../../images/Icons/ic_qr_code_white.svg'
+import ic_mvp_verify from '../../images/Icons/ic_check_primary.svg'
+import ic_mvp_verify_white from '../../images/Icons/ic_check_white.svg'
 import ic_work_letter from '../../images/Icons/ic_doc_letter_primary.svg'
 import ic_work_contact from '../../images/Icons/ic_doc_contract_primary.svg'
 import ic_work_nda from '../../images/Icons/ic_doc_nda_primary.svg'
@@ -51,6 +53,8 @@ const images = {
   // mvp
   ic_mvp_sign,
   ic_mvp_verify,
+  ic_mvp_sign_white,
+  ic_mvp_verify_white,
   // work
   ic_work_letter,
   ic_work_contact,

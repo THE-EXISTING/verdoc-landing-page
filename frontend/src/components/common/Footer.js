@@ -66,6 +66,10 @@ const ExternalLink = styled.a`
   color: ${R.colors.text_footer};
   text-decoration: none;
   margin: 0 0 1rem 0;
+
+  &:hover {
+    color: ${R.colors.white};
+  }
 `
 
 const LinkCustom = styled(Link)`
@@ -74,6 +78,10 @@ const LinkCustom = styled(Link)`
   color: ${R.colors.text_footer};
   text-decoration: none;
   margin: 0 0 1rem 0;
+
+  &:hover {
+    color: ${R.colors.white};
+  }
 `
 
 const Footer = () => {

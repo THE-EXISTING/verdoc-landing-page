@@ -7,7 +7,6 @@ const ContainerMvp = styled.div`
   display: flex;
   width: 100vw;
   justify-content: center;
-  
 `
 
 const MvpLanding = () => (
@@ -15,13 +14,13 @@ const MvpLanding = () => (
     <ContainerMvp>
       <CardMvp
         icPath={R.images.ic_mvp_sign}
-        isPrimary={false}
+        icHoverPath={R.images.ic_mvp_sign_white}
         featureName="Sign documents"
         featureDetail="Upload documents and sign its"
       />
       <CardMvp
         icPath={R.images.ic_mvp_verify}
-        isPrimary={true}
+        icHoverPath={R.images.ic_mvp_verify_white}
         featureName="Verify documents"
         featureDetail="Check the authenticity of documents"
       />
