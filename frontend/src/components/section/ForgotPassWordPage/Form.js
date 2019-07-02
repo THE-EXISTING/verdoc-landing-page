@@ -43,7 +43,7 @@ const BtnSubscribe = styled(Button)`
     text-transform: uppercase;
     color: ${R.colors.white};
     background-color: ${R.colors.primary};
-    margin: 1.6rem auto;
+    margin: 1.4rem auto;
     &:hover {
       background-color: ${R.colors.primary} !important;
       box-shadow: 0.75px 0.75px 5.5px 0.75px ${R.colors.border_btn_subsc_hover};
@@ -68,26 +68,6 @@ const TextOr = styled.p`
   letter-spacing: 2px;
 `
 
-const TextSignUp = styled.p`
-  color: ${R.colors.text_low_gray};
-  font-family: 'Roboto-Regular';
-  font-size: 1em;
-  letter-spacing: 0.5px;
-  margin-right: 0.5rem;
-`
-
-const LinkSignUp = styled(Link)`
-  text-decoration: none;
-  color: ${R.colors.primary};
-  font-family: 'Roboto-Medium';
-  font-size: 0.9em;
-  letter-spacing: 1.25px;
-
-  &:hover {
-    color: ${R.colors.text};
-  }
-`
-
 const WrapSignUpSection = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -97,38 +77,53 @@ const WrapSignUpSection = styled.div`
   padding: 0;
 `
 
-const FormLogin = () => {
+const BtnLink = styled(Button)`
+  && {
+    font-family: 'Roboto-Medium';
+    color: ${R.colors.primary};
+    font-size: 1em;
+    &:hover {
+      background: transparent;
+    }
+  }
+`
+
+const TextOrBtn = styled.p`
+  color: ${R.colors.text};
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto-Regular';
+`
+
+const ForgotPassWordForm = () => {
   return (
     <WrapContainer>
-      <Label>Log in to Verdoc</Label>
+      <Label>Enter your email to reset password</Label>
       <TextField
         type="email"
         name="email"
         label="Email"
         placeholder="your@verdoc.io"
       />
-      <TextField
-        type="password"
-        name="password"
-        label="Password"
-        placeholder="**********"
-      />
-      <LinkForgot>Forgot password?</LinkForgot>
+
       <BtnSubscribe data-testid="btn_submit" variant="outlined" size="large">
-        LOG IN
+        Reset password
       </BtnSubscribe>
+
       <WrapForgotSection>
         <HorizontalRule />
         <TextOr>OR</TextOr>
         <HorizontalRule />
       </WrapForgotSection>
+
       <WrapSignUpSection>
-        <TextSignUp>Don’t have an account?</TextSignUp>
-        <LinkSignUp>SIGN UP</LinkSignUp>
+        <BtnLink>SIGN UP</BtnLink>
+        <TextOrBtn>or</TextOrBtn>
+        <BtnLink>LOG IN</BtnLink>
       </WrapSignUpSection>
+
       <FooterLogin />
     </WrapContainer>
   )
 }
-
-export default FormLogin
+export default ForgotPassWordForm

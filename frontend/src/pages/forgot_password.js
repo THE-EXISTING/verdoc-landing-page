@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from '../components/section/LoginPage/Form'
+import Form from '../components/section/ForgotPassWordPage/Form'
 import Navbar from '../components/common/Navbar'
 import styled, { createGlobalStyle } from 'styled-components'
 import R from '../components/resources/R'
@@ -26,7 +26,7 @@ const ContainerGlobal = styled.div`
   overflow: hidden;
 `
 
-const login = () => {
+const ForgotPasswordPage = () => {
   return (
     <ContainerGlobal>
       <Navbar isLanding={true} />
@@ -36,4 +36,4 @@ const login = () => {
   )
 }
 
-export default login
+export default ForgotPasswordPage
