@@ -25,7 +25,7 @@ const TextFieldEmail = styled(TextField)`
   }
 `
 
-function TextFieldCustom({
+function TextFieldSubscribe({
   isExist,
   isSubmit,
   handleTyping,
@@ -102,4 +102,4 @@ function TextFieldCustom({
   )
 }
 
-export default TextFieldCustom
+export default TextFieldSubscribe

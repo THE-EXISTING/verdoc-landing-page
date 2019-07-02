@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import TextField from '../../common/TextField'
+import TextFieldSubscribe from '../../common/TextFieldSubscribe'
 import R from '../../resources/R'
 
 const WraperContent = styled.div`
@@ -67,7 +67,7 @@ const Subscribe = props => {
   const callSubmited = event => {
     event.preventDefault()
     if (emailReady) {
-      // check from child component (TextField) (look at callback)
+      // check from child component (TextFieldSubscribe) (look at callback)
       setLoading(true)
       props.db
         .firestore()
@@ -79,7 +79,7 @@ const Subscribe = props => {
             // you already subscribe Verdoc.
             setIsSubmit(true)
             setEmailReady(false) // give state = 1 => email is exists (not ready)
-            setIsExists(true) // tell textfield show text-error
+            setIsExists(true) // tell TextFieldSubscribe show text-error
             setLoading(false)
             console.log(snapshot)
           } else {
@@ -125,7 +125,7 @@ const Subscribe = props => {
         </Cutter>
       </TextOnBtnFront>
       <WraperForm>
-        <TextField
+        <TextFieldSubscribe
           handleTyping={handleTyping}
           handleEmail={handleEmail}
           handleSubmit={handleSubmit}

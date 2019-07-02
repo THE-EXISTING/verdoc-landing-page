@@ -35,6 +35,9 @@ const BtnSignup = styled(Button)`
     text-align: center;
     margin: auto 1.2rem;
     padding: 1px 10px;
+    &:hover {
+      color: ${R.colors.text};
+    }
   }
 `
 
@@ -71,13 +74,16 @@ const Navbar = ({ isLanding = true }) => {
 
   const LinkCustom = styled(Link)`
     box-sizing: border-box;
+    height: 30px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 
     /* For Subscribe page */
-
     color: ${R.colors.text};
     opacity: 0.3;
     margin: auto 1.5rem;
+
     &:hover {
       color: ${R.colors.primary};
       opacity: 1;
@@ -89,9 +95,9 @@ const Navbar = ({ isLanding = true }) => {
         color: ${R.colors.primary};
         opacity: 1;
         margin: auto 1.2rem;
+
         &:hover {
           color: ${R.colors.text};
-          opacity: 0.3;
         }
       `}
     /* end */
@@ -108,10 +114,12 @@ const Navbar = ({ isLanding = true }) => {
 
   const ExternalLink = styled.a`
     box-sizing: border-box;
-    height: 20px;
+    height: 30px;
     text-decoration: none;
-    
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    
     /* For Subscribe page */
     color: ${R.colors.text};
     opacity: 0.3;
@@ -129,7 +137,6 @@ const Navbar = ({ isLanding = true }) => {
         margin: auto 1.2rem;
         &:hover {
           color: ${R.colors.text};
-          opacity: 0.3;
         }
       `}
     /* end */
