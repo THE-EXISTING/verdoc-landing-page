@@ -6,8 +6,16 @@ import R from '../components/resources/R'
 
 const GlobbalStyled = createGlobalStyle`
   body {
+    
+    @font-face{
+      font-family: 'Roboto-Medium';
+      src: url('../fonts/Roboto/Roboto-Medium.ttf');
+    }
+
     margin: 0;
     background: ${R.colors.white};
+
+
   }
 `
 

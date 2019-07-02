@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+// import PowerBy from './PowerBy'
 import { Link } from 'gatsby'
 import R from '../resources/R'
 
@@ -26,21 +27,6 @@ const HorizontalRule = styled.hr`
   width: 70%;
   border: 1px solid ${R.colors.hr_footer};
   margin: 0 auto 1.6rem auto;
-`
-const WrapPowerBy = styled.div`
-  width: 70%;
-  text-align: left;
-  letter-spacing: 0.55px;
-  margin: 1.4rem auto 3rem auto;
-`
-
-const LogoTheExisting = styled.img`
-  width: 93px;
-  height: 12px;
-  opacity: 0.7;
-  &:hover {
-    opacity: 1;
-  }
 `
 
 const WrapSitemap = styled.div`
@@ -84,6 +70,22 @@ const LinkCustom = styled(Link)`
   }
 `
 
+const WrapPowerBy = styled.div`
+  width: 70%;
+  text-align: left;
+  letter-spacing: 0.55px;
+  margin: 1.4rem auto 3rem auto;
+`
+
+const LogoTheExisting = styled.img`
+  width: 93px;
+  height: 12px;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
+`
+
 const Footer = () => {
   return (
     <WrapFooter>
@@ -116,6 +118,7 @@ const Footer = () => {
         </ItemSitemap>
       </WrapSitemap>
       <HorizontalRule />
+      {/* <PowerBy /> */}
       <WrapPowerBy>
         Power by{' '}
         <ExternalLink

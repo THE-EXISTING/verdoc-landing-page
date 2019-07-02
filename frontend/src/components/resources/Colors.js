@@ -3,6 +3,7 @@ const colors = {
   text: '#000000', // black
   gray: 'rgba(0,0,0,.2)',
   text_gray: 'rgba(0,0,0,.6)',
+  text_low_gray: 'rgba(0,0,0,.87)',
   repeat: 'rgba(255, 0, 0, 0.87)', // red
   line: '#00b900', // green (line)
   border_btn: 'rgba(0, 0, 0, 0.34)',
