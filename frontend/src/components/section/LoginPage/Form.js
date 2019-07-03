@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import TextField from '../../common/TextFieldCustom'
-import Button from '@material-ui/core/Button'
+// import Button from '@material-ui/core/Button'
+import ButtonSubmit from '../../common/BtnSubmtForm'
 import FooterLogin from '../../common/FormFooter'
 import R from '../../resources/R'
 import { Link } from 'gatsby'
@@ -33,23 +34,24 @@ const LinkForgot = styled(Link)`
   line-height: 28px;
   margin-top: 0.8rem;
 `
-const BtnSubscribe = styled(Button)`
-  && {
-    width: 100%;
-    height: 48px;
-    font-size: 1em;
-    border-width: 0;
-    display: inline-block;
-    text-transform: uppercase;
-    color: ${R.colors.white};
-    background-color: ${R.colors.primary};
-    margin: 1.6rem auto;
-    &:hover {
-      background-color: ${R.colors.primary} !important;
-      box-shadow: 0.75px 0.75px 5.5px 0.75px ${R.colors.border_btn_subsc_hover};
-    }
-  }
-`
+// const BtnSubscribe = styled(Button)`
+//   && {
+//     width: 100%;
+//     max-width: 352px;
+//     height: 48px;
+//     font-size: 1em;
+//     border-width: 0;
+//     display: inline-block;
+//     text-transform: uppercase;
+//     color: ${R.colors.white};
+//     background-color: ${R.colors.primary};
+//     margin: 1.6rem 0;
+//     &:hover {
+//       background-color: ${R.colors.primary} !important;
+//       box-shadow: 0.75px 0.75px 5.5px 0.75px ${R.colors.border_btn_subsc_hover};
+//     }
+//   }
+// `
 const WrapForgotSection = styled.div`
   display: flex;
   justify-content: center;
@@ -106,17 +108,17 @@ const FormLogin = () => {
         name="email"
         label="Email"
         placeholder="your@verdoc.io"
+        autocomplete="email"
       />
       <TextField
         type="password"
-        name="password"
+        name="current-password"
         label="Password"
         placeholder="**********"
+        autocomplete="current-password"
       />
       <LinkForgot>Forgot password?</LinkForgot>
-      <BtnSubscribe data-testid="btn_submit" variant="outlined" size="large">
-        LOG IN
-      </BtnSubscribe>
+      <ButtonSubmit text="LOG IN" />
       <WrapForgotSection>
         <HorizontalRule />
         <TextOr>OR</TextOr>
