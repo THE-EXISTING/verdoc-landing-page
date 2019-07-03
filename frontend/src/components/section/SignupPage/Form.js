@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import TextField from '../../common/TextFieldCustom'
 import BtnSignupLogin from '../../common/BtnSignupLogin'
-import ButtonSubmit from '../../common/BtnSubmtForm'
+import ButtonSubmit from '../../common/BtnSubmitForm'
 import Checkbox from '@material-ui/core/Checkbox'
 import FooterLogin from '../../common/FormFooter'
 import R from '../../resources/R'
@@ -116,10 +116,6 @@ const FormSingUp = () => {
           // checked={state.checkedA}
           // onChange={handleChange('checkedA')}
           value="checkAgree"
-          labelStyle={{ color: 'white' }}
-          // iconStyle={{ fill: R.colors.primary }}
-          inputStyle={{ color: 'white' }}
-          // style={{ color: R.colors.primary }}
         />
         <Label>
           I agree to Verdoc’s <LinkCustom href="/">Terms of Service</LinkCustom>{' '}

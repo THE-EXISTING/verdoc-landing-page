@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
 import R from '../resources/R'
+import { Link } from 'gatsby'
 
 const WrapSignUpSection = styled.div`
   display: flex;
@@ -30,12 +31,22 @@ const TextOrBtn = styled.p`
   font-family: 'Roboto-Regular';
 `
 
+const LinkCustom = styled(Link)`
+  text-decoration: none;
+  color: ${R.colors.primary};
+`
+
 const BtnSignupLogin = () => {
   return (
     <WrapSignUpSection>
-      <BtnLink>SIGN UP</BtnLink>
+      <LinkCustom to="/signup">
+        <BtnLink>SIGN UP</BtnLink>
+      </LinkCustom>
+
       <TextOrBtn>or</TextOrBtn>
-      <BtnLink>LOG IN</BtnLink>
+      <LinkCustom to="/login">
+        <BtnLink>LOG IN</BtnLink>
+      </LinkCustom>
     </WrapSignUpSection>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import TextField from '../../common/TextFieldCustom'
 // import Button from '@material-ui/core/Button'
-import ButtonSubmit from '../../common/BtnSubmtForm'
+import ButtonSubmit from '../../common/BtnSubmitForm'
 import FooterLogin from '../../common/FormFooter'
 import R from '../../resources/R'
 import { Link } from 'gatsby'
@@ -117,7 +117,7 @@ const FormLogin = () => {
         placeholder="**********"
         autocomplete="current-password"
       />
-      <LinkForgot>Forgot password?</LinkForgot>
+      <LinkForgot to="/forgot_password">Forgot password?</LinkForgot>
       <ButtonSubmit text="LOG IN" />
       <WrapForgotSection>
         <HorizontalRule />
@@ -126,7 +126,7 @@ const FormLogin = () => {
       </WrapForgotSection>
       <WrapSignUpSection>
         <TextSignUp>Don’t have an account?</TextSignUp>
-        <LinkSignUp>SIGN UP</LinkSignUp>
+        <LinkSignUp to="/signup">SIGN UP</LinkSignUp>
       </WrapSignUpSection>
       <FooterLogin />
     </WrapContainer>

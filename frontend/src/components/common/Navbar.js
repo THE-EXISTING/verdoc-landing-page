@@ -42,6 +42,11 @@ const BtnSignup = styled(Button)`
   }
 `
 
+const LinkSignUp = styled(Link)`
+  color: ${R.colors.primary};
+  text-decoration: none;
+`
+
 const Navbar = ({ isLanding = true }) => {
   const [isDown, setIsDown] = useState(false)
 
@@ -175,7 +180,9 @@ const Navbar = ({ isLanding = true }) => {
           Login
         </LinkCustom>
 
-        <BtnSignup variant="outlined">SIGN UP</BtnSignup>
+        <BtnSignup variant="outlined">
+          <LinkSignUp to="/signup">SIGN UP</LinkSignUp>
+        </BtnSignup>
       </WrapLanding>
     </Container>
   ) : (

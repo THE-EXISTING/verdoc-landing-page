@@ -22,7 +22,7 @@ const BtnSubmit = styled(Button)`
   }
 `
 
-const BtnSubmtForm = props => {
+const BtnSubmitForm = props => {
   return (
     <BtnSubmit data-testid="btn_submit" variant="outlined" size="large">
       {props.text}
@@ -30,4 +30,4 @@ const BtnSubmtForm = props => {
   )
 }
 
-export default BtnSubmtForm
+export default BtnSubmitForm
