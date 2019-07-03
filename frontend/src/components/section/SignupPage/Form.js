@@ -65,9 +65,7 @@ const WrapAgree = styled.div`
   margin: 1.2rem 0 0.4rem 0;
 `
 const CheckboxCustom = styled(Checkbox)`
-  /* margin: 0; */
   && {
-    /* padding: 0 0.9rem; */
     color: ${R.colors.primary} !important;
     margin-left: -10px;
     &:hover {
