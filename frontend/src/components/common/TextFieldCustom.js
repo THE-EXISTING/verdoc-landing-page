@@ -5,7 +5,7 @@ import R from '../resources/R'
 
 const InputCustom = styled(TextField)`
   && {
-    width: 50vw;
+    width: 100%;
     max-width: 352px;
     height: 56px;
     font-size: 1.6rem;
@@ -29,7 +29,7 @@ const TextFieldCustom = props => {
       type={props.type}
       name={props.name}
       label={props.label}
-      autoComplete={props.type}
+      autoComplete={props.autoComplete}
       //   value={values.value}
       //   onChange={handleChangeText('value')}
       placeholder={props.placeHolder}

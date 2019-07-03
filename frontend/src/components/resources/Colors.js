@@ -1,5 +1,6 @@
 const colors = {
   primary: '#5856d6', // purple
+  low_primary: 'rgb(88, 86, 214, .08)',
   text: '#000000', // black
   gray: 'rgba(0,0,0,.2)',
   text_gray: 'rgba(0,0,0,.6)',

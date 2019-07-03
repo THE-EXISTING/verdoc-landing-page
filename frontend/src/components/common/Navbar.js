@@ -30,6 +30,7 @@ const LogoVerdoc = styled.img`
 `
 const BtnSignup = styled(Button)`
   && {
+    white-space: nowrap;
     font-family: 'Roboto-Medium';
     color: ${R.colors.primary};
     text-align: center;
