@@ -15,6 +15,7 @@ const FeatureCard = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  color: ${R.colors.gray};
 
   &:hover {
     background-color: ${R.colors.primary};
@@ -46,7 +47,12 @@ const FeatureDetail = styled.p`
 `
 
 const HorizontalRule = styled.hr`
+  border: 0.5px solid ${R.colors.gray};
   width: 70%;
+
+  ${FeatureCard}:hover & {
+    border-color: ${R.colors.white};
+  }
 `
 
 const CardMvplanding = props => {
