@@ -28,7 +28,13 @@ import bg_verdoc_sig from '../../images/Logos/logo_verdoc_signature.svg'
 import logo_verdoc_footer from '../../images/Logos/logo_verdoc_white.svg'
 import logo_theexisting from '../../images/Logos/logo_existing_white.svg'
 import logo_verdoc from '../../images/Logos/logo_verdoc.svg'
+import ic_upload_primary from '../../images/Icons/ic_upload_primary.svg'
+import ic_upload_white from '../../images/Icons/ic_upload_white.svg'
+
 const images = {
+  //upload
+  ic_upload_primary,
+  ic_upload_white,
   //navbar
   logo_verdoc,
   //footer

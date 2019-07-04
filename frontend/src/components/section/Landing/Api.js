@@ -42,7 +42,12 @@ const ApiLanding = () => (
     <IconApi src={R.images.ic_api} />
     <DetailApi>Integrate your application to Blockchain Timestamping</DetailApi>
     <DetailApi>Architecture, our unique underlying technology.</DetailApi>
-    <BtnInfo variant="outlined">MORE INFO</BtnInfo>
+    <BtnInfo
+      variant="outlined"
+      href="https://docs.verdoc.io/docs/api_ref/login_token_api/about-access-token/"
+    >
+      MORE INFO
+    </BtnInfo>
   </WrapContainer>
 )
 

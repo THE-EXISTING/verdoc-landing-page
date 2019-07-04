@@ -156,7 +156,7 @@ const Navbar = ({ isLanding = true }) => {
         <LinkCustom to="/">
           <LogoVerdoc src={R.images.logo_verdoc} />
         </LinkCustom>
-        <LinkCustom activeClassName="active" to="/sign">
+        <LinkCustom activeClassName="active" to="/sign_documents">
           Sign
         </LinkCustom>
         <LinkCustom activeClassName="active" to="/verify">
