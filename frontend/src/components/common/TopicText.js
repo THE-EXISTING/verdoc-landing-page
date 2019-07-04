@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import R from '../resources/R'
 
 const Topic = styled.p`
-  font-family: 'RobotoSlab-Regular';
+  font-family: ${props => props.font};
   font-size: 1.5em;
   white-space: nowrap;
   color: ${props => (props.isPrimary ? R.colors.primary : R.colors.text)};
@@ -11,9 +11,15 @@ const Topic = styled.p`
   margin: 1.8rem auto;
 `
 
-const TopicText = props => (
+const TopicText = ({
+  isPrimary = false,
+  font = 'RobotoSlab-Regular',
+  text,
+}) => (
   <>
-    <Topic isPrimary={props.isPrimary}>{props.text}</Topic>
+    <Topic isPrimary={isPrimary} font={font}>
+      {text}
+    </Topic>
   </>
 )
 export default TopicText

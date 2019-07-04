@@ -27,12 +27,14 @@ const MvpLanding = () => (
           featureDetail="Upload documents and sign its"
         />
       </LinkCustom>
-      <CardMvp
-        icPath={R.images.ic_mvp_verify}
-        icHoverPath={R.images.ic_mvp_verify_white}
-        featureName="Verify documents"
-        featureDetail="Check the authenticity of documents"
-      />
+      <LinkCustom to="/sign_documents">
+        <CardMvp
+          icPath={R.images.ic_mvp_verify}
+          icHoverPath={R.images.ic_mvp_verify_white}
+          featureName="Verify documents"
+          featureDetail="Check the authenticity of documents"
+        />
+      </LinkCustom>
     </ContainerMvp>
   </>
 )

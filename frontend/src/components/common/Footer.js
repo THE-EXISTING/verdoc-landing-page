@@ -7,6 +7,7 @@ import R from '../resources/R'
 const WrapFooter = styled.footer`
   display: flex;
   flex-direction: column;
+  width: 100%;
   /* justify-content: center; */
   align-items: center;
   background-color: ${R.colors.footer};

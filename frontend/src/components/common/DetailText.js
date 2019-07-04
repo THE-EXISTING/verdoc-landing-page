@@ -5,14 +5,19 @@ import R from '../resources/R'
 const StyleDetail = styled.p`
   font-family: 'Roboto-Regular';
   font-size: 1rem;
-  color: ${R.colors.text_gray};
+  color: ${props => (props.isPrimary ? R.colors.primary : R.colors.text_gray)};
   letter-spacing: 0.5px;
   width: 52%;
-  margin: 2rem auto;
+  text-align: center;
+  margin: ${props => props.space} auto;
 `
 
-const TextDetail = props => {
-  return <StyleDetail>{props.text}</StyleDetail>
+const TextDetail = ({ isPrimary = false, space = '2em', text }) => {
+  return (
+    <StyleDetail space={space} isPrimary={isPrimary}>
+      {text}
+    </StyleDetail>
+  )
 }
 
 export default TextDetail

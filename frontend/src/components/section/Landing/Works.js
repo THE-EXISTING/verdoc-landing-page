@@ -23,6 +23,7 @@ const WorksLanding = () => (
   <WrapContainer>
     <TopicText
       text="Sign a example document to see how verdoc works."
+      font="Roboto-Regular"
       isPrimary={false}
     />
     <WrapFeatures>
