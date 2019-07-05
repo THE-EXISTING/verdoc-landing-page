@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import TextDetai from '../../common/DetailText'
-import R from '../../resources/R'
+import TextDetai from '../../../common/DetailText'
+import R from '../../../resources/R'
 
 const TopicPrimary = styled.p`
   font-family: Courier;

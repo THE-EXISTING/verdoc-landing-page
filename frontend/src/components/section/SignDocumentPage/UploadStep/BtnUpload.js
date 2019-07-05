@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import R from '../../resources/R'
+import R from '../../../resources/R'
 
 const BtnUploadCard = styled.div`
   && {
