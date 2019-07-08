@@ -109,7 +109,8 @@ const FormSingUp = () => {
         type="password"
         name="verify_password"
         label="Verify password"
-        placeholder="confirm-password"
+        placeholder="*****"
+        autoComplete="confirm-password"
       />
       <WrapAgree>
         <CheckboxCustom
