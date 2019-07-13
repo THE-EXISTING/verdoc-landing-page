@@ -10,11 +10,17 @@ const StyleDetail = styled.p`
   width: 52%;
   text-align: center;
   margin: ${props => props.space} auto;
+  white-space: ${props => (props.isWrap ? 'wrap' : 'nowrap')};
 `
 
-const TextDetail = ({ isPrimary = false, space = '2em', text }) => {
+const TextDetail = ({
+  isPrimary = false,
+  space = '2em',
+  isWrap = true,
+  text,
+}) => {
   return (
-    <StyleDetail space={space} isPrimary={isPrimary}>
+    <StyleDetail space={space} isPrimary={isPrimary} isWrap={isWrap}>
       {text}
     </StyleDetail>
   )
