@@ -5,3 +5,11 @@
  */
 
 // You can delete this file if you're not using it
+
+// exports.onCreateWbpackConfig = ({ actions }) => {
+//   actions.replaceWebpackConfig({
+//     output: {
+//       globalObject: 'this',
+//     },
+//   })
+// }

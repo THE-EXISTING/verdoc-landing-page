@@ -30,8 +30,16 @@ import logo_theexisting from '../../images/Logos/logo_existing_white.svg'
 import logo_verdoc from '../../images/Logos/logo_verdoc.svg'
 import ic_upload_primary from '../../images/Icons/ic_upload_primary.svg'
 import ic_upload_white from '../../images/Icons/ic_upload_white.svg'
-
+import ic_pdf_red from '../../images/Icons/ic_pdf_red.svg'
+import ic_back from '../../images/Icons/ic_back_black.svg'
+import ic_private_gold from '../../images/Icons/ic_private_gold.svg'
+import ic_public_inactive from '../../images/Icons/ic_public_inactive.svg'
 const images = {
+  ic_public_inactive,
+  ic_private_gold,
+  //sign_signer
+  ic_back,
+  ic_pdf_red,
   //upload
   ic_upload_primary,
   ic_upload_white,

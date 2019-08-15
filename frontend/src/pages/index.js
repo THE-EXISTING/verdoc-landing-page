@@ -16,17 +16,17 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face{
     font-family: 'Roboto-Regular';
-    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
   }
 
   @font-face{
     font-family: 'Roboto-Medium';
-    src: url('../fonts/Roboto/Roboto-Medium.ttf');
+    src: url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype');
   }
 
   @font-face{
     font-family: 'RobotoSlab-Regular';
-    src: url('../fonts/Roboto_Slab/RobotoSlab-Regular.ttf');
+    src: url('../fonts/Roboto_Slab/RobotoSlab-Regular.ttf') format('truetype');
   }
 
   body{

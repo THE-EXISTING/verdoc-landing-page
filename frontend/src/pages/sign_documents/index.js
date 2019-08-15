@@ -1,7 +1,7 @@
 import React from 'react'
 import ContainerGlobal from '../../components/common/ContainerGlobal'
-import Header from '../../components/section/SignDocumentPage/Header'
-import BtnUpload from '../../components/section/SignDocumentPage/BtnUpload'
+import Header from '../../components/section/SignDocumentPage/UploadStep/Header'
+import BtnUpload from '../../components/section/SignDocumentPage/UploadStep/BtnUpload'
 import Works from '../../components/section/Landing/Works'
 import styled from 'styled-components'
 

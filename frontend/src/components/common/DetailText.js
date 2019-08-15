@@ -1,20 +1,45 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import R from '../resources/R'
 
-const StyleDetail = styled.p`
-  font-family: 'Roboto-Regular';
-  font-size: 1rem;
-  color: ${props => (props.isPrimary ? R.colors.primary : R.colors.text_gray)};
-  letter-spacing: 0.5px;
-  width: 52%;
-  text-align: center;
-  margin: ${props => props.space} auto;
-`
+// const StyleDetail = styled.p`
+//   font-family: 'Roboto-Regular';
+//   font-size: 1rem;
+//   color: ${props => (props.isPrimary ? R.colors.primary : R.colors.text_gray)};
+//   letter-spacing: 0.5px;
+//   width: 52%;
 
-const TextDetail = ({ isPrimary = false, space = '2em', text }) => {
+//   margin: ${props => props.space} auto;
+//   white-space: ${props => (props.isWrap ? 'wrap' : 'nowrap')};
+// `
+
+const TextDetail = ({
+  isPrimary = false,
+  space = '2em',
+  isWrap = true,
+  disableMargin = false,
+  text,
+}) => {
+  const StyleDetail = styled.p`
+    font-family: 'Roboto-Regular';
+    font-size: 1rem;
+    color: ${props =>
+      props.isPrimary ? R.colors.primary : R.colors.text_gray};
+    letter-spacing: 0.5px;
+    width: 52%;
+    white-space: ${props => (props.isWrap ? 'wrap' : 'nowrap')};
+    ${!disableMargin &&
+      css`
+        margin: ${space} auto;
+      `}
+  `
   return (
-    <StyleDetail space={space} isPrimary={isPrimary}>
+    <StyleDetail
+      space={space}
+      isPrimary={isPrimary}
+      isWrap={isWrap}
+      disableMargin={disableMargin}
+    >
       {text}
     </StyleDetail>
   )

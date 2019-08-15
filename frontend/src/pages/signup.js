@@ -9,7 +9,7 @@ const GlobbalStyled = createGlobalStyle`
     
     @font-face{
       font-family: 'Roboto-Medium';
-      src: url('../fonts/Roboto/Roboto-Medium.ttf');
+      src: url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype');
     }
 
     margin: 0;
