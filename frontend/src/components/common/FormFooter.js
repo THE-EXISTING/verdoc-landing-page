@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import R from '../resources/R'
-
+import PowerBy from './PowerBy'
 const WrapFooter = styled.div`
   display: flex;
   flex-direction: column;
@@ -65,7 +65,8 @@ const FooterLogin = () => {
         <LinkCustom>Privacy</LinkCustom>
         <LinkCustom>Blog</LinkCustom>
       </WrapshortSitemap>
-      <WrapPowerBy>
+      <PowerBy />
+      {/* <WrapPowerBy>
         <TextPowerBy>Power by </TextPowerBy>
         <ExternalLink
           href="https://existing.co/"
@@ -85,7 +86,7 @@ const FooterLogin = () => {
             />
           </LogoExistingSvg>
         </ExternalLink>
-      </WrapPowerBy>
+      </WrapPowerBy> */}
     </WrapFooter>
   )
 }

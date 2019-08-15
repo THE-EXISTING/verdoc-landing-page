@@ -6,8 +6,8 @@ import R from '../resources/R'
 const InputCustom = styled(TextField)`
   && {
     width: 100%;
-    max-width: 352px;
-    height: 56px;
+    max-width: 400px;
+    height: 48px;
     font-size: 1.6rem;
     padding-top: 0;
     background-color: ${R.colors.white};

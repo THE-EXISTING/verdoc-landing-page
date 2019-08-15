@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import TextField from '../../common/TextFieldCustom'
-import FooterLogin from '../../common/FormFooter'
 import ButtonSubmit from '../../common/BtnSubmitForm'
-import BtnSignupLogin from '../../common/BtnSignupLogin'
 import R from '../../resources/R'
+import Powerby from '../../common/PowerBy'
+import HeadText from '../../common/HeadText'
 import { Link } from 'gatsby'
 
 const WrapContainer = styled.div`
@@ -12,8 +12,8 @@ const WrapContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 10rem;
-  width: 352px;
+  /* padding-top: 10rem; */
+  width: 400px;
 `
 
 const Label = styled.p`
@@ -22,55 +22,33 @@ const Label = styled.p`
   font-size: 1em;
   letter-spacing: 0.5px;
   line-height: 28px;
-  margin-bottom: 0;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 1.1em;
 `
-
-const LinkForgot = styled(Link)`
+const BackText = styled(Link)`
   color: ${R.colors.primary};
-  text-decoration: none;
   font-family: 'Roboto-Regular';
   font-size: 1em;
-  letter-spacing: 0.5px;
-  line-height: 28px;
-  margin-top: 0.8rem;
-`
-
-const WrapForgotSection = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  opacity: 0.32;
-`
-
-const HorizontalRule = styled.hr`
-  width: 100%;
-`
-
-const TextOr = styled.p`
-  margin: auto 0.3rem;
-  font-family: 'Roboto-Medium';
-  font-size: 0.7rem;
-  letter-spacing: 2px;
+  font-weight: 500;
+  margin: auto;
+  cursor: pointer;
+  text-decoration: none;
 `
 
 const ForgotPassWordForm = () => {
   return (
     <WrapContainer>
-      <Label>Enter your email to reset password</Label>
+      <HeadText text="Forgot your password?" />
+      <Label>We’ll help you reset it and get back on service.</Label>
       <TextField
         type="email"
         name="email"
         label="Email"
         placeholder="your@verdoc.io"
       />
-      <ButtonSubmit text="Reset password" />
-      <WrapForgotSection>
-        <HorizontalRule />
-        <TextOr>OR</TextOr>
-        <HorizontalRule />
-      </WrapForgotSection>
-      <BtnSignupLogin />
-      <FooterLogin />
+      <ButtonSubmit text="Reset password" disableMaxWidth={true} />
+      <BackText>BACK</BackText>
     </WrapContainer>
   )
 }
