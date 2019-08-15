@@ -1,13 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 // import { Document, Page } from 'react-pdf'
 // import MockPDF from '../../../../images/mock_pdf.pdf'
 // import TextDetail from '../../../common/DetailText'
-import R from '../../../resources/R'
-import Button from '@material-ui/core/Button'
+// import R from '../../../resources/R'
+// import Button from '@material-ui/core/Button'
 // import CircularProgress from '@material-ui/core/CircularProgress'
 import ViewPortSigning from '../Sign/ViewPortSigning'
-import { Link, navigate } from 'gatsby'
+// import { Link, navigate } from 'gatsby'
 import ChooseSigner from '../Sign/ChooseSigner'
 // const WrapContainer = styled.div`
 //   display: flex;
@@ -92,25 +92,25 @@ import ChooseSigner from '../Sign/ChooseSigner'
 //   justify-content: flex-start;
 //   align-items: center;
 // `
-const BtnSigner = styled(Button)`
-  && {
-    font-family: 'Roboto-Medium';
-    color: ${R.colors.primary};
-    font-size: 0.8em;
-    margin: 0.5rem 2rem;
-    text-align: center;
-    width: 163px;
-    height: 86px;
-  }
-`
+// const BtnSigner = styled(Button)`
+//   && {
+//     font-family: 'Roboto-Medium';
+//     color: ${R.colors.primary};
+//     font-size: 0.8em;
+//     margin: 0.5rem 2rem;
+//     text-align: center;
+//     width: 163px;
+//     height: 86px;
+//   }
+// `
 
-const WrapMenuSigner = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 2rem;
-`
+// const WrapMenuSigner = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   width: 100%;
+//   margin-top: 2rem;
+// `
 // const CircleLoading = styled(CircularProgress)`
 //   color: ${R.colors.primary};
 // `

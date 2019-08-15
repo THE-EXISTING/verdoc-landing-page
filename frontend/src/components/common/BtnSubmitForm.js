@@ -12,6 +12,7 @@ const BtnSubmitForm = ({ disableMaxWidth = false, ...props }) => {
           max-width: 352px;
         `}
       /* max-width: 352px; */
+      font-family: 'Roboto-Regular';
       height: 48px;
       font-size: 1em;
       border-width: 0;

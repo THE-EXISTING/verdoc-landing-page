@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import TextField from '../../common/TextFieldCustom'
 import ButtonSubmit from '../../common/BtnSubmitForm'
 import R from '../../resources/R'
-import Powerby from '../../common/PowerBy'
+// import Powerby from '../../common/PowerBy'
 import HeadText from '../../common/HeadText'
 import { Link } from 'gatsby'
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import Form from '../components/section/ForgotPassWordPage/Form'
-import Navbar from '../components/common/Navbar'
 import Powerby from '../components/common/PowerBy'
 import styled, { createGlobalStyle } from 'styled-components'
 import R from '../components/resources/R'

@@ -1,9 +1,9 @@
 import React from 'react'
-import Form from '../components/section/LoginPage/Form'
-import Navbar from '../components/common/Navbar'
+// import Form from '../components/section/LoginPage/Form'
+// import Navbar from '../components/common/Navbar'
 import styled, { createGlobalStyle } from 'styled-components'
 import R from '../components/resources/R'
-
+import FormAccount from '../components/common/FormAccount'
 const GlobbalStyled = createGlobalStyle`
   body {
     
@@ -29,9 +29,10 @@ const ContainerGlobal = styled.div`
 const login = () => {
   return (
     <ContainerGlobal>
-      <Navbar isLanding={true} />
+      {/* <Navbar isLanding={true} /> */}
       <GlobbalStyled />
-      <Form />
+      {/* <Form /> */}
+      <FormAccount />
     </ContainerGlobal>
   )
 }

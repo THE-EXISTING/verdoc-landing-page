@@ -34,7 +34,9 @@ import ic_pdf_red from '../../images/Icons/ic_pdf_red.svg'
 import ic_back from '../../images/Icons/ic_back_black.svg'
 import ic_private_gold from '../../images/Icons/ic_private_gold.svg'
 import ic_public_inactive from '../../images/Icons/ic_public_inactive.svg'
+import bg_login from '../../images/Account_Management/assets/Images/img_signing.jpg'
 const images = {
+  bg_login,
   ic_public_inactive,
   ic_private_gold,
   //sign_signer
