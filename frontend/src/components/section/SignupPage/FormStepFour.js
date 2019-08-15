@@ -5,6 +5,27 @@ import R from '../../resources/R'
 import Checkbox from '@material-ui/core/Checkbox'
 import { Link } from 'gatsby'
 import ButtonSubmit from '../../common/BtnSubmitForm'
+import TextFieldMat from '@material-ui/core/TextField'
+
+const InputSignature = styled(TextFieldMat)`
+  && {
+    width: 400px;
+    font-size: 0.5px;
+
+    & input {
+      height: 180px !important;
+      text-align: center !important;
+      opacity: 0.6;
+      font-family: 'Roboto-Regular';
+      font-size: 24px;
+      color: #000000;
+      text-align: center;
+      &:hover {
+        cursor: pointer !important;
+      }
+    }
+  }
+`
 
 const LinkCustom = styled(Link)`
   color: ${R.colors.primary};
@@ -87,6 +108,7 @@ const ContainerDetail = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 18px;
+  margin-bottom: 2rem;
 `
 
 const SkipText = styled(Link)`
@@ -131,6 +153,18 @@ const FormStepFour = () => {
           information will not be provided to the Third Party.{' '}
         </DetailPrivacyText>
       </ContainerDetail>
+      <InputSignature
+        variant="outlined"
+        type="text"
+        name="signature"
+        label="Signature"
+        value="Input text"
+        disabled
+        //    autoComplete={props.autoComplete}
+        //   value={values.value}
+        //   onChange={handleChangeText('value')}
+        //    placeholder={props.placeHolder}
+      />
       <WrapAgree>
         <CheckboxCustom
           // checked={state.checkedA}
@@ -139,10 +173,11 @@ const FormStepFour = () => {
         />
         <Label>
           I agree to Verdoc’s <LinkCustom to="/">Terms of Service</LinkCustom>{' '}
-          and <LinkCustom href="">Privacy Policy.</LinkCustom>
+          and <br />
+          <LinkCustom to="/">Privacy Policy.</LinkCustom>
         </Label>
       </WrapAgree>
-      <ButtonSubmit text="COMPLETE SIGN UP" />
+      <ButtonSubmit text="COMPLETE SIGN UP" disabled />
       <SkipText to="/">Skip & Sign up</SkipText>
     </>
   )

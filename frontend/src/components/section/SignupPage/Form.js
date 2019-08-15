@@ -35,7 +35,7 @@ const PreviousContainer = styled.div`
   display: flex;
   align-items: center;
   position: absolute;
-  left: 25%;
+  left: 20%;
   /* top: 72px; */
   top: 4%;
   &:hover {
