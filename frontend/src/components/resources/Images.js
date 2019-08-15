@@ -34,15 +34,19 @@ import ic_pdf_red from '../../images/Icons/ic_pdf_red.svg'
 import ic_back from '../../images/Icons/ic_back_black.svg'
 import ic_private_gold from '../../images/Icons/ic_private_gold.svg'
 import ic_public_inactive from '../../images/Icons/ic_public_inactive.svg'
+import bg_regis from '../../images/Account_Management/assets/Images/img_scan_qr_code.jpg'
 import bg_login from '../../images/Account_Management/assets/Images/img_signing.jpg'
 import auth_google from '../../images/Account_Management/assets/Logos/Social/logo_google.svg'
 import auth_facebook from '../../images/Account_Management/assets/Logos/Social/logo_facebook.svg'
 import auth_line from '../../images/Account_Management/assets/Logos/Social/logo_line.svg'
+import ic_correct from '../../images/Icons/ic_correct_green.svg'
 const images = {
+  ic_correct,
   auth_google,
   auth_facebook,
   auth_line,
   bg_login,
+  bg_regis,
   ic_public_inactive,
   ic_private_gold,
   //sign_signer

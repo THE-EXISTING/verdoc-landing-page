@@ -1,6 +1,7 @@
 import React from 'react'
 import Form from '../components/section/SignupPage/Form'
-import Navbar from '../components/common/Navbar'
+// import Navbar from '../components/common/Navbar'
+import FormAccount from '../components/common/FormAccount'
 import styled, { createGlobalStyle } from 'styled-components'
 import R from '../components/resources/R'
 
@@ -29,9 +30,11 @@ const ContainerGlobal = styled.div`
 const SignupPage = () => {
   return (
     <ContainerGlobal>
-      <Navbar isLanding={true} />
+      {/* <Navbar isLanding={true} /> */}
       <GlobbalStyled />
-      <Form />
+      <FormAccount isLogin={false}>
+        <Form />
+      </FormAccount>
     </ContainerGlobal>
   )
 }

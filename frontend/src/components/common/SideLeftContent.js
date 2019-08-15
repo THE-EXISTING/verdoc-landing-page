@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import R from '../resources/R'
 import Footer from './FormFooter'
-const SideLeftContent = () => {
+const SideLeftContent = ({ isLogin }) => {
   const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -13,7 +13,8 @@ const SideLeftContent = () => {
     width: 420px;
     min-width: 420px;
     height: 100vh;
-    background-image: url(${R.images.bg_login});
+
+    background-image: url(${isLogin ? R.images.bg_login : R.images.bg_regis});
     background-size: cover;
     background-position: -400px 0;
     background-repeat: no-repeat;

@@ -11,6 +11,7 @@ const InputCustom = styled(TextField)`
     font-size: 1.6rem;
     padding-top: 0;
     background-color: ${R.colors.white};
+    margin: 1.05rem auto;
 
     &:hover {
       border-width: 2px;

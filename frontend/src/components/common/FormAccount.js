@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import R from '../resources/R'
 import SideContent from './SideLeftContent'
-import Form from '../section/LoginPage/Form'
-// import { Button } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 const Container = styled.div`
   display: flex;
@@ -28,6 +26,7 @@ const FrameContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 `
 
 const ContainerQuestion = styled.div`
@@ -36,6 +35,7 @@ const ContainerQuestion = styled.div`
   position: absolute;
   top: 32px;
   right: 40px;
+  z-index: 99;
 `
 const TextQuestion = styled.p`
   color: ${R.colors.text_gray};
@@ -56,18 +56,28 @@ const BtnQuestion = styled(Button)`
   }
 `
 
-const FormAccount = () => {
+const FormAccount = ({ isLogin = true, ...props }) => {
   return (
     <Container>
       <VerdocWhite src={R.images.logo_verdoc_footer} />
-      <SideContent />
+      <SideContent isLogin={isLogin} />
+
       <ContainerQuestion>
-        <TextQuestion>Don’t have an account?</TextQuestion>
-        <BtnQuestion variant="outlined">SIGN UP</BtnQuestion>
+        <TextQuestion>
+          {isLogin ? 'Don’t ' : 'Aleardy '}have an account?
+        </TextQuestion>
+
+        {isLogin ? (
+          <BtnQuestion variant="outlined" href="/signup">
+            SIGN UP
+          </BtnQuestion>
+        ) : (
+          <BtnQuestion variant="outlined" href="/login">
+            LOGIN
+          </BtnQuestion>
+        )}
       </ContainerQuestion>
-      <FrameContainer>
-        <Form />
-      </FrameContainer>
+      <FrameContainer>{props.children}</FrameContainer>
     </Container>
   )
 }

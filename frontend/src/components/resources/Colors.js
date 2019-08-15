@@ -8,6 +8,7 @@ const colors = {
   text_three_gray: 'rgba(0,0,0,.37)',
   repeat: 'rgba(255, 0, 0, 0.87)', // red
   line: '#00b900', // green (line)
+  green_privacy: '#00C853',
   border_btn: 'rgba(0, 0, 0, 0.34)',
   border_btn_subsc_hover: 'rgba(0, 0, 0, 0.45)',
   white: '#FFF',

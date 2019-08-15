@@ -26,11 +26,20 @@ const BtnSubmitForm = ({ disableMaxWidth = false, ...props }) => {
         box-shadow: 0.75px 0.75px 5.5px 0.75px
           ${R.colors.border_btn_subsc_hover};
       }
+      &[disabled] {
+        background-color: ${R.colors.gray};
+        border-width: 0;
+      }
     }
   `
 
   return (
-    <BtnSubmit data-testid="btn_submit" variant="outlined" size="large">
+    <BtnSubmit
+      data-testid="btn_submit"
+      variant="outlined"
+      size="large"
+      {...props}
+    >
       {props.text}
     </BtnSubmit>
   )

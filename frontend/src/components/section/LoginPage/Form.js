@@ -55,26 +55,6 @@ const TextOr = styled.p`
   white-space: nowrap;
 `
 
-const TextSignUp = styled.p`
-  color: ${R.colors.text_low_gray};
-  font-family: 'Roboto-Regular';
-  font-size: 1em;
-  letter-spacing: 0.5px;
-  margin-right: 0.5rem;
-`
-
-const LinkSignUp = styled(Link)`
-  text-decoration: none;
-  color: ${R.colors.primary};
-  font-family: 'Roboto-Medium';
-  font-size: 0.9em;
-  letter-spacing: 1.25px;
-
-  &:hover {
-    color: ${R.colors.text};
-  }
-`
-
 const WrapSignUpSection = styled.div`
   display: flex;
   justify-content: space-between;

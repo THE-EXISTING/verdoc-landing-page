@@ -12,13 +12,14 @@ const WrapFooter = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 1.5rem auto;
+  margin: 0.5rem auto;
   z-index: 10;
 `
 const WrapshortSitemap = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  margin-bottom: 1.25em;
   /* margin: 1.3rem auto; */
 `
 
@@ -71,10 +72,10 @@ const FooterLogin = () => {
   return (
     <WrapFooter>
       <WrapshortSitemap>
-        <LinkCustom>About us</LinkCustom>
-        <LinkCustom>Terms</LinkCustom>
-        <LinkCustom>Privacy</LinkCustom>
-        <LinkCustom>Blog</LinkCustom>
+        <LinkCustom to="/">About us</LinkCustom>
+        <LinkCustom to="/">Terms</LinkCustom>
+        <LinkCustom to="/">Privacy</LinkCustom>
+        <LinkCustom to="/">Blog</LinkCustom>
       </WrapshortSitemap>
       {/* <PowerBy /> */}
       <WrapPowerBy>

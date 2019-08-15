@@ -48,7 +48,7 @@ const ForgotPassWordForm = () => {
         placeholder="your@verdoc.io"
       />
       <ButtonSubmit text="Reset password" disableMaxWidth={true} />
-      <BackText>BACK</BackText>
+      <BackText to="/login">BACK</BackText>
     </WrapContainer>
   )
 }
