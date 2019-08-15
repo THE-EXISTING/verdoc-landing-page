@@ -18,6 +18,7 @@ const TextDetail = ({
   space = '2em',
   isWrap = true,
   disableMargin = false,
+  width = '52%',
   text,
 }) => {
   const StyleDetail = styled.p`
@@ -26,7 +27,7 @@ const TextDetail = ({
     color: ${props =>
       props.isPrimary ? R.colors.primary : R.colors.text_gray};
     letter-spacing: 0.5px;
-    width: 52%;
+    width: ${width};
     white-space: ${props => (props.isWrap ? 'wrap' : 'nowrap')};
     ${!disableMargin &&
       css`

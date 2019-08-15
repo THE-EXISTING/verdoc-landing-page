@@ -18,11 +18,13 @@ const HomeSignDocs = () => {
       <TextDetai
         text="Verdoc is empowered by blockchain technology call"
         space="1em"
+        width="auto"
       />
       <TextDetai
         text="Blockchain Timestamping Architecture (BTA)"
         isPrimary={true}
         space="0"
+        width="auto"
       />
     </>
   )
