@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import TextField from '../../common/TextFieldCustom'
-// import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button'
 import ButtonSubmit from '../../common/BtnSubmitForm'
-import FooterLogin from '../../common/FormFooter'
+// import FooterLogin from '../../common/FormFooter'
 import R from '../../resources/R'
 import { Link } from 'gatsby'
 
@@ -12,8 +12,8 @@ const WrapContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 10rem;
-  width: 352px;
+  /* padding-top: 10rem; */
+  width: 400px;
 `
 
 const Label = styled.p`
@@ -33,25 +33,9 @@ const LinkForgot = styled(Link)`
   letter-spacing: 0.5px;
   line-height: 28px;
   margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
 `
-// const BtnSubscribe = styled(Button)`
-//   && {
-//     width: 100%;
-//     max-width: 352px;
-//     height: 48px;
-//     font-size: 1em;
-//     border-width: 0;
-//     display: inline-block;
-//     text-transform: uppercase;
-//     color: ${R.colors.white};
-//     background-color: ${R.colors.primary};
-//     margin: 1.6rem 0;
-//     &:hover {
-//       background-color: ${R.colors.primary} !important;
-//       box-shadow: 0.75px 0.75px 5.5px 0.75px ${R.colors.border_btn_subsc_hover};
-//     }
-//   }
-// `
+
 const WrapForgotSection = styled.div`
   display: flex;
   justify-content: center;
@@ -68,6 +52,7 @@ const TextOr = styled.p`
   font-family: 'Roboto-Medium';
   font-size: 0.7rem;
   letter-spacing: 2px;
+  white-space: nowrap;
 `
 
 const TextSignUp = styled.p`
@@ -92,11 +77,22 @@ const LinkSignUp = styled(Link)`
 
 const WrapSignUpSection = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
   padding: 0;
+`
+
+const BtnAuth = styled(Button)`
+  && {
+    width: 112px;
+    height: 40px;
+  }
+`
+const LogoAuth = styled.img`
+  width: 24px;
+  height: 24px;
 `
 
 const FormLogin = () => {
@@ -121,14 +117,21 @@ const FormLogin = () => {
       <ButtonSubmit text="LOG IN" />
       <WrapForgotSection>
         <HorizontalRule />
-        <TextOr>OR</TextOr>
+        <TextOr>OR QUICK ACCEES WITH</TextOr>
         <HorizontalRule />
       </WrapForgotSection>
       <WrapSignUpSection>
-        <TextSignUp>Don’t have an account?</TextSignUp>
-        <LinkSignUp to="/signup">SIGN UP</LinkSignUp>
+        <BtnAuth variant="outlined" size="small">
+          <LogoAuth src={R.images.auth_google} />
+        </BtnAuth>
+        <BtnAuth variant="outlined" size="small">
+          <LogoAuth src={R.images.auth_facebook} />
+        </BtnAuth>
+        <BtnAuth variant="outlined" size="small">
+          <LogoAuth src={R.images.auth_line} />
+        </BtnAuth>
       </WrapSignUpSection>
-      <FooterLogin />
+      {/* <FooterLogin /> */}
     </WrapContainer>
   )
 }

@@ -8,9 +8,10 @@ const SideLeftContent = () => {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: relative;
     left: 0;
     width: 420px;
+    min-width: 420px;
     height: 100vh;
     background-image: url(${R.images.bg_login});
     background-size: cover;
@@ -18,7 +19,7 @@ const SideLeftContent = () => {
     background-repeat: no-repeat;
   `
   const FilterBg = styled.div`
-    width: 420px;
+    width: 100%;
     z-index: 2;
     height: 100vh;
     background: #1e1e33;
