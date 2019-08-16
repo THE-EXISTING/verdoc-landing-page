@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import R from '../resources/R'
 import SideContent from './SideLeftContent'
 import Button from '@material-ui/core/Button'
+
 const Container = styled.div`
   display: flex;
   width: 100vw;
@@ -35,7 +36,7 @@ const ContainerQuestion = styled.div`
   position: absolute;
   top: 32px;
   right: 40px;
-  z-index: 99;
+  z-index: 40;
 `
 const TextQuestion = styled.p`
   color: ${R.colors.text_gray};

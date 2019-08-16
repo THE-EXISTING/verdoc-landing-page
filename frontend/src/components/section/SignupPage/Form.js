@@ -55,7 +55,7 @@ const BackText = styled.p`
   line-height: 16px;
 `
 
-const FormSingUp = () => {
+const FormSingUp = props => {
   const [step, setStep] = useState(1)
   const [showStep, setShowStep] = useState({
     One: false,
@@ -153,7 +153,7 @@ const FormSingUp = () => {
       ) : null}
       {showStep.Four ? (
         <>
-          <FormStepFour />
+          <FormStepFour {...props} />
         </>
       ) : null}
     </WrapContainer>

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Form from '../components/section/SignupPage/Form'
 // import Navbar from '../components/common/Navbar'
 import FormAccount from '../components/common/FormAccount'
 import styled, { createGlobalStyle } from 'styled-components'
 import R from '../components/resources/R'
-
+import ModalCreateSignature from '../components/section/SignupPage/ModalCreateSignature'
 const GlobbalStyled = createGlobalStyle`
   body {
     
@@ -28,12 +28,16 @@ const ContainerGlobal = styled.div`
 `
 
 const SignupPage = () => {
+  const [isShow, setIsShow] = useState(false)
+  const show = () => setIsShow(true)
+  const hide = () => setIsShow(false)
+
   return (
     <ContainerGlobal>
-      {/* <Navbar isLanding={true} /> */}
+      <ModalCreateSignature isShow={true} hide={hide} />
       <GlobbalStyled />
       <FormAccount isLogin={false}>
-        <Form />
+        <Form show={show} />
       </FormAccount>
     </ContainerGlobal>
   )

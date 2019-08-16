@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TextField from '../../common/TextFieldCustom'
 import styled from 'styled-components'
 import R from '../../resources/R'
@@ -123,7 +123,7 @@ const SkipText = styled(Link)`
   text-transform: uppercase;
 `
 
-const FormStepFour = () => {
+const FormStepFour = ({ show }) => {
   return (
     <>
       <LeftPosition>
@@ -160,10 +160,7 @@ const FormStepFour = () => {
         label="Signature"
         value="Input text"
         disabled
-        //    autoComplete={props.autoComplete}
-        //   value={values.value}
-        //   onChange={handleChangeText('value')}
-        //    placeholder={props.placeHolder}
+        onClick={show}
       />
       <WrapAgree>
         <CheckboxCustom
