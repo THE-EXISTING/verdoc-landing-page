@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from '@material-ui/core/Button'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import R from '../../resources/R'
 
 const Container = styled.div`
@@ -43,20 +43,6 @@ const Content = styled.div`
   align-items: center;
   justify-content: flex-start;
   /* padding: 0.5rem 3rem; */
-`
-
-const TextProcess = styled.p`
-  color: ${R.colors.text_gray};
-  font-family: 'Roboto-Regular';
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  text-align: left;
-  line-height: 28px;
-  margin: 1.5em 0.5em;
-  text-decoration: none;
-  &:hover {
-    cursor: pointer;
-  }
 `
 
 const ContainerMenu = styled.div`
@@ -134,19 +120,90 @@ const ButtonSign = styled(Button)`
     height: 36px;
     color: ${R.colors.primary};
     text-transform: uppercase;
+    &[disabled] {
+      background-color: ${R.colors.gray};
+      border-width: 0;
+      font-family: 'Roboto-Medium';
+      font-size: 14px;
+      color: ${R.colors.border_btn};
+      letter-spacing: 1.25px;
+      line-height: 16px;
+    }
   }
 `
 
 const ModalCreateSignature = props => {
+  const [options, setOption] = useState({
+    isKeyboard: true,
+    isTrackpad: false,
+    isImage: false,
+  })
+
+  const choosingOption = opt => {
+    Object.keys(options).map(key => {
+      if (key != opt) setOption({ [key]: false, ...options })
+      else setOption({ [key]: true, ...options })
+    })
+  }
+  const switchOption = () => {
+    console.log(options)
+  }
+
+  useEffect(() => {
+    // switchOption()
+  }, [options])
+
+  const TextProcess = styled.p`
+    color: ${R.colors.text_gray};
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    line-height: 28px;
+    margin: 1.5em 0.5em;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      color: ${R.colors.primary};
+    }
+
+    ${
+      () => {
+        
+      }
+    }
+    /* ${options.isKeyboard &&
+      css`
+        &:nth-child(0) {
+          border-bottom: 2px solid ${R.colors.primary};
+        }
+      `}
+
+    ${!options.isKeyboard &&
+      css`
+        &:nth-child(0) {
+          border-width: 0;
+        }
+      `} */
+  `
+
   return props.isShow ? (
     <>
       <Container onClick={props.hide} />
       <CardModal>
         <Content>
           <ContainerMenu>
-            <TextProcess>KEYBOARD</TextProcess>
-            <TextProcess>TRACKPAD</TextProcess>
-            <TextProcess>IMAGE</TextProcess>
+            <TextProcess onClick={() => choosingOption('isKeyboard')}>
+              KEYBOARD
+            </TextProcess>
+            <TextProcess onClick={() => choosingOption('isTrackpad')}>
+              TRACKPAD
+            </TextProcess>
+            <TextProcess onClick={() => choosingOption('isImage')}>
+              IMAGE
+            </TextProcess>
           </ContainerMenu>
 
           <BorderCreateSignature>
@@ -162,7 +219,7 @@ const ModalCreateSignature = props => {
               <ButtonSign variant="outlined" href="#">
                 Cancel
               </ButtonSign>
-              <ButtonSign variant="outlined" href="#">
+              <ButtonSign variant="outlined" disabled>
                 done
               </ButtonSign>
             </RightBtn>

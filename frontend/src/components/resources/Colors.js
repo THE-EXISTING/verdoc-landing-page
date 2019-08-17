@@ -6,6 +6,7 @@ const colors = {
   text_gray: 'rgba(0,0,0,.6)',
   text_low_gray: 'rgba(0,0,0,.87)',
   text_three_gray: 'rgba(0,0,0,.37)',
+  black87: 'rgba(255,255,255, 0.87)',
   repeat: 'rgba(255, 0, 0, 0.87)', // red
   line: '#00b900', // green (line)
   green_privacy: '#00C853',

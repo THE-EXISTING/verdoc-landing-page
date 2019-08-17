@@ -29,6 +29,11 @@ const BtnSubmitForm = ({ disableMaxWidth = false, ...props }) => {
       &[disabled] {
         background-color: ${R.colors.gray};
         border-width: 0;
+        font-family: 'Roboto-Medium';
+        font-size: 14px;
+        color: ${R.colors.border_btn};
+        letter-spacing: 1.25px;
+        line-height: 16px;
       }
     }
   `
