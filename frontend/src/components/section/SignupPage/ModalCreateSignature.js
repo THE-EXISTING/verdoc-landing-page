@@ -140,17 +140,26 @@ const ModalCreateSignature = props => {
   })
 
   const choosingOption = opt => {
+    // setOption(
+
+    // )
+
     Object.keys(options).map(key => {
-      if (key != opt) setOption({ [key]: false, ...options })
-      else setOption({ [key]: true, ...options })
+      if (key !== opt) options[key] = false
+      else options[key] = true
     })
+
+    // Object.keys(options).map(key => {
+    //   if (key === opt) setOption({ ...options, [key]: true })
+    //   else setOption({ ...options, [key]: false })
+    // })
   }
   const switchOption = () => {
     console.log(options)
   }
 
   useEffect(() => {
-    // switchOption()
+    switchOption()
   }, [options])
 
   const TextProcess = styled.p`
@@ -169,11 +178,7 @@ const ModalCreateSignature = props => {
       color: ${R.colors.primary};
     }
 
-    ${
-      () => {
-        
-      }
-    }
+    ${() => {}}
     /* ${options.isKeyboard &&
       css`
         &:nth-child(0) {
